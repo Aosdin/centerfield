@@ -1,31 +1,29 @@
 <template>
-  <header>
-    <a
-      href="javascript:;"
-      style="float: left;"
-      @click="showNavi"
-    >메뉴열기</a>
-    <h1 style="margin: 0;">header</h1>
+  <header class="header">
+    <a href="javascript:;" class="btn-gnb" @click="showNavi"><span>메뉴열기</span></a>
+    <h1>
+      <a href="#"><span>THE SHOPS AT CENTERFIELD</span></a>
+    </h1>
   </header>
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
+import { mapActions, mapState } from "vuex";
 
 export default {
-  name: 'Header',
+  name: "Header",
   computed: {
-    ...mapState('common', {
+    ...mapState("common", {
       isNavigation: state => state.isNavigation
     })
   },
   methods: {
-    ...mapActions('common', {
-      setNavigation: 'setNavigation'
+    ...mapActions("common", {
+      setNavigation: "setNavigation"
     }),
-    showNavi () {
-      this.setNavigation(!this.isNavigation)
+    showNavi() {
+      this.setNavigation(!this.isNavigation);
     }
   }
-}
+};
 </script>

@@ -1,3 +1,14 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixin';
+
+@import 'base/fonts';
+@import 'base/base';
+
+@import 'layout/contents';
+@import 'layout/header';
+@import 'layout/nav';
+@import 'layout/main';
+
 //scss
 .full-base {
   position: relative;
@@ -10,11 +21,9 @@
     left: -250px;
     height: 100vh;
     width: 250px;
-    background: #ccc;
-
+    background: $white;
   }
   &.active {
     left: 250px;
   }
-  
 }
