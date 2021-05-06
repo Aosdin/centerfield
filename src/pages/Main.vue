@@ -34,9 +34,7 @@
                 <span>CLINIC</span>
               </div>
             </div>
-            <div class="background-img">
-              <img src="../assets/images/main/uban_img01.png" alt="" />
-            </div>
+            <div class="background-img"></div>
           </div>
         </div>
         <div class="item i2">
@@ -57,9 +55,7 @@
                 <span>LIFESTYLE</span>
               </div>
             </div>
-            <div class="background-img">
-              <img src="../assets/images/main/uban_img02.png" alt="" />
-            </div>
+            <div class="background-img"></div>
           </div>
         </div>
         <div class="item i3">
@@ -78,9 +74,7 @@
                 <span>AMENITY</span>
               </div>
             </div>
-            <div class="background-img">
-              <img src="../assets/images/main/uban_img03.png" alt="" />
-            </div>
+            <div class="background-img"></div>
           </div>
         </div>
         <div class="item i4">
@@ -99,9 +93,7 @@
                 <span>GOLF ACADEMY</span>
               </div>
             </div>
-            <div class="background-img">
-              <img src="../assets/images/main/uban_img04.png" alt="" />
-            </div>
+            <div class="background-img"></div>
           </div>
         </div>
       </section>
@@ -115,7 +107,9 @@
           <img src="../assets/images/main/temp_insta.png" alt="" style="width: 100%" />
         </div>
         <!--// 인스타그램 영역(e) -->
-        <a href="#" class="more">더 보기</a>
+        <div class="more">
+          <a href="#" class="btnmore">더 보기</a>
+        </div>
       </section>
     </div>
   </div>

@@ -49,6 +49,22 @@
         height: 510px;
         z-index: 1;
       }
+      @for $i from 1 through 4 {
+        &.i#{$i} .background-img {
+          background-image: url('../images/main/uban_img#{$i}.png');
+        }
+      }
+      .background-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.25;
+        z-index: 1;
+      }
       .inner-item {
         background-color: $white;
         position: absolute;
@@ -129,26 +145,13 @@
           left: 0;
         }
       }
-      .background-img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        img {
-          width: 100%;
-          opacity: 0.25;
-        }
-      }
+
       &.active {
         .back-tit {
           display: none;
         }
         .background-img {
-          img {
-            opacity: 1;
-          }
+          opacity: 1;
         }
       }
     }
@@ -161,6 +164,16 @@
       font-weight: 700;
       text-align: center;
       line-height: 1.3;
+    }
+    .more {
+      display: block;
+      margin-top: 50px;
+      padding-left: 20px;
+      .btnmore {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 700;
+      }
     }
   }
 }
