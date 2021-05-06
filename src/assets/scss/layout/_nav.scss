@@ -42,7 +42,7 @@
           display: inline-block;
           line-height: 1.2;
         }
-        &.current {
+        &.active {
           span {
             &::after {
               @include inAfter;
