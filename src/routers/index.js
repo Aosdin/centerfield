@@ -1,20 +1,21 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
-import FullBase from '@/container/FullBase'
+import FullBase from '@/container/FullBase';
 // modules
+import api from './api';
 
 // page
-import Main from '@/pages/Main'
-import Main2 from '@/pages/Main2'
-import F1 from '@/pages/F1'
+import Main from '@/pages/Main';
+import Floor1 from '@/pages/Floor1';
+import TenantDetail from '@/pages/TenantDetail';
 
 /**
  * Vue router
  * https://router.vuejs.org
  * Must call `Vue.use` before creating new instance
  */
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const router = new VueRouter({
   linkActiveClass: 'active',
@@ -27,29 +28,41 @@ const router = new VueRouter({
         {
           path: '/',
           name: 'main',
-          component: Main
+          component: Main,
         },
+      ],
+    },
+    {
+      path: '/floor1',
+      component: FullBase,
+      children: [
         {
-          path: '/main2',
-          name: 'main2',
-          component: Main2
+          path: '/floor1',
+          name: 'floor1',
+          component: Floor1,
         },
+      ],
+    },
+    {
+      path: '/tenantDetail',
+      component: FullBase,
+      children: [
         {
-          path: '/f1',
-          name: 'f1',
-          component: F1
-        }
-      ]
-    }
-  ]
-})
+          path: '/tenantDetail',
+          name: 'tenantDetail',
+          component: TenantDetail,
+        },
+      ],
+    },
+  ],
+});
 
 router.beforeEach((to, from, next) => {
   // TODO: Checking authentications
-  next()
-})
+  next();
+});
 router.afterEach((to, from, next) => {
   // TODO: Checking authentications
-})
+});
 
-export default router
+export default router;
