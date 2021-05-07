@@ -5,10 +5,7 @@
       <div class="main-sldr">
         <div class="item">
           <div>
-            <img
-              src="../assets/images/main/slide_img01.png"
-              alt="MIRROR &amp; LIGHT"
-            >
+            <img src="../assets/images/main/slide_img01.png" alt="MIRROR &amp; LIGHT" />
           </div>
         </div>
       </div>
@@ -16,15 +13,11 @@
       <section class="info-sector">
         <h3>DINING - LIFESTYLE - AMENITY</h3>
         <p>
-          품격 있고 트렌디한 미각 세계와 프리미엄 라이프스타일 컨텐츠를 The Shops At CENTERFIELD에서
-          만나보세요.
+          품격 있고 트렌디한 미각 세계와 프리미엄 라이프스타일 컨텐츠를 The Shops At CENTERFIELD에서 만나보세요.
         </p>
       </section>
-      <section
-        class="urban-sector"
-        ref="urban"
-      >
-        <div class="item i1">
+      <section class="urban-sector type2" ref="urban">
+        <div class="item i1 active">
           <div class="inner-item">
             <div class="front-tit">
               <div class="floorinfo">
@@ -45,7 +38,7 @@
             <div class="background-img" />
           </div>
         </div>
-        <div class="item i2">
+        <div class="item i2 active">
           <div class="inner-item">
             <div class="front-tit">
               <div class="floorinfo">
@@ -66,7 +59,7 @@
             <div class="background-img" />
           </div>
         </div>
-        <div class="item i3">
+        <div class="item i3 active">
           <div class="inner-item">
             <div class="front-tit">
               <div class="floorinfo">
@@ -85,7 +78,7 @@
             <div class="background-img" />
           </div>
         </div>
-        <div class="item i4">
+        <div class="item i4 active">
           <div class="inner-item">
             <div class="front-tit">
               <div class="floorinfo">
@@ -107,23 +100,16 @@
       </section>
       <section class="insta-sector">
         <h3>
-          #THESHOPSATCENTERFIELD<br>
+          #THESHOPSATCENTERFIELD<br />
           #더샵스앳센터필드
         </h3>
         <!-- 인스타그램 영역(s) -->
         <div class="img-insta">
-          <img
-            src="../assets/images/main/temp_insta.png"
-            alt=""
-            style="width: 100%"
-          >
+          <img src="../assets/images/main/temp_insta.png" alt="" style="width: 100%" />
         </div>
         <!--// 인스타그램 영역(e) -->
         <div class="more">
-          <a
-            href="#"
-            class="btnmore"
-          >더 보기</a>
+          <a href="#" class="btnmore">더 보기</a>
         </div>
       </section>
     </div>
@@ -131,22 +117,20 @@
 </template>
 
 <script>
-import { gsap, ScrollTrigger, power2 } from 'gsap/all'
-gsap.registerPlugin(ScrollTrigger)
+import { gsap, ScrollTrigger, power2 } from 'gsap/all';
+gsap.registerPlugin(ScrollTrigger);
 
 export default {
   name: 'Main',
   head: {
     title: {
-      inner: 'Main'
+      inner: 'Main',
     },
     // Meta tags
-    meta: [{ name: 'keywords', content: 'Main' }]
+    meta: [{ name: 'keywords', content: 'Main' }],
   },
-  methods: {
-
-  },
-  mounted () {
+  methods: {},
+  mounted() {
     // gsap.to('.urban-sector .item:not(:last-child)', {
     //   // yPercent: -100,
     //   // ease: 'none',
@@ -197,18 +181,18 @@ export default {
     //     // scrub: true,
     //   })
     // })
-  //   gsap.to('.urban-sector .item.i1', {
-  //     scrollTrigger: {
-  //       trigger: '.urban-sector .item.i1',
-  //       // scrub: true,
-  //       markers: true,
-  //       start: start,
-  //       end: 'bottom center',
-  //       ease: 'power2',
-  //       // pin: true,
-  //       toggleClass: 'active'
-  //     }
-  //   })
-  }
-}
+    //   gsap.to('.urban-sector .item.i1', {
+    //     scrollTrigger: {
+    //       trigger: '.urban-sector .item.i1',
+    //       // scrub: true,
+    //       markers: true,
+    //       start: start,
+    //       end: 'bottom center',
+    //       ease: 'power2',
+    //       // pin: true,
+    //       toggleClass: 'active'
+    //     }
+    //   })
+  },
+};
 </script>
