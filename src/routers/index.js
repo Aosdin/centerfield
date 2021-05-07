@@ -3,10 +3,11 @@ import VueRouter from 'vue-router'
 
 import FullBase from '@/container/FullBase'
 // modules
-import api from './api'
 
 // page
 import Main from '@/pages/Main'
+import Main2 from '@/pages/Main2'
+import F1 from '@/pages/F1'
 
 /**
  * Vue router
@@ -27,6 +28,16 @@ const router = new VueRouter({
           path: '/',
           name: 'main',
           component: Main
+        },
+        {
+          path: '/main2',
+          name: 'main2',
+          component: Main2
+        },
+        {
+          path: '/f1',
+          name: 'f1',
+          component: F1
         }
       ]
     }
