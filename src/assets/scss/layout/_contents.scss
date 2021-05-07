@@ -8,3 +8,58 @@
   padding-left: 10px;
   padding-right: 10px;
 }
+.inner2 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.sector {
+  margin-bottom: 50px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+.sectit1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.imgwrap {
+  img {
+    width: 100%;
+  }
+}
+.patition-text {
+  span {
+    position: relative;
+    display: inline-block;
+    margin-right: 8px;
+    padding-left: 10px;
+    font-size: 15;
+    font-weight: 700;
+    &::before {
+      @include inAfter;
+      @include posiCenter('v');
+      background-color: $black;
+      display: block;
+      position: absolute;
+      width: 1px;
+      height: 17px;
+      left: 0;
+    }
+    &:first-of-type {
+      padding-left: 0;
+      &::before {
+        display: none;
+      }
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+.dlist {
+  dt {
+    font-weight: 14px;
+    font-weight: 700;
+  }
+}

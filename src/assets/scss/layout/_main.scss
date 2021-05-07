@@ -87,9 +87,9 @@
             position: relative;
             display: inline-block;
             margin-right: 8px;
-            padding-right: 10px;
+            padding-left: 10px;
             text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            &::after {
+            &::before {
               @include inAfter;
               @include posiCenter('v');
               background-color: $white;
@@ -97,14 +97,16 @@
               position: absolute;
               width: 1px;
               height: 22px;
-              right: 0;
+              left: 0;
+            }
+            &:first-of-type {
+              padding-left: 0;
+              &::before {
+                display: none;
+              }
             }
             &:last-of-type {
               margin-right: 0;
-              padding-right: 0;
-              &::after {
-                display: none;
-              }
             }
           }
         }
@@ -126,19 +128,26 @@
           span {
             position: relative;
             display: inline-block;
-            & + span {
-              margin-left: 8px;
-              padding-left: 10px;
+            margin-right: 8px;
+            padding-left: 10px;
+            &::before {
+              @include inAfter;
+              @include posiCenter('v');
+              background-color: $black;
+              display: block;
+              position: absolute;
+              width: 1px;
+              height: 16px;
+              left: 0;
+            }
+            &:first-of-type {
+              padding-left: 0;
               &::before {
-                @include inAfter;
-                @include posiCenter('v');
-                background-color: $black;
-                display: block;
-                position: absolute;
-                width: 1px;
-                height: 16px;
-                left: 0;
+                display: none;
               }
+            }
+            &:last-of-type {
+              margin-right: 0;
             }
           }
         }

@@ -1,7 +1,7 @@
 <template>
   <div class="contents">
     <div class="sect-prepare">오픈 준비중</div>
-    <section class="sect-tenant">
+    <section class="sector sect-tenant">
       <div class="tenant-mainimg"><img src="../assets/images/tenant/joenTheJuice.png" alt="" /></div>
       <div class="tenant-info">
         <div class="tenant-tit">FIRE BELL</div>
@@ -18,14 +18,16 @@
       <div class="tenant-location">
         <img src="../assets/images/tenant/tenant_location_firebell.svg" alt="" />
       </div>
-      <!-- 매장 썸네일(s) -->
-      <div class="inner">
-        <div class="tenant-thumb"><img src="../assets/images/tenant/Rectangle_116.png" alt="" /></div>
-        <div class="tenant-thumb"><img src="../assets/images/tenant/Rectangle_117.png" alt="" /></div>
-        <div class="tenant-thumb"><img src="../assets/images/tenant/Rectangle_116.png" alt="" /></div>
-      </div>
-      <!--// 매장 썸네일(e) -->
     </section>
+    <!-- 매장 썸네일(s) -->
+    <section class="sector">
+      <div class="inner">
+        <div class="img-thumb"><img src="../assets/images/tenant/Rectangle_116.png" alt="" /></div>
+        <div class="img-thumb"><img src="../assets/images/tenant/Rectangle_117.png" alt="" /></div>
+        <div class="img-thumb"><img src="../assets/images/tenant/Rectangle_116.png" alt="" /></div>
+      </div>
+    </section>
+    <!--// 매장 썸네일(e) -->
   </div>
 </template>
 

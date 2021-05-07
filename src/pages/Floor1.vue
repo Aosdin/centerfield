@@ -1,7 +1,7 @@
 <template>
   <div class="contents">
     <div class="sect-prepare">오픈 준비중</div>
-    <section class="sect-floorinfo">
+    <section class="sector sect-floorinfo">
       <div class="inner">
         <div class="floor-imgwrap">
           <div class="floor-tit">
@@ -20,8 +20,8 @@
         </div>
       </div>
     </section>
-    <section class="sect-floormap"><img src="../assets/images/floor/floor_map1.svg" alt="" /></section>
-    <section class="sect-store">
+    <section class="sector sect-floormap"><img src="../assets/images/floor/floor_map1.svg" alt="" /></section>
+    <section class="sector sect-store">
       <div class="inner">
         <div class="store">
           <a href="#">
