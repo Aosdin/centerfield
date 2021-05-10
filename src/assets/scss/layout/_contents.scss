@@ -28,6 +28,9 @@
     width: 100%;
   }
 }
+.bg-graylight2 {
+  background-color: $gray-light2;
+}
 .patition-text {
   span {
     position: relative;
@@ -57,6 +60,37 @@
     }
   }
 }
+.ulist1 {
+  & > li {
+    border-top: 1px solid $primary;
+    padding-top: 20px;
+    margin-top: 20px;
+    &:first-of-type {
+      padding-top: 0;
+      margin-top: 0;
+      border-top: none;
+    }
+  }
+}
+.ulist2 {
+  & > li {
+    position: relative;
+    padding-left: 16px;
+    font-size: 14px;
+    font-weight: 300;
+    &::before {
+      @include inAfter();
+      background-color: $black;
+      display: block;
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      top: 9px;
+      left: 8px;
+      border-radius: 50%;
+    }
+  }
+}
 .dlist {
   & > dt {
     font-weight: 14px;
@@ -78,6 +112,66 @@
       top: 9px;
       left: 8px;
       border-radius: 50%;
+    }
+  }
+}
+.sect-visual {
+  .visual {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    .text-group {
+      color: $white;
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      font-size: 14px;
+      font-weight: 300;
+      text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+    }
+    .text-group2 {
+      color: $white;
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      font-size: 12px;
+      text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      h3 {
+        font-size: 42px;
+        font-weight: 700;
+      }
+    }
+    .background-img {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.icotit {
+  margin-bottom: 20px;
+  font-weight: 700;
+  .icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    img {
+      width: 100%;
+    }
+  }
+}
+.tbl1 {
+  border-top: 1px solid $gray;
+  tbody {
+    th,
+    td {
+      border-bottom: 1px solid $gray;
+      padding: 11px 10px;
     }
   }
 }

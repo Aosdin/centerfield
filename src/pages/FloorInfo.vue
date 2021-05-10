@@ -1,8 +1,8 @@
 <template>
   <div class="contents">
-    <section class="sect-floorinfo">
+    <section class="sector sect-visual">
       <div class="inner">
-        <div class="floor-imgwrap">
+        <div class="visual">
           <div class="text-group">
             <h3>Floor Map</h3>
             <div>더샵스앳센터필드 층별안내</div>

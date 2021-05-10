@@ -10,6 +10,7 @@ import Main2 from '@/pages/Main2';
 import Floor1 from '@/pages/Floor1';
 import TenantDetail from '@/pages/TenantDetail';
 import FloorInfo from '@/pages/FloorInfo';
+import ParkingInfo from '@/pages/ParkingInfo';
 
 /**
  * Vue router
@@ -68,6 +69,17 @@ const router = new VueRouter({
           path: '/floorInfo',
           name: 'floorInfo',
           component: FloorInfo,
+        },
+      ],
+    },
+    {
+      path: '/parkingInfo',
+      component: FullBase,
+      children: [
+        {
+          path: '/parkingInfo',
+          name: 'parkingInfo',
+          component: ParkingInfo,
         },
       ],
     },

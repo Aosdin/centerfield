@@ -1,0 +1,29 @@
+.sect-parking {
+  margin-bottom: 25px;
+  .imgwrap {
+    margin-bottom: 20px;
+  }
+  .parktext {
+    font-size: 14px;
+    font-weight: 300;
+    strong {
+      font-weight: 700;
+    }
+  }
+  .ulist2 + .parktext {
+    margin-top: 25px;
+  }
+  .park-intext {
+    margin-top: 20px;
+    font-size: 14px;
+    strong {
+      font-weight: 700;
+    }
+    p {
+      font-weight: 300;
+    }
+    .tbl1 {
+      margin: 20px 0;
+    }
+  }
+}
