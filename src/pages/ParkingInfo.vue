@@ -7,17 +7,32 @@
             <h3>PARKING</h3>
             <div>더샵스앳센터필드 주차 안내</div>
           </div>
-          <div class="background-img"><img src="../assets/images/parking/visual_parking.png" alt="" /></div>
+          <div class="background-img">
+            <img
+              src="../assets/images/parking/visual_parking.png"
+              alt=""
+            >
+          </div>
         </div>
       </div>
     </section>
     <section class="sector sect-parking">
-      <div class="imgwrap bg-graylight2"><img src="../assets/images/parking/location_parking.png" alt="" /></div>
+      <div class="imgwrap bg-graylight2">
+        <img
+          src="../assets/images/parking/location_parking.png"
+          alt=""
+        >
+      </div>
       <div class="inner2">
         <ul class="ulist1">
           <li>
             <h4 class="icotit">
-              <div class="icon"><img src="../assets/images/icon/ico_parking1.svg" alt="" /></div>
+              <div class="icon">
+                <img
+                  src="../assets/images/icon/ico_parking1.svg"
+                  alt=""
+                >
+              </div>
               주차진입로
             </h4>
             <div class="parktext"><strong>Gate 1</strong> : 지하주차장 진입로</div>
@@ -25,7 +40,12 @@
           </li>
           <li>
             <h4 class="icotit">
-              <div class="icon"><img src="../assets/images/icon/ico_parking2.svg" alt="" /></div>
+              <div class="icon">
+                <img
+                  src="../assets/images/icon/ico_parking2.svg"
+                  alt=""
+                >
+              </div>
               주차요금
             </h4>
             <ul class="ulist2">
@@ -44,14 +64,14 @@
                   주요매장 주차요금 할인안내(매장, 할인 시간으로 구분)
                 </caption>
                 <colgroup>
-                  <col style="width: 45%" />
-                  <col style="width: 55%" />
+                  <col style="width: 45%">
+                  <col style="width: 55%">
                 </colgroup>
                 <tbody>
                   <tr>
                     <th>카페, 판매시설</th>
                     <td>
-                      1시간<br />
+                      1시간<br>
                       *카페는 1만원 이상 구매 시
                     </td>
                   </tr>
@@ -70,7 +90,12 @@
           </li>
           <li>
             <h4 class="icotit">
-              <div class="icon"><img src="../assets/images/icon/ico_parking3.svg" alt="" /></div>
+              <div class="icon">
+                <img
+                  src="../assets/images/icon/ico_parking3.svg"
+                  alt=""
+                >
+              </div>
               이륜차 주차 안내
             </h4>
             <ul class="ulist2">
@@ -89,10 +114,10 @@ export default {
   name: 'ParkingInfo',
   head: {
     title: {
-      inner: '주차안내 상세',
+      inner: '주차안내 상세'
     },
     // Meta tags
-    meta: [{ name: 'keywords', content: 'ParkingInfo' }],
-  },
-};
+    meta: [{ name: 'keywords', content: 'ParkingInfo' }]
+  }
+}
 </script>

@@ -13,7 +13,10 @@
         </div>
       </div>
       <!--// 슬라이드 영역(e) -->
-      <section class="info-sector">
+      <section
+        class="info-sector"
+        ref="info"
+      >
         <h3>DINING - LIFESTYLE - AMENITY</h3>
         <p>
           품격 있고 트렌디한 미각 세계와 프리미엄 라이프스타일 컨텐츠를 The Shops At CENTERFIELD에서
@@ -23,8 +26,12 @@
       <section
         class="urban-sector"
         ref="urban"
+        id="urban"
       >
-        <div class="item i1">
+        <div
+          class="item i1 active"
+          ref="item1"
+        >
           <div class="inner-item">
             <div class="front-tit">
               <div class="floorinfo">
@@ -45,7 +52,10 @@
             <div class="background-img" />
           </div>
         </div>
-        <div class="item i2">
+        <div
+          class="item i2"
+          ref="item2"
+        >
           <div class="inner-item">
             <div class="front-tit">
               <div class="floorinfo">
@@ -66,7 +76,10 @@
             <div class="background-img" />
           </div>
         </div>
-        <div class="item i3">
+        <div
+          class="item i3"
+          ref="item3"
+        >
           <div class="inner-item">
             <div class="front-tit">
               <div class="floorinfo">
@@ -85,7 +98,10 @@
             <div class="background-img" />
           </div>
         </div>
-        <div class="item i4">
+        <div
+          class="item i4"
+          ref="item4"
+        >
           <div class="inner-item">
             <div class="front-tit">
               <div class="floorinfo">
@@ -143,10 +159,220 @@ export default {
     // Meta tags
     meta: [{ name: 'keywords', content: 'Main' }]
   },
+  computed: {
+    vh () {
+      return 2 * innerHeight / 100
+    }
+  },
   methods: {
+    onUpdate () {
+      console.log(this)
+      // gsap.to('.i1', { y: -this.$refs.info.getBoundingClientRect().top, ease: 'none', overwrite: true })
+      // gsap.to('.i2', { y: -this.$refs.item1.getBoundingClientRect().top, ease: 'none', overwrite: true })
+      // gsap.to('.i3', { y: -this.$refs.item2.getBoundingClientRect().top, ease: 'none', overwrite: true })
+      // gsap.to('.i4', { y: -this.$refs.item3.getBoundingClientRect().top, ease: 'none', overwrite: true })
+    },
+    goToSection (t, b) {
 
+    },
+    handleScroll () {
+      console.log(Math.max(
+        document.body.scrollTop, document.documentElement.scrollTop,
+        document.body.offsetTop, document.documentElement.scrollTop,
+        document.body.clientTop, document.documentElement.scrollTop
+      ), innerHeight, innerWidth, this.$refs.item1.offsetTop)
+    },
+    urban () {
+      return Math.max(
+        document.body.scrollTop, document.documentElement.scrollTop,
+        document.body.offsetTop, document.documentElement.scrollTop,
+        document.body.clientTop, document.documentElement.scrollTop
+      )
+    }
   },
   mounted () {
+    const urban = document.getElementById('urban')
+    const urbanTop = urban.offsetTop || 0
+    console.log('=-==>', urban.offsetTop)
+    console.log('')
+    window.addEventListener('scroll', this.handleScroll)
+    console.log(innerHeight, this.$refs.urban.getBoundingClientRect().top)
+    this.$nextTick(_ => {
+      ScrollTrigger.create({
+        trigger: '.i2',
+        start: 'top ' + (innerHeight - 510) + 'px',
+        markers: true,
+        end: 'top ' + -urbanTop + 'px',
+        scrub: true,
+        pin: true,
+        overwrite: true,
+        onEnter: () => this.goToSection('.i2', true),
+        onEnterBack: () => this.goToSection('.i2', true)
+      })
+      ScrollTrigger.create({
+        trigger: '.i3',
+        start: 'top ' + (innerHeight - 510) + 'px',
+        // markers: true,
+        end: 'top ' + -(urbanTop - 30) + 'px',
+        scrub: true,
+        pin: true,
+        overwrite: true,
+        onEnter: () => this.goToSection('.i3', true),
+        onEnterBack: () => this.goToSection('.i3', true)
+      })
+      ScrollTrigger.create({
+        trigger: '.i4',
+        start: 'top ' + (innerHeight - 510) + 'px',
+        // markers: true
+        end: 'top ' + -(urbanTop + 900) + 'px',
+        scrub: true,
+        pin: true,
+        overwrite: true,
+        onEnter: () => this.goToSection('.i4', true),
+        onEnterBack: () => this.goToSection('.i4', true)
+      })
+    })
+    // gsap.timeline({
+    //   scrollTrigger: {
+    //     animation: '.urban-sector',
+    //     trigger: '.urban-sector',
+    //     start: 'top ' + this.$refs.urban.getBoundingClientRect().top + 'px',
+    //     markers: true,
+    //     end: 'top top',
+    //     scrub: true,
+    //     pin: true,
+    //     toggleClass: 'active',
+    //     onUpdate: () => this.onUpdate()
+    //   }
+    // })
+    //   .to('.i1', { y: -innerHeight, ease: 'none' })
+    //   .to('.i2', { y: -innerHeight, ease: 'none' })
+    //   .to('.i3', { y: -innerHeight, ease: 'none' })
+    //   .to('.i4', { y: -innerHeight, ease: 'none' })
+    // gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger: '.i1',
+    //     start: 'top ' + this.$refs.item1.getBoundingClientRect().top + 'px',
+    //     markers: true,
+    //     end: 'top top',
+    //     scrub: true,
+    //     pin: true
+    //   }
+    // })
+    // gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger: '.i2',
+    //     start: 'top ' + this.$refs.item2.getBoundingClientRect().top + 'px',
+    //     // markers: true,
+    //     end: 'top top',
+    //     scrub: true,
+    //     pin: true
+    //   }
+    // })
+    // gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger: '.i3',
+    //     start: 'top ' + this.$refs.item3.getBoundingClientRect().top + 'px',
+    //     // markers: true,
+    //     end: 'top top',
+    //     scrub: true,
+    //     pin: true
+    //   }
+    // })
+    // gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger: '.i4',
+    //     start: 'top ' + this.$refs.item4.getBoundingClientRect().top + 'px',
+    //     // markers: true,
+    //     end: 'top top',
+    //     scrub: true,
+    //     pin: true
+    //   }
+    // })
+    // const depth = layer.dataset.depth;
+    // const movement = -(layer.offsetHeight * depth)
+    // tl.to(layer, {y: movement, ease: "none"}, 0)
+    // ScrollTrigger.create({
+    //   snap: 1 / 4 // snap whole page to the closest section!
+    // })
+    //   .to('.i1', {
+    //   scrollTrigger: {
+    //     trigger: '.i1',
+    //     start: 'top ' + this.$refs.item1.getBoundingClientRect().top + 'px',
+    //     end: 'top top',
+    //     pin: true,
+    //     scrub: true
+    //   }
+    // }).to('.i2', {
+    //   scrollTrigger: {
+    //     trigger: '.i2',
+    //     start: 'top ' + this.$refs.item2.getBoundingClientRect().top + 'px',
+    //     end: 'top top',
+    //     pin: true,
+    //     scrub: true
+    //   }
+    // }).to('.i3', {
+    //   scrollTrigger: {
+    //     trigger: '.i3',
+    //     start: 'top ' + this.$refs.item3.getBoundingClientRect().top + 'px',
+    //     end: 'top top',
+    //     pin: true,
+    //     scrub: true
+    //   }
+    // }).to('.i4', {
+    //   scrollTrigger: {
+    //     trigger: '.i4',
+    //     start: 'top ' + this.$refs.item4.getBoundingClientRect().top + 'px',
+    //     end: 'top top',
+    //     pin: true,
+    //     scrub: true
+    //   }
+    // })
+    // .to('.i1', { yPercent: -100 }, 0)
+    // .to('.i1', { y: -innerHeight })
+    // .to('.i2', { y: -innerHeight })
+    // .to('.i3', { y: -innerHeight })
+    // .to('.i4', { y: -innerHeight })
+    // gsap.to('.i1', {
+    //   scrollTrigger: {
+    //     trigger: '.urban-sector',
+    //     markers: true,
+    //     start: 'top ' + this.$refs.item1.getBoundingClientRect().top + 'px',
+    //     end: 'top top',
+    //     pin: true,
+    //     scrub: true
+    //   }
+    // })
+    // gsap.to('.i2', {
+    //   scrollTrigger: {
+    //     trigger: '.i1',
+    //     markers: true,
+    //     start: 'top ' + this.$refs.item2.getBoundingClientRect().top + 'px',
+    //     end: 'top top',
+    //     pin: true,
+    //     scrub: true
+    //   }
+    // })
+    // gsap.to('.i3', {
+    //   scrollTrigger: {
+    //     trigger: '.i2',
+    //     markers: true,
+    //     start: 'top ' + this.$refs.item3.getBoundingClientRect().top + 'px',
+    //     end: 'top top',
+    //     pin: true,
+    //     scrub: true
+    //   }
+    // })
+    // gsap.to('.i4', {
+    //   scrollTrigger: {
+    //     trigger: '.i3',
+    //     markers: true,
+    //     start: 'top ' + this.$refs.item4.getBoundingClientRect().top + 'px',
+    //     end: 'top top',
+    //     pin: true,
+    //     scrub: true
+    //   }
+    // })
     // gsap.to('.urban-sector .item:not(:last-child)', {
     //   // yPercent: -100,
     //   // ease: 'none',
@@ -197,18 +423,23 @@ export default {
     //     // scrub: true,
     //   })
     // })
-  //   gsap.to('.urban-sector .item.i1', {
-  //     scrollTrigger: {
-  //       trigger: '.urban-sector .item.i1',
-  //       // scrub: true,
-  //       markers: true,
-  //       start: start,
-  //       end: 'bottom center',
-  //       ease: 'power2',
-  //       // pin: true,
-  //       toggleClass: 'active'
-  //     }
-  //   })
+    // gsap.to('.urban-sector .item.i1', {
+    //   scrollTrigger: {
+    //     trigger: '.urban-sector',
+    //     scrub: true,
+    //     markers: true,
+    //     start: 'top center',
+    //     end: 'bottom center',
+    //     ease: 'power2',
+    //     // pin: true,
+    //     toggleClass: 'active'
+    //   }
+    // })
   }
 }
 </script>
+<style scoped>
+ .urban-sector {
+   height: 200vh;
+ }
+</style>

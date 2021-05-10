@@ -21,16 +21,24 @@
           </li>
           <li>
             <div class="familysite">
-              <a href="#" class="select"><span>패밀리사이트</span></a>
+              <a
+                href="#"
+                class="select"
+              ><span>패밀리사이트</span></a>
             </div>
           </li>
         </ul>
         <ul class="foot-menu">
           <li><a href="#">이용약관</a></li>
-          <li><a href="#" class="privacy">개인정보처리방침</a></li>
+          <li>
+            <a
+              href="#"
+              class="privacy"
+            >개인정보처리방침</a>
+          </li>
           <li>
             <a href="#">
-              영상정보저리기기<br />
+              영상정보저리기기<br>
               운영관리 방침
             </a>
           </li>
@@ -38,13 +46,22 @@
       </div>
       <ul class="sns-menu">
         <li>
-          <a href="#" class="insta"><span>instagram</span></a>
+          <a
+            href="#"
+            class="insta"
+          ><span>instagram</span></a>
         </li>
         <li>
-          <a href="#" class="youtube"><span>youtube</span></a>
+          <a
+            href="#"
+            class="youtube"
+          ><span>youtube</span></a>
         </li>
         <li>
-          <a href="#" class="facebook"><span>facebook</span></a>
+          <a
+            href="#"
+            class="facebook"
+          ><span>facebook</span></a>
         </li>
       </ul>
       <p class="copyright">Copyright &copy; 2021 CENTERFIELD. All Rights Reserved.</p>
@@ -54,8 +71,8 @@
 
 <script>
 export default {
-  name: 'Header',
-};
+  name: 'Header'
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

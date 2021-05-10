@@ -7,11 +7,21 @@
             <h3>Floor Map</h3>
             <div>더샵스앳센터필드 층별안내</div>
           </div>
-          <div class="background-img"><img src="../assets/images/floor/visual01.png" alt="" /></div>
+          <div class="background-img">
+            <img
+              src="../assets/images/floor/visual01.png"
+              alt=""
+            >
+          </div>
         </div>
       </div>
     </section>
-    <section class="sector sect-floormap"><img src="../assets/images/floor/floor_map1.svg" alt="" /></section>
+    <section class="sector sect-floormap">
+      <img
+        src="../assets/images/floor/floor_map1.svg"
+        alt=""
+      >
+    </section>
     <section class="sector">
       <div class="inner2">
         <h3 class="sectit1">경로 찾기</h3>
@@ -20,7 +30,10 @@
             <fieldset>
               <legend>경로 찾기</legend>
               <div class="selectbox">
-                <label for="frm1" class="blind">현재 위치 선택</label>
+                <label
+                  for="frm1"
+                  class="blind"
+                >현재 위치 선택</label>
                 <select id="frm1">
                   <option>현재 위치를 선택하세요.</option>
                   <option>선택1</option>
@@ -29,7 +42,10 @@
                 </select>
               </div>
               <div class="selectbox">
-                <label for="frm2" class="blind">목적지 선택</label>
+                <label
+                  for="frm2"
+                  class="blind"
+                >목적지 선택</label>
                 <select id="frm2">
                   <option>목적지를 선택하세요</option>
                   <option>선택1</option>
@@ -37,7 +53,12 @@
                   <option>선택3</option>
                 </select>
               </div>
-              <button type="button" class="btn1 btg-gray"><span>재설정</span></button>
+              <button
+                type="button"
+                class="btn1 btg-gray"
+              >
+                <span>재설정</span>
+              </button>
             </fieldset>
           </form>
         </div>
@@ -45,7 +66,12 @@
     </section>
     <section class="sector">
       <div class="inner">
-        <div class="imgwrap"><img src="../assets/images/floor/floor_info.svg" alt="" /></div>
+        <div class="imgwrap">
+          <img
+            src="../assets/images/floor/floor_info.svg"
+            alt=""
+          >
+        </div>
       </div>
     </section>
     <section class="sector sect-floorstore">
@@ -158,10 +184,10 @@ export default {
   name: 'FloorInfo',
   head: {
     title: {
-      inner: '층별안내 상세',
+      inner: '층별안내 상세'
     },
     // Meta tags
-    meta: [{ name: 'keywords', content: 'FloorInfo' }],
-  },
-};
+    meta: [{ name: 'keywords', content: 'FloorInfo' }]
+  }
+}
 </script>

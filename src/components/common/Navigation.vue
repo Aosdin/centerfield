@@ -7,7 +7,12 @@
     <!-- <a href="javascript:;" @click="hideNavi">메뉴닫기</a> -->
     <ul class="gnb1">
       <li>
-        <router-link to="/" exact><span>HOME</span></router-link>
+        <router-link
+          to="/"
+          exact
+        >
+          <span>HOME</span>
+        </router-link>
       </li>
       <li>
         <router-link to="/floor2"><span>2F</span></router-link>
@@ -46,17 +51,17 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions } from 'vuex'
 
 export default {
   name: 'Header',
   methods: {
     ...mapActions('common', {
-      setNavigation: 'setNavigation',
+      setNavigation: 'setNavigation'
     }),
-    hideNavi() {
-      this.setNavigation(false);
-    },
-  },
-};
+    hideNavi () {
+      this.setNavigation(false)
+    }
+  }
+}
 </script>

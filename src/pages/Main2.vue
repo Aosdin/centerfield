@@ -5,7 +5,10 @@
       <div class="main-sldr">
         <div class="item">
           <div>
-            <img src="../assets/images/main/slide_img01.png" alt="MIRROR &amp; LIGHT" />
+            <img
+              src="../assets/images/main/slide_img01.png"
+              alt="MIRROR &amp; LIGHT"
+            >
           </div>
         </div>
       </div>
@@ -16,8 +19,14 @@
           품격 있고 트렌디한 미각 세계와 프리미엄 라이프스타일 컨텐츠를 The Shops At CENTERFIELD에서 만나보세요.
         </p>
       </section>
-      <section class="urban-sector type2" ref="urban">
-        <div class="item i1 active">
+      <section
+        class="urban-sector type2"
+        ref="urban"
+      >
+        <div
+          class="item i1 active"
+          ref="item1"
+        >
           <div class="inner-item">
             <div class="front-tit">
               <div class="floorinfo">
@@ -38,7 +47,10 @@
             <div class="background-img" />
           </div>
         </div>
-        <div class="item i2 active">
+        <div
+          class="item i2"
+          ref="item2"
+        >
           <div class="inner-item">
             <div class="front-tit">
               <div class="floorinfo">
@@ -59,7 +71,10 @@
             <div class="background-img" />
           </div>
         </div>
-        <div class="item i3 active">
+        <div
+          class="item i3"
+          ref="item3"
+        >
           <div class="inner-item">
             <div class="front-tit">
               <div class="floorinfo">
@@ -78,7 +93,10 @@
             <div class="background-img" />
           </div>
         </div>
-        <div class="item i4 active">
+        <div
+          class="item i4"
+          ref="item4"
+        >
           <div class="inner-item">
             <div class="front-tit">
               <div class="floorinfo">
@@ -100,16 +118,23 @@
       </section>
       <section class="insta-sector">
         <h3>
-          #THESHOPSATCENTERFIELD<br />
+          #THESHOPSATCENTERFIELD<br>
           #더샵스앳센터필드
         </h3>
         <!-- 인스타그램 영역(s) -->
         <div class="img-insta">
-          <img src="../assets/images/main/temp_insta.png" alt="" style="width: 100%" />
+          <img
+            src="../assets/images/main/temp_insta.png"
+            alt=""
+            style="width: 100%"
+          >
         </div>
         <!--// 인스타그램 영역(e) -->
         <div class="more">
-          <a href="#" class="btnmore">더 보기</a>
+          <a
+            href="#"
+            class="btnmore"
+          >더 보기</a>
         </div>
       </section>
     </div>
@@ -117,82 +142,193 @@
 </template>
 
 <script>
-import { gsap, ScrollTrigger, power2 } from 'gsap/all';
-gsap.registerPlugin(ScrollTrigger);
+import { gsap, ScrollTrigger, power2 } from 'gsap/all'
+gsap.registerPlugin(ScrollTrigger)
 
 export default {
   name: 'Main',
   head: {
     title: {
-      inner: 'Main',
+      inner: 'Main'
     },
     // Meta tags
-    meta: [{ name: 'keywords', content: 'Main' }],
+    meta: [{ name: 'keywords', content: 'Main' }]
   },
   methods: {},
-  mounted() {
-    // gsap.to('.urban-sector .item:not(:last-child)', {
-    //   // yPercent: -100,
-    //   // ease: 'none',
-    //   // stagger: 0.5,
+  mounted () {
+    gsap.set('.i2', { y: -250 })
+    gsap.set('.i3', { y: -760 })
+    gsap.set('.i4', { y: -1250 })
+    ScrollTrigger.create({
+      trigger: '.i2',
+      start: 'top ' + this.$refs.item2.getBoundingClientRect().top + 'px',
+      // markers: true,
+      end: 'top top',
+      scrub: true,
+      pin: true
+    })
+    ScrollTrigger.create({
+      trigger: '.i3',
+      start: 'top ' + this.$refs.item2.getBoundingClientRect().top + 'px',
+      markers: true,
+      end: 'top top-=300',
+      scrub: true,
+      pin: true
+    })
+    ScrollTrigger.create({
+      trigger: '.i4',
+      start: 'top ' + this.$refs.item2.getBoundingClientRect().top + 'px',
+      // markers: true,
+      end: 'top top-=300',
+      scrub: true,
+      pin: true
+    })
+    // gsap.timeline({
     //   scrollTrigger: {
-    //     trigger: '.urban-sector ',
-    //     // endTrigger: '.urban-sector ',
-    //     start: 'top top',
-    //     end: 'bottom -100%',
+    //     trigger: '.i3',
+    //     start: 'top ' + this.$refs.item2.getBoundingClientRect().top + 'px',
+    //     // markers: true,
+    //     end: 'top top',
     //     scrub: true,
     //     pin: true
     //   }
     // })
-    // gsap.set('.urban-sector .item', { zIndex: (i, target, targets) => targets.length - i })
-    // gsap.to('.urban-sector', {
+    // gsap.timeline({
     //   scrollTrigger: {
-    //     trigger: '.urban-sector',
+    //     trigger: '.i4',
+    //     start: 'top ' + this.$refs.item2.getBoundingClientRect().top + 'px',
+    //     // markers: true,
+    //     end: 'top top',
     //     scrub: true,
-    //     pin: true,
-    //     start: 'center center',
-    //     end: 'bottom -100%',
-    //     toggleClass: 'active',
-    //     ease: 'power2'
+    //     pin: true
     //   }
     // })
-    //
-    // const HEIGHT = window.innerHeight
-    // const top = this.$refs.urban.getBoundingClientRect().top
-    // const start = 'top ' + top + 'px'
-    // console.log(HEIGHT, start, top)
     // ScrollTrigger.create({
-    //   trigger: '.urban-sector',
-    //   pin: true,
-    //   // markers: true,
-    //   // toggleActions: 'restart none reverse reset',
-    //   start: start,
+    //   trigger: '.urban-sector .item.i2',
+    //   pin: '.urban-sector .item.i2',
+    //   markers: true,
+    //   // toggleClass: 'active',
+    //   start: 'top ' + this.$refs.item2.getBoundingClientRect().top + 'px',
     //   end: 'bottom center'
     // })
-    // gsap.utils.toArray('.urban-sector .item').forEach((panel, i) => {
-    //   let cards = [top, top + 310, top + 310 * 2, top + 310 * 3, top + 310 * 4]
-    //   ScrollTrigger.create({
-    //     trigger: panel,
-    //     start: 'top top',
-    //     // pin: true,
+    // gsap.to('.i2', {
+    //   scrollTrigger: {
+    //     trigger: '.i2',
     //     markers: true,
-    //     end: () => '+=' + cards[i]
-    //     // pinSpacing: true,
-    //     // scrub: true,
-    //   })
+    //     start: 'top ' + this.$refs.item2.getBoundingClientRect().top + 'px',
+    //     end: 'top top',
+    //     pin: true,
+    //     scrub: true
+    //   }
     // })
-    //   gsap.to('.urban-sector .item.i1', {
-    //     scrollTrigger: {
-    //       trigger: '.urban-sector .item.i1',
-    //       // scrub: true,
-    //       markers: true,
-    //       start: start,
-    //       end: 'bottom center',
-    //       ease: 'power2',
-    //       // pin: true,
-    //       toggleClass: 'active'
-    //     }
-    //   })
-  },
-};
+    // gsap.to('.i3', {
+    //   scrollTrigger: {
+    //     trigger: '.i3',
+    //     markers: true,
+    //     start: 'top ' + this.$refs.item3.getBoundingClientRect().top + 'px',
+    //     end: 'top top',
+    //     pin: true,
+    //     scrub: true
+    //   }
+    // })
+    // gsap.to('.i4', {
+    //   scrollTrigger: {
+    //     trigger: '.i4',
+    //     markers: true,
+    //     start: 'top ' + this.$refs.item4.getBoundingClientRect().top + 'px',
+    //     end: 'top top',
+    //     pin: true,
+    //     scrub: true
+    //   }
+    // })
+    // gsap.to('#thirdCircle', {
+    //   x: 100,
+    //   duration: 5,
+    //   scrollTrigger: {
+    //     trigger: '#thirdCircle',
+    //     markers: true,
+    //     start: 'top center',
+    //     end: 'bottom 80px',
+    //     scrub: true
+    //   }
+    // })
+    // console.log(this.$refs.item2.getBoundingClientRect().top)
+    // console.log(this.$refs.item3.getBoundingClientRect().top)
+    // console.log(this.$refs.item4.getBoundingClientRect().top)
+    // gsap.timeline({
+    //   scrollTrigger: {
+    //     y: -340,
+    //     trigger: '.urban-sector .i2',
+    //     pin: '.urban-sector .i2',
+    //     markers: true,
+    //     // toggleClass: 'active',
+    //     start: 'top ' + this.$refs.item2.getBoundingClientRect().top + 'px',
+    //     end: 'bottom center'
+    //   }
+    // })
+    // gsap.timeline({
+    //   scrollTrigger: {
+    //     // y: -140,
+    //     trigger: '.urban-sector .i3',
+    //     pin: '.urban-sector .i3',
+    //     // markers: true,
+    //     // toggleClass: 'active',
+    //     start: 'top ' + this.$refs.item3.getBoundingClientRect().top + 'px',
+    //     end: 'bottom center'
+    //   }
+    // })
+    // gsap.timeline({
+    //   scrollTrigger: {
+    //     // y: -140,
+    //     trigger: '.urban-sector .i4',
+    //     pin: '.urban-sector .i4',
+    //     // markers: true,
+    //     // toggleClass: 'active',
+    //     start: 'top ' + this.$refs.item4.getBoundingClientRect().top + 'px',
+    //     end: 'bottom center'
+    //   }
+    // })
+    // ScrollTrigger.create({
+    //   trigger: '.urban-sector .item.i2',
+    //   pin: '.urban-sector .item.i2',
+    //   markers: true,
+    //   // toggleClass: 'active',
+    //   start: 'top ' + this.$refs.item2.getBoundingClientRect().top + 'px',
+    //   end: 'bottom center'
+    // })
+    // ScrollTrigger.create({
+    //   trigger: '.urban-sector .item.i3',
+    //   pin: '.urban-sector .item.i3',
+    //   // markers: true,
+    //   // toggleClass: 'active',
+    //   start: 'top ' + this.$refs.item3.getBoundingClientRect().top + 'px',
+    //   end: 'bottom center'
+    // })
+    // ScrollTrigger.create({
+    //   trigger: '.urban-sector .item.i4',
+    //   pin: '.urban-sector .item.i4',
+    //   // markers: true,
+    //   // toggleClass: 'active',
+    //   start: 'top ' + this.$refs.item4.getBoundingClientRect().top + 'px',
+    //   end: 'bottom center'
+    // })
+  }
+}
 </script>
+<style>
+/*.i1 {*/
+/*  z-index: 5;*/
+/*}*/
+/*.i2 {*/
+/*  z-index: 4;*/
+/*  margin-top: -250px;*/
+/*}*/
+/*.i3 {*/
+/*  z-index: 3;*/
+/*  margin-top: -500px;*/
+/*}*/
+/*.i4 {*/
+/*  z-index: 2;*/
+/*  margin-top: -750px;*/
+/*}*/
+</style>
