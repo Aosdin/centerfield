@@ -77,7 +77,7 @@
           <h4 class="sectit2">COUPON</h4>
           <ul class="brd-list">
             <li>
-              <a href="/eventDetail">
+              <a href="/couponDetail">
                 <div class="imgthumb"><img src="../assets/images/temp/temp_event.png" alt="" /></div>
                 <div class="brd-wrap">
                   <h5 class="tit">더샵스앳센터필드 오픈기념 쿠폰</h5>
@@ -86,7 +86,7 @@
               </a>
             </li>
             <li>
-              <a href="/eventDetail">
+              <a href="/couponDetail">
                 <div class="imgthumb"><img src="../assets/images/temp/temp_event.png" alt="" /></div>
                 <div class="brd-wrap">
                   <h5 class="tit">더샵스앳센터필드 오픈기념 쿠폰</h5>
@@ -95,7 +95,7 @@
               </a>
             </li>
             <li>
-              <a href="/eventDetail">
+              <a href="/couponDetail">
                 <div class="imgthumb"><img src="../assets/images/temp/temp_event.png" alt="" /></div>
                 <div class="brd-wrap">
                   <h5 class="tit">더샵스앳센터필드 오픈기념 쿠폰</h5>
@@ -104,7 +104,7 @@
               </a>
             </li>
             <li>
-              <a href="/eventDetail">
+              <a href="/couponDetail">
                 <div class="imgthumb"><img src="../assets/images/temp/temp_event.png" alt="" /></div>
                 <div class="brd-wrap">
                   <h5 class="tit">더샵스앳센터필드 오픈기념 쿠폰</h5>
@@ -113,7 +113,7 @@
               </a>
             </li>
             <li>
-              <a href="/eventDetail">
+              <a href="/couponDetail">
                 <div class="imgthumb"><img src="../assets/images/temp/temp_event.png" alt="" /></div>
                 <div class="brd-wrap">
                   <h5 class="tit">더샵스앳센터필드 오픈기념 쿠폰</h5>
@@ -122,7 +122,7 @@
               </a>
             </li>
             <li>
-              <a href="/eventDetail">
+              <a href="/couponDetail">
                 <div class="imgthumb"><img src="../assets/images/temp/temp_event.png" alt="" /></div>
                 <div class="brd-wrap">
                   <h5 class="tit">더샵스앳센터필드 오픈기념 쿠폰</h5>
