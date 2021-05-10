@@ -11,6 +11,7 @@ import Floor1 from '@/pages/Floor1';
 import TenantDetail from '@/pages/TenantDetail';
 import FloorInfo from '@/pages/FloorInfo';
 import ParkingInfo from '@/pages/ParkingInfo';
+import EventCouponList from '@/pages/EventCouponList';
 
 /**
  * Vue router
@@ -80,6 +81,17 @@ const router = new VueRouter({
           path: '/parkingInfo',
           name: 'parkingInfo',
           component: ParkingInfo,
+        },
+      ],
+    },
+    {
+      path: '/eventCouponList',
+      component: FullBase,
+      children: [
+        {
+          path: '/eventCouponList',
+          name: 'eventCouponList',
+          component: EventCouponList,
         },
       ],
     },

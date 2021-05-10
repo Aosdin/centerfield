@@ -23,6 +23,13 @@
   font-weight: 700;
   margin-bottom: 20px;
 }
+.sectit2 {
+  color: $primary;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  padding-left: 20px;
+}
 .imgwrap {
   img {
     width: 100%;
@@ -57,61 +64,6 @@
     }
     &:last-of-type {
       margin-right: 0;
-    }
-  }
-}
-.ulist1 {
-  & > li {
-    border-top: 1px solid $primary;
-    padding-top: 20px;
-    margin-top: 20px;
-    &:first-of-type {
-      padding-top: 0;
-      margin-top: 0;
-      border-top: none;
-    }
-  }
-}
-.ulist2 {
-  & > li {
-    position: relative;
-    padding-left: 16px;
-    font-size: 14px;
-    font-weight: 300;
-    &::before {
-      @include inAfter();
-      background-color: $black;
-      display: block;
-      position: absolute;
-      width: 3px;
-      height: 3px;
-      top: 9px;
-      left: 8px;
-      border-radius: 50%;
-    }
-  }
-}
-.dlist {
-  & > dt {
-    font-weight: 14px;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-  & > dd {
-    position: relative;
-    padding-left: 16px;
-    font-size: 14px;
-    font-weight: 300;
-    &::before {
-      @include inAfter();
-      background-color: $primary;
-      display: block;
-      position: absolute;
-      width: 3px;
-      height: 3px;
-      top: 9px;
-      left: 8px;
-      border-radius: 50%;
     }
   }
 }
@@ -162,16 +114,6 @@
     margin-bottom: 15px;
     img {
       width: 100%;
-    }
-  }
-}
-.tbl1 {
-  border-top: 1px solid $gray;
-  tbody {
-    th,
-    td {
-      border-bottom: 1px solid $gray;
-      padding: 11px 10px;
     }
   }
 }

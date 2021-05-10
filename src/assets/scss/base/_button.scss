@@ -10,3 +10,10 @@
   background-color: $gray;
   border: 1px solid $gray;
 }
+.btn-more {
+  a {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+  }
+}

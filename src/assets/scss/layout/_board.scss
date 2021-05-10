@@ -1,0 +1,113 @@
+.tbl1 {
+  border-top: 1px solid $gray;
+  tbody {
+    th,
+    td {
+      border-bottom: 1px solid $gray;
+      padding: 11px 10px;
+    }
+  }
+}
+
+.ulist1 {
+  & > li {
+    border-top: 1px solid $primary;
+    padding-top: 20px;
+    margin-top: 20px;
+    &:first-of-type {
+      padding-top: 0;
+      margin-top: 0;
+      border-top: none;
+    }
+  }
+}
+.ulist2 {
+  & > li {
+    position: relative;
+    padding-left: 16px;
+    font-size: 14px;
+    font-weight: 300;
+    &::before {
+      @include inAfter();
+      background-color: $black;
+      display: block;
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      top: 9px;
+      left: 8px;
+      border-radius: 50%;
+    }
+  }
+}
+.dlist {
+  & > dt {
+    font-weight: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  & > dd {
+    position: relative;
+    padding-left: 16px;
+    font-size: 14px;
+    font-weight: 300;
+    &::before {
+      @include inAfter();
+      background-color: $primary;
+      display: block;
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      top: 9px;
+      left: 8px;
+      border-radius: 50%;
+    }
+  }
+}
+.listwrap {
+  position: relative;
+  & + .listwrap {
+    margin-top: 50px;
+    padding-top: 50px;
+    &::before {
+      @include inAfter();
+      @include posiCenter('a');
+      background-color: $primary;
+      display: block;
+      width: calc(100% - 30px);
+      height: 1px;
+      top: 0;
+    }
+  }
+}
+.brd-list {
+  & > li {
+    margin-top: 20px;
+    &:first-of-type {
+      margin-top: 0;
+    }
+    a {
+      display: block;
+    }
+    .imgthumb {
+      border-radius: 20px;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+    .brd-wrap {
+      padding: 12px 20px 9px;
+      .tit {
+        font-weight: 700;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+  }
+  & + .btn-more {
+    margin: 50px 20px 0;
+  }
+}
