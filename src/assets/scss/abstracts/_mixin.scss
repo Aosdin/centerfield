@@ -50,3 +50,11 @@
     transform: translateY(-50%);
   }
 }
+
+@mixin mq($screen-width) {
+  @if $screen-width == 'min375' {
+    @media screen and (min-width: 375px) {
+      @content;
+    }
+  }
+}

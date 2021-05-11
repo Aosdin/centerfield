@@ -15,6 +15,7 @@ import ParkingInfo from '@/pages/ParkingInfo';
 import EventCouponList from '@/pages/EventCouponList';
 import EventDetail from '@/pages/EventDetail';
 import CouponDetail from '@/pages/CouponDetail';
+import Faq from '@/pages/Faq';
 
 /**
  * Vue router
@@ -75,6 +76,11 @@ const router = new VueRouter({
           path: '/couponDetail',
           name: 'couponDetail',
           component: CouponDetail,
+        },
+        {
+          path: '/faq',
+          name: 'faq',
+          component: Faq,
         },
       ],
     },

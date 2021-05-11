@@ -104,6 +104,162 @@
     margin: 50px 20px 0;
   }
 }
+.notice-list {
+  border-top: 1px solid $gray;
+  & > dt,
+  & > dd {
+    border-bottom: 1px solid $gray;
+  }
+  & > dt {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    div {
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+  & > dd {
+    & > a {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 11px 10px;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.3;
+      .num {
+        font-size: 10px;
+      }
+      .category {
+        font-size: 10px;
+      }
+    }
+    .cont {
+      border-top: 1px solid $gray;
+      display: none;
+      padding: 20px 10px;
+      font-size: 14px;
+      font-weight: 300;
+      word-break: break-all;
+      p {
+        word-break: break-all;
+      }
+    }
+    &.active {
+      background-color: $gray-light;
+      & > a {
+        font-weight: 700;
+      }
+      .cont {
+        display: block;
+      }
+    }
+  }
+  .num {
+    flex: 0 0 31px;
+    word-break: break-all;
+  }
+  .category {
+    flex: 0 0 63px;
+    margin-left: 5px;
+    word-break: break-all;
+  }
+  .tit {
+    flex: 0 0 calc(100% - 104px);
+    margin-left: 5px;
+    word-break: break-all;
+  }
+}
+.pagenum {
+  position: relative;
+  margin-top: 20px;
+  padding: 0 10px;
+  .btn-control {
+    display: block;
+    width: 34px;
+    height: 34px;
+    overflow: hidden;
+    &:disabled {
+      span {
+        background-color: $gray;
+      }
+    }
+    span {
+      @include ir();
+      @include mgCenter();
+      background-color: $black;
+      display: block;
+      position: relative;
+      width: 24px;
+      height: 24px;
+      &::after {
+        @include inAfter();
+        @include posiCenter('va');
+        width: 8px;
+        height: 15px;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+    &.prev {
+      left: 0;
+      span {
+        &::after {
+          background-image: url('../images/icon/ico_prev.svg');
+        }
+      }
+    }
+    &.next {
+      right: 0;
+      span {
+        &::after {
+          background-image: url('../images/icon/ico_next.svg');
+        }
+      }
+    }
+  }
+  display: flex;
+  justify-content: center;
+  li {
+    position: relative;
+    margin-right: 3px;
+    padding-left: 3px;
+    a {
+      display: block;
+      width: 34px;
+      height: 34px;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 34px;
+      text-align: center;
+    }
+    &::before {
+      @include posiCenter('v');
+      @include inAfter();
+      background-color: $gray;
+      width: 3px;
+      height: 3px;
+      left: -1px;
+      border-radius: 50%;
+    }
+    &:first-of-type {
+      padding-left: 0;
+      &::before {
+        display: none;
+      }
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+    &.current {
+      a {
+        color: $primary;
+        font-weight: 700;
+      }
+    }
+  }
+}
 .detail-view {
   .tit {
     padding: 0 20px;
@@ -155,6 +311,74 @@
       }
       .list-tit {
         font-weight: 700;
+      }
+    }
+  }
+}
+.tab-menu {
+  display: flex;
+  justify-content: space-between;
+  & > li {
+    & > a {
+      color: $gray;
+      display: block;
+      padding-bottom: 20px;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.1;
+      span {
+        position: relative;
+        display: inline-block;
+      }
+    }
+    &.active {
+      & > a {
+        color: $primary;
+        span {
+          &::after {
+            background-color: $primary;
+            @include inAfter();
+            display: block;
+            width: 100%;
+            height: 1px;
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  &.tabintab {
+    border-top: 1px solid $primary;
+    justify-content: center;
+    & > li {
+      position: relative;
+      padding-left: 8px;
+      margin-right: 8px;
+      @include mq(min375) {
+        padding-left: 15px;
+        margin-right: 15px;
+      }
+      & > a {
+        padding: 20px 0;
+        font-size: 1rem;
+      }
+      &::before {
+        background-color: $gray;
+        @include inAfter();
+        @include posiCenter('v');
+        width: 3px;
+        height: 3px;
+        left: -1px;
+        border-radius: 50%;
+      }
+      &:first-of-type {
+        padding-left: 0;
+        &::before {
+          display: none;
+        }
+      }
+      &:last-of-type {
+        margin-right: 0;
       }
     }
   }
