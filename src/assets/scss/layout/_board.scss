@@ -89,13 +89,6 @@
     a {
       display: block;
     }
-    .imgthumb {
-      border-radius: 20px;
-      overflow: hidden;
-      img {
-        width: 100%;
-      }
-    }
     .brd-wrap {
       padding: 12px 20px 9px;
       .tit {
@@ -109,5 +102,60 @@
   }
   & + .btn-more {
     margin: 50px 20px 0;
+  }
+}
+.detail-view {
+  .tit {
+    padding: 0 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  .cont {
+    margin-bottom: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  .guide {
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.3;
+    strong {
+      font-weight: 700;
+    }
+  }
+  & + .btn-more {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 50px;
+  }
+  .imgthumb {
+    margin-bottom: 20px;
+  }
+  .detail-text {
+    padding-left: 20px;
+    padding-right: 20px;
+    .tit {
+      padding: 0;
+    }
+    .text {
+      margin-bottom: 20px;
+      font-size: 14px;
+      font-weight: 300;
+    }
+    .guide-list {
+      border-top: 1px solid $primary;
+      & > li {
+        margin-top: 20px;
+        font-size: 14px;
+        font-weight: 300;
+      }
+      .list-tit {
+        font-weight: 700;
+      }
+    }
   }
 }
