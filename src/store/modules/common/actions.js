@@ -21,7 +21,6 @@ export default {
       })
   },
   setNavigation ({ commit }, payload) {
-    console.log(payload)
     commit(t.SET_NAVIGATION, payload)
   }
 }

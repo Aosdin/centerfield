@@ -8,23 +8,23 @@
     <ul class="gnb1">
       <li>
         <router-link
-          to="/"
+          :to="{ name: 'main' }"
           exact
         >
           <span>HOME</span>
         </router-link>
       </li>
       <li>
-        <router-link to="/floor2"><span>2F</span></router-link>
+        <router-link :to="{ name: 'floor1' }"><span>2F</span></router-link>
       </li>
       <li>
-        <router-link to="/floor1"><span>1F</span></router-link>
+        <router-link :to="{ name: 'floor1' }"><span>1F</span></router-link>
       </li>
       <li>
-        <router-link to="/floorB1"><span>B1</span></router-link>
+        <router-link :to="{ name: 'floor1' }"><span>B1</span></router-link>
       </li>
       <li>
-        <router-link to="/floorB2"><span>B2</span></router-link>
+        <router-link :to="{ name: 'floor1' }"><span>B2</span></router-link>
       </li>
     </ul>
     <ul class="gnb2">
@@ -32,13 +32,13 @@
         <a href="#"><span>ABOUT</span></a>
       </li>
       <li>
-        <a href="#"><span>FLOOR MAP</span></a>
+        <router-link :to="{ name: 'floorInfo' }"><span>FLOOR MAP</span></router-link>
       </li>
       <li>
-        <a href="#"><span>PARKING</span></a>
+        <router-link :to="{ name: 'parkingInfo' }"><span>PARKING</span></router-link>
       </li>
       <li>
-        <a href="#"><span>EVENT</span></a>
+        <router-link :to="{ name: 'eventCouponList' }"><span>EVENT</span></router-link>
       </li>
       <li>
         <a href="#"><span>NOTICE</span></a>

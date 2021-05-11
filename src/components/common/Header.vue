@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <h1>
-      <a href="#"><span>THE SHOPS AT CENTERFIELD</span></a>
+      <router-link :to="{ name: 'main' }"><span>THE SHOPS AT CENTERFIELD</span></router-link>
     </h1>
     <a
       href="javascript:;"

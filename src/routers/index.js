@@ -1,24 +1,25 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import store from '@/store'
 
-import FullBase from '@/container/FullBase';
+import FullBase from '@/container/FullBase'
 // modules
 
 // page
-import Main from '@/pages/Main';
-import Main2 from '@/pages/Main2';
-import Floor1 from '@/pages/Floor1';
-import TenantDetail from '@/pages/TenantDetail';
-import FloorInfo from '@/pages/FloorInfo';
-import ParkingInfo from '@/pages/ParkingInfo';
-import EventCouponList from '@/pages/EventCouponList';
+import Main from '@/pages/Main'
+import Main2 from '@/pages/Main2'
+import Floor1 from '@/pages/Floor1'
+import TenantDetail from '@/pages/TenantDetail'
+import FloorInfo from '@/pages/FloorInfo'
+import ParkingInfo from '@/pages/ParkingInfo'
+import EventCouponList from '@/pages/EventCouponList'
 
 /**
  * Vue router
  * https://router.vuejs.org
  * Must call `Vue.use` before creating new instance
  */
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const router = new VueRouter({
   linkActiveClass: 'active',
@@ -31,79 +32,57 @@ const router = new VueRouter({
         {
           path: '/',
           name: 'main',
-          component: Main,
+          component: Main
         },
         {
           path: '/main2',
           name: 'main',
-          component: Main2,
+          component: Main2
         },
-      ],
-    },
-    {
-      path: '/floor1',
-      component: FullBase,
-      children: [
         {
           path: '/floor1',
           name: 'floor1',
-          component: Floor1,
+          component: Floor1
         },
-      ],
-    },
-    {
-      path: '/tenantDetail',
-      component: FullBase,
-      children: [
         {
           path: '/tenantDetail',
           name: 'tenantDetail',
-          component: TenantDetail,
+          component: TenantDetail
         },
-      ],
-    },
-    {
-      path: '/floorInfo',
-      component: FullBase,
-      children: [
         {
           path: '/floorInfo',
           name: 'floorInfo',
-          component: FloorInfo,
+          component: FloorInfo
         },
-      ],
-    },
-    {
-      path: '/parkingInfo',
-      component: FullBase,
-      children: [
         {
           path: '/parkingInfo',
           name: 'parkingInfo',
-          component: ParkingInfo,
+          component: ParkingInfo
         },
-      ],
-    },
-    {
-      path: '/eventCouponList',
-      component: FullBase,
-      children: [
         {
           path: '/eventCouponList',
           name: 'eventCouponList',
-          component: EventCouponList,
-        },
-      ],
-    },
+          component: EventCouponList
+        }
+      ]
+    }
   ],
-});
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
+  }
+})
 
 router.beforeEach((to, from, next) => {
   // TODO: Checking authentications
-  next();
-});
+  store.dispatch('common/setNavigation', false)
+  next()
+})
 router.afterEach((to, from, next) => {
   // TODO: Checking authentications
-});
+})
 
-export default router;
+export default router

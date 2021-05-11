@@ -31,6 +31,7 @@
         <div
           class="item i1 active"
           ref="item1"
+          id="i1"
         >
           <div class="inner-item">
             <div class="front-tit">
@@ -55,6 +56,7 @@
         <div
           class="item i2"
           ref="item2"
+          id="i2"
         >
           <div class="inner-item">
             <div class="front-tit">
@@ -79,6 +81,7 @@
         <div
           class="item i3"
           ref="item3"
+          id="i3"
         >
           <div class="inner-item">
             <div class="front-tit">
@@ -101,6 +104,7 @@
         <div
           class="item i4"
           ref="item4"
+          id="i4"
         >
           <div class="inner-item">
             <div class="front-tit">
@@ -147,7 +151,7 @@
 </template>
 
 <script>
-import { gsap, ScrollTrigger, power2 } from 'gsap/all'
+import { gsap, ScrollTrigger } from 'gsap/all'
 gsap.registerPlugin(ScrollTrigger)
 
 export default {
@@ -159,44 +163,30 @@ export default {
     // Meta tags
     meta: [{ name: 'keywords', content: 'Main' }]
   },
+  data: () => ({
+    ScrollTrigger01: null,
+    ScrollTrigger02: null,
+    ScrollTrigger03: null
+  }),
   computed: {
-    vh () {
-      return 2 * innerHeight / 100
-    }
   },
   methods: {
-    onUpdate () {
-      console.log(this)
-      // gsap.to('.i1', { y: -this.$refs.info.getBoundingClientRect().top, ease: 'none', overwrite: true })
-      // gsap.to('.i2', { y: -this.$refs.item1.getBoundingClientRect().top, ease: 'none', overwrite: true })
-      // gsap.to('.i3', { y: -this.$refs.item2.getBoundingClientRect().top, ease: 'none', overwrite: true })
-      // gsap.to('.i4', { y: -this.$refs.item3.getBoundingClientRect().top, ease: 'none', overwrite: true })
-    },
     goToSection (t, b) {
-      const o = document.getElementsByClassName(t)
-      if (b === 'onEnter' || b === 'onEnterBack') o[0].classList.remove('active')
-      else o[0].classList.add('active')
-    },
-    handleScroll () {
-      // console.log(Math.max(
-      //   document.body.scrollTop, document.documentElement.scrollTop,
-      //   document.body.offsetTop, document.documentElement.scrollTop,
-      //   document.body.clientTop, document.documentElement.scrollTop
-      // ), innerHeight, innerWidth, this.$refs.item1.offsetTop)
+      const o = document.getElementById(t)
+      if (b === 'onEnter' || b === 'onEnterBack') o.classList.remove('active')
+      else o.classList.add('active')
     }
   },
   mounted () {
-    const urban = document.getElementById('urban')
-    const urbanTop = urban.offsetTop || 0
-    console.log('=-==>', urban.offsetTop)
-    console.log('')
-    window.addEventListener('scroll', this.handleScroll)
-    console.log(innerHeight, this.$refs.urban.getBoundingClientRect().top)
     this.$nextTick(_ => {
-      ScrollTrigger.create({
-        trigger: '.i2',
+      const urban = document.getElementById('urban') || this.$refs.urban
+      const urbanTop = urban.getBoundingClientRect().y || 0
+      console.log(urban)
+      console.log(urbanTop, window.screenTop, innerHeight, innerWidth, window.screenTop)
+      this.ScrollTrigger01 = ScrollTrigger.create({
+        trigger: '#i2',
         start: 'top ' + (innerHeight - 510) + 'px',
-        markers: true,
+        // markers: true,
         end: 'top top+=' + (innerHeight - 510 + 10 - urbanTop),
         scrub: true,
         pin: true,
@@ -205,8 +195,8 @@ export default {
         onEnterBack: () => this.goToSection('i2', 'onEnterBack'),
         onLeave: () => this.goToSection('i2', 'onLeave')
       })
-      ScrollTrigger.create({
-        trigger: '.i3',
+      this.ScrollTrigger02 = ScrollTrigger.create({
+        trigger: '#i3',
         start: 'top ' + (innerHeight - 510) + 'px',
         // markers: true,
         end: 'top top+=' + (innerHeight - 510 - 240 - urbanTop),
@@ -215,10 +205,10 @@ export default {
         overwrite: true,
         onEnter: () => this.goToSection('i3', 'onEnter'),
         onEnterBack: () => this.goToSection('i3', 'onEnterBack'),
-        onLeave: () => this.goToSection('i3', 'onLeave'),
+        onLeave: () => this.goToSection('i3', 'onLeave')
       })
-      ScrollTrigger.create({
-        trigger: '.i4',
+      this.ScrollTrigger03 = ScrollTrigger.create({
+        trigger: '#i4',
         start: 'top ' + (innerHeight - 510) + 'px',
         // markers: true
         end: 'top top+=' + (innerHeight - 510 - 490 - urbanTop),
@@ -230,209 +220,12 @@ export default {
         onLeave: () => this.goToSection('i4', 'onLeave')
       })
     })
-    // gsap.timeline({
-    //   scrollTrigger: {
-    //     animation: '.urban-sector',
-    //     trigger: '.urban-sector',
-    //     start: 'top ' + this.$refs.urban.getBoundingClientRect().top + 'px',
-    //     markers: true,
-    //     end: 'top top',
-    //     scrub: true,
-    //     pin: true,
-    //     toggleClass: 'active',
-    //     onUpdate: () => this.onUpdate()
-    //   }
-    // })
-    //   .to('.i1', { y: -innerHeight, ease: 'none' })
-    //   .to('.i2', { y: -innerHeight, ease: 'none' })
-    //   .to('.i3', { y: -innerHeight, ease: 'none' })
-    //   .to('.i4', { y: -innerHeight, ease: 'none' })
-    // gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: '.i1',
-    //     start: 'top ' + this.$refs.item1.getBoundingClientRect().top + 'px',
-    //     markers: true,
-    //     end: 'top top',
-    //     scrub: true,
-    //     pin: true
-    //   }
-    // })
-    // gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: '.i2',
-    //     start: 'top ' + this.$refs.item2.getBoundingClientRect().top + 'px',
-    //     // markers: true,
-    //     end: 'top top',
-    //     scrub: true,
-    //     pin: true
-    //   }
-    // })
-    // gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: '.i3',
-    //     start: 'top ' + this.$refs.item3.getBoundingClientRect().top + 'px',
-    //     // markers: true,
-    //     end: 'top top',
-    //     scrub: true,
-    //     pin: true
-    //   }
-    // })
-    // gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: '.i4',
-    //     start: 'top ' + this.$refs.item4.getBoundingClientRect().top + 'px',
-    //     // markers: true,
-    //     end: 'top top',
-    //     scrub: true,
-    //     pin: true
-    //   }
-    // })
-    // const depth = layer.dataset.depth;
-    // const movement = -(layer.offsetHeight * depth)
-    // tl.to(layer, {y: movement, ease: "none"}, 0)
-    // ScrollTrigger.create({
-    //   snap: 1 / 4 // snap whole page to the closest section!
-    // })
-    //   .to('.i1', {
-    //   scrollTrigger: {
-    //     trigger: '.i1',
-    //     start: 'top ' + this.$refs.item1.getBoundingClientRect().top + 'px',
-    //     end: 'top top',
-    //     pin: true,
-    //     scrub: true
-    //   }
-    // }).to('.i2', {
-    //   scrollTrigger: {
-    //     trigger: '.i2',
-    //     start: 'top ' + this.$refs.item2.getBoundingClientRect().top + 'px',
-    //     end: 'top top',
-    //     pin: true,
-    //     scrub: true
-    //   }
-    // }).to('.i3', {
-    //   scrollTrigger: {
-    //     trigger: '.i3',
-    //     start: 'top ' + this.$refs.item3.getBoundingClientRect().top + 'px',
-    //     end: 'top top',
-    //     pin: true,
-    //     scrub: true
-    //   }
-    // }).to('.i4', {
-    //   scrollTrigger: {
-    //     trigger: '.i4',
-    //     start: 'top ' + this.$refs.item4.getBoundingClientRect().top + 'px',
-    //     end: 'top top',
-    //     pin: true,
-    //     scrub: true
-    //   }
-    // })
-    // .to('.i1', { yPercent: -100 }, 0)
-    // .to('.i1', { y: -innerHeight })
-    // .to('.i2', { y: -innerHeight })
-    // .to('.i3', { y: -innerHeight })
-    // .to('.i4', { y: -innerHeight })
-    // gsap.to('.i1', {
-    //   scrollTrigger: {
-    //     trigger: '.urban-sector',
-    //     markers: true,
-    //     start: 'top ' + this.$refs.item1.getBoundingClientRect().top + 'px',
-    //     end: 'top top',
-    //     pin: true,
-    //     scrub: true
-    //   }
-    // })
-    // gsap.to('.i2', {
-    //   scrollTrigger: {
-    //     trigger: '.i1',
-    //     markers: true,
-    //     start: 'top ' + this.$refs.item2.getBoundingClientRect().top + 'px',
-    //     end: 'top top',
-    //     pin: true,
-    //     scrub: true
-    //   }
-    // })
-    // gsap.to('.i3', {
-    //   scrollTrigger: {
-    //     trigger: '.i2',
-    //     markers: true,
-    //     start: 'top ' + this.$refs.item3.getBoundingClientRect().top + 'px',
-    //     end: 'top top',
-    //     pin: true,
-    //     scrub: true
-    //   }
-    // })
-    // gsap.to('.i4', {
-    //   scrollTrigger: {
-    //     trigger: '.i3',
-    //     markers: true,
-    //     start: 'top ' + this.$refs.item4.getBoundingClientRect().top + 'px',
-    //     end: 'top top',
-    //     pin: true,
-    //     scrub: true
-    //   }
-    // })
-    // gsap.to('.urban-sector .item:not(:last-child)', {
-    //   // yPercent: -100,
-    //   // ease: 'none',
-    //   // stagger: 0.5,
-    //   scrollTrigger: {
-    //     trigger: '.urban-sector ',
-    //     // endTrigger: '.urban-sector ',
-    //     start: 'top top',
-    //     end: 'bottom -100%',
-    //     scrub: true,
-    //     pin: true
-    //   }
-    // })
-    // gsap.set('.urban-sector .item', { zIndex: (i, target, targets) => targets.length - i })
-    // gsap.to('.urban-sector', {
-    //   scrollTrigger: {
-    //     trigger: '.urban-sector',
-    //     scrub: true,
-    //     pin: true,
-    //     start: 'center center',
-    //     end: 'bottom -100%',
-    //     toggleClass: 'active',
-    //     ease: 'power2'
-    //   }
-    // })
-    //
-    // const HEIGHT = window.innerHeight
-    // const top = this.$refs.urban.getBoundingClientRect().top
-    // const start = 'top ' + top + 'px'
-    // console.log(HEIGHT, start, top)
-    // ScrollTrigger.create({
-    //   trigger: '.urban-sector',
-    //   pin: true,
-    //   // markers: true,
-    //   // toggleActions: 'restart none reverse reset',
-    //   start: start,
-    //   end: 'bottom center'
-    // })
-    // gsap.utils.toArray('.urban-sector .item').forEach((panel, i) => {
-    //   let cards = [top, top + 310, top + 310 * 2, top + 310 * 3, top + 310 * 4]
-    //   ScrollTrigger.create({
-    //     trigger: panel,
-    //     start: 'top top',
-    //     // pin: true,
-    //     markers: true,
-    //     end: () => '+=' + cards[i]
-    //     // pinSpacing: true,
-    //     // scrub: true,
-    //   })
-    // })
-    // gsap.to('.urban-sector .item.i1', {
-    //   scrollTrigger: {
-    //     trigger: '.urban-sector',
-    //     scrub: true,
-    //     markers: true,
-    //     start: 'top center',
-    //     end: 'bottom center',
-    //     ease: 'power2',
-    //     // pin: true,
-    //     toggleClass: 'active'
-    //   }
-    // })
+  },
+  destroyed () {
+    console.log(ScrollTrigger.getAll())
+    ScrollTrigger.getAll().map(s => {
+      s.kill(true)
+    })
   }
 }
 </script>
