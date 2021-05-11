@@ -169,6 +169,9 @@ export default {
     ScrollTrigger03: null
   }),
   computed: {
+    vtop () {
+      return 106.6667 * innerWidth / 100
+    }
   },
   methods: {
     goToSection (t, b) {
@@ -181,13 +184,14 @@ export default {
     this.$nextTick(_ => {
       const urban = document.getElementById('urban') || this.$refs.urban
       const urbanTop = urban.getBoundingClientRect().y || 0
+      console.log(this.vtop)
       console.log(urban)
       console.log(urbanTop, window.screenTop, innerHeight, innerWidth, window.screenTop)
       this.ScrollTrigger01 = ScrollTrigger.create({
         trigger: '#i2',
         start: 'top ' + (innerHeight - 510) + 'px',
         // markers: true,
-        end: 'top top+=' + (innerHeight - 510 + 10 - urbanTop),
+        end: 'top top+=' + (innerHeight - this.vtop - 360),
         scrub: true,
         pin: true,
         overwrite: true,
@@ -199,7 +203,7 @@ export default {
         trigger: '#i3',
         start: 'top ' + (innerHeight - 510) + 'px',
         // markers: true,
-        end: 'top top+=' + (innerHeight - 510 - 240 - urbanTop),
+        end: 'top top+=' + (innerHeight - this.vtop - 610),
         scrub: true,
         pin: true,
         overwrite: true,
@@ -211,7 +215,7 @@ export default {
         trigger: '#i4',
         start: 'top ' + (innerHeight - 510) + 'px',
         // markers: true
-        end: 'top top+=' + (innerHeight - 510 - 490 - urbanTop),
+        end: 'top top+=' + (innerHeight - this.vtop - 860),
         scrub: true,
         pin: true,
         overwrite: true,
