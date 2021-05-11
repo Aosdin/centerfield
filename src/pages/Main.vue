@@ -197,7 +197,7 @@ export default {
         trigger: '.i2',
         start: 'top ' + (innerHeight - 510) + 'px',
         markers: true,
-        end: 'top top+=' + (innerHeight - 510 - urbanTop),
+        end: 'top top+=' + (innerHeight - 510 + 10 - urbanTop),
         scrub: true,
         pin: true,
         overwrite: true,
@@ -209,7 +209,7 @@ export default {
         trigger: '.i3',
         start: 'top ' + (innerHeight - 510) + 'px',
         // markers: true,
-        end: 'top top+=' + (innerHeight - 510 - 260 - urbanTop),
+        end: 'top top+=' + (innerHeight - 510 - 240 - urbanTop),
         scrub: true,
         pin: true,
         overwrite: true,
@@ -221,7 +221,7 @@ export default {
         trigger: '.i4',
         start: 'top ' + (innerHeight - 510) + 'px',
         // markers: true
-        end: 'top top+=' + (innerHeight - 510 - 520 - urbanTop),
+        end: 'top top+=' + (innerHeight - 510 - 490 - urbanTop),
         scrub: true,
         pin: true,
         overwrite: true,
@@ -438,6 +438,6 @@ export default {
 </script>
 <style scoped>
  .urban-sector {
-   height: 160vh;
+   height: 1260px;
  }
 </style>
