@@ -173,21 +173,16 @@ export default {
       // gsap.to('.i4', { y: -this.$refs.item3.getBoundingClientRect().top, ease: 'none', overwrite: true })
     },
     goToSection (t, b) {
-
+      const o = document.getElementsByClassName(t)
+      if (b === 'onEnter' || b === 'onEnterBack') o[0].classList.remove('active')
+      else o[0].classList.add('active')
     },
     handleScroll () {
-      console.log(Math.max(
-        document.body.scrollTop, document.documentElement.scrollTop,
-        document.body.offsetTop, document.documentElement.scrollTop,
-        document.body.clientTop, document.documentElement.scrollTop
-      ), innerHeight, innerWidth, this.$refs.item1.offsetTop)
-    },
-    urban () {
-      return Math.max(
-        document.body.scrollTop, document.documentElement.scrollTop,
-        document.body.offsetTop, document.documentElement.scrollTop,
-        document.body.clientTop, document.documentElement.scrollTop
-      )
+      // console.log(Math.max(
+      //   document.body.scrollTop, document.documentElement.scrollTop,
+      //   document.body.offsetTop, document.documentElement.scrollTop,
+      //   document.body.clientTop, document.documentElement.scrollTop
+      // ), innerHeight, innerWidth, this.$refs.item1.offsetTop)
     }
   },
   mounted () {
@@ -202,34 +197,37 @@ export default {
         trigger: '.i2',
         start: 'top ' + (innerHeight - 510) + 'px',
         markers: true,
-        end: 'top ' + -urbanTop + 'px',
+        end: 'top top+=' + (innerHeight - 510 - urbanTop),
         scrub: true,
         pin: true,
         overwrite: true,
-        onEnter: () => this.goToSection('.i2', true),
-        onEnterBack: () => this.goToSection('.i2', true)
+        onEnter: () => this.goToSection('i2', 'onEnter'),
+        onEnterBack: () => this.goToSection('i2', 'onEnterBack'),
+        onLeave: () => this.goToSection('i2', 'onLeave')
       })
       ScrollTrigger.create({
         trigger: '.i3',
         start: 'top ' + (innerHeight - 510) + 'px',
         // markers: true,
-        end: 'top ' + -(urbanTop - 30) + 'px',
+        end: 'top top+=' + (innerHeight - 510 - 260 - urbanTop),
         scrub: true,
         pin: true,
         overwrite: true,
-        onEnter: () => this.goToSection('.i3', true),
-        onEnterBack: () => this.goToSection('.i3', true)
+        onEnter: () => this.goToSection('i3', 'onEnter'),
+        onEnterBack: () => this.goToSection('i3', 'onEnterBack'),
+        onLeave: () => this.goToSection('i3', 'onLeave'),
       })
       ScrollTrigger.create({
         trigger: '.i4',
         start: 'top ' + (innerHeight - 510) + 'px',
         // markers: true
-        end: 'top ' + -(urbanTop + 900) + 'px',
+        end: 'top top+=' + (innerHeight - 510 - 520 - urbanTop),
         scrub: true,
         pin: true,
         overwrite: true,
-        onEnter: () => this.goToSection('.i4', true),
-        onEnterBack: () => this.goToSection('.i4', true)
+        onEnter: () => this.goToSection('i4', 'onEnter'),
+        onEnterBack: () => this.goToSection('i4', 'onEnterBack'),
+        onLeave: () => this.goToSection('i4', 'onLeave')
       })
     })
     // gsap.timeline({
@@ -440,6 +438,6 @@ export default {
 </script>
 <style scoped>
  .urban-sector {
-   height: 200vh;
+   height: 160vh;
  }
 </style>
