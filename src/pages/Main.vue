@@ -32,6 +32,7 @@
           class="item i1 active"
           ref="item1"
           id="i1"
+          @click="goFloor"
         >
           <div class="inner-item">
             <div class="front-tit">
@@ -57,6 +58,7 @@
           class="item i2"
           ref="item2"
           id="i2"
+          @click="goFloor"
         >
           <div class="inner-item">
             <div class="front-tit">
@@ -82,6 +84,7 @@
           class="item i3"
           ref="item3"
           id="i3"
+          @click="goFloor"
         >
           <div class="inner-item">
             <div class="front-tit">
@@ -178,6 +181,9 @@ export default {
       const o = document.getElementById(t)
       if (b === 'onEnter' || b === 'onEnterBack') o.classList.remove('active')
       else o.classList.add('active')
+    },
+    goFloor () {
+      this.$router.push({ name: 'floor1' })
     }
   },
   mounted () {
