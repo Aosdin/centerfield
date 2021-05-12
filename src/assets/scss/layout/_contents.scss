@@ -30,6 +30,12 @@
   margin-bottom: 18px;
   padding-left: 20px;
 }
+.sectit3 {
+  color: $primary;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
 .imgwrap {
   img {
     width: 100%;
@@ -125,4 +131,9 @@
       width: 100%;
     }
   }
+}
+.textbox {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 300;
 }

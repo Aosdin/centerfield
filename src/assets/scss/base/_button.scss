@@ -1,9 +1,19 @@
 .btn1 {
   display: block;
   width: 100%;
-  padding: 6px 5px 8px;
+  padding: 7px 5px 9px;
   font-weight: 700;
   text-align: center;
+}
+.btg-primary {
+  color: $white;
+  background-color: $primary;
+  border: 1px solid $primary;
+}
+.btg-black {
+  color: $white;
+  background-color: $black;
+  border: 1px solid $black;
 }
 .btg-gray {
   color: $white;

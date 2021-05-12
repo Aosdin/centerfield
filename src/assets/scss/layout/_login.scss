@@ -1,0 +1,63 @@
+.logbtn-wrap {
+  .btn1 {
+    margin-bottom: 20px;
+  }
+}
+.loginbox {
+  label {
+    @include blind;
+  }
+  & + .loginbox {
+    border-top: 1px solid $primary;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+  .inputbox {
+    & + .inputbox,
+    & + .phonebox {
+      margin-top: 20px;
+    }
+  }
+  .btn1,
+  .ulist2 {
+    margin-top: 20px;
+  }
+}
+.login-menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  & > li {
+    position: relative;
+    flex: 0 0 33%;
+    &::before {
+      @include inAfter();
+      background-color: $gray;
+      position: absolute;
+      display: block;
+      width: 1px;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    &:first-of-type {
+      &::before {
+        display: none;
+      }
+    }
+    a {
+      display: block;
+      font-size: 14px;
+      text-align: center;
+    }
+    .ico {
+      height: 44px;
+      margin-bottom: 10px;
+      padding-top: 10px;
+      overflow: hidden;
+      img {
+        height: 25px;
+      }
+    }
+  }
+}

@@ -17,6 +17,8 @@ import EventDetail from '@/pages/EventDetail';
 import CouponDetail from '@/pages/CouponDetail';
 import Notice from '@/pages/Notice';
 import Faq from '@/pages/Faq';
+import Login from '@/pages/Login';
+import Login2 from '@/pages/Login2';
 
 /**
  * Vue router
@@ -87,6 +89,16 @@ const router = new VueRouter({
           path: '/faq',
           name: 'faq',
           component: Faq,
+        },
+        {
+          path: '/login',
+          name: 'login',
+          component: Login,
+        },
+        {
+          path: '/login2',
+          name: 'login2',
+          component: Login2,
         },
       ],
     },
