@@ -128,10 +128,9 @@
       font-size: 14px;
       font-weight: 300;
       line-height: 1.3;
-      .num {
-        font-size: 10px;
-      }
-      .category {
+      .num,
+      .category,
+      .date {
         font-size: 10px;
       }
     }
@@ -170,11 +169,16 @@
     margin-left: 5px;
     word-break: break-all;
   }
+  .date {
+    flex: 0 0 63px;
+    text-align: right;
+  }
 }
-.pagenum {
-  position: relative;
+.page-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
-  padding: 0 10px;
   .btn-control {
     display: block;
     width: 34px;
@@ -219,43 +223,47 @@
       }
     }
   }
-  display: flex;
-  justify-content: center;
-  li {
+  .pagenum {
     position: relative;
-    margin-right: 3px;
-    padding-left: 3px;
-    a {
-      display: block;
-      width: 34px;
-      height: 34px;
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 34px;
-      text-align: center;
-    }
-    &::before {
-      @include posiCenter('v');
-      @include inAfter();
-      background-color: $gray;
-      width: 3px;
-      height: 3px;
-      left: -1px;
-      border-radius: 50%;
-    }
-    &:first-of-type {
-      padding-left: 0;
-      &::before {
-        display: none;
-      }
-    }
-    &:last-of-type {
-      margin-right: 0;
-    }
-    &.current {
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    li {
+      position: relative;
+      margin-right: 3px;
+      padding-left: 3px;
       a {
-        color: $primary;
-        font-weight: 700;
+        display: block;
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 34px;
+        text-align: center;
+      }
+      &::before {
+        @include posiCenter('v');
+        @include inAfter();
+        background-color: $gray;
+        width: 3px;
+        height: 3px;
+        left: -1px;
+        border-radius: 50%;
+      }
+      &:first-of-type {
+        padding-left: 0;
+        &::before {
+          display: none;
+        }
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+      &.current {
+        a {
+          color: $primary;
+          font-weight: 700;
+        }
       }
     }
   }

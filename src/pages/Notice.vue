@@ -17,25 +17,11 @@
       <div class="inner2">
         <!-- 탭 목록(s) -->
         <ul class="tab-menu" role="tablist">
-          <li role="tab">
+          <li class="active" role="tab">
             <a href="#"><span>공지사항</span></a>
           </li>
-          <li class="active" role="tab">
+          <li role="tab">
             <a href="#"><span>자주하는질문</span></a>
-          </li>
-        </ul>
-        <ul class="tab-menu tabintab" role="tablist">
-          <li class="active" role="tab">
-            <a href="#"><span>전체</span></a>
-          </li>
-          <li role="tab">
-            <a href="#"><span>회원가입</span></a>
-          </li>
-          <li role="tab">
-            <a href="#"><span>시설안내</span></a>
-          </li>
-          <li role="tab">
-            <a href="#"><span>주차/교통</span></a>
           </li>
         </ul>
         <!--// 탭 목록(e) -->
@@ -44,27 +30,14 @@
           <dl class="notice-list">
             <dt>
               <div class="num">번호</div>
-              <div class="category">카테고리</div>
               <div class="tit">내용</div>
+              <div class="date">날짜</div>
             </dt>
             <dd>
               <a href="#" role="button">
-                <div class="num">13</div>
-                <div class="category">회원가입</div>
-                <div class="tit">포인트 적립 내역은 어디서 확인 할 수 있나요?</div>
-              </a>
-              <div class="cont">
-                <p>
-                  상세내용<br />
-                  상세내용
-                </p>
-              </div>
-            </dd>
-            <dd>
-              <a href="#" role="button">
-                <div class="num">12</div>
-                <div class="category">회원가입</div>
-                <div class="tit">스타필드 멤버십 선정기준 및 혜택은 무엇인가요?</div>
+                <div class="num">공지</div>
+                <div class="tit">더샵스앳센터필드 멤버십 선정기준 및 혜택 안내</div>
+                <div class="date">2021.06.01</div>
               </a>
               <div class="cont">
                 <p>
@@ -75,9 +48,9 @@
             </dd>
             <dd class="active">
               <a href="#" role="button">
-                <div class="num">11</div>
-                <div class="category">회원가입</div>
-                <div class="tit">신세계 포인트는 모든 매장에서 적립 및 사용이 가능한가요?</div>
+                <div class="num">공지</div>
+                <div class="tit">더샵스앳센터필드 대관 및 촬영 문의 안내</div>
+                <div class="date">2021.06.01</div>
               </a>
               <div class="cont">
                 <p>
@@ -100,9 +73,22 @@
             </dd>
             <dd>
               <a href="#" role="button">
+                <div class="num">11</div>
+                <div class="tit">세계포인트 서버 점검 안내</div>
+                <div class="date">2021.06.01</div>
+              </a>
+              <div class="cont">
+                <p>
+                  상세내용<br />
+                  상세내용
+                </p>
+              </div>
+            </dd>
+            <dd>
+              <a href="#" role="button">
                 <div class="num">10</div>
-                <div class="category">회원가입</div>
-                <div class="tit">신세계 포인트 회원 가입은 어떻게 하나요?</div>
+                <div class="tit">임시 단축영업 및 휴점 안내</div>
+                <div class="date">2021.06.01</div>
               </a>
               <div class="cont">
                 <p>
@@ -114,8 +100,8 @@
             <dd>
               <a href="#" role="button">
                 <div class="num">9</div>
-                <div class="category">주차/교통</div>
-                <div class="tit">주차장 위치는 어디인가요?</div>
+                <div class="tit">센터필드 개인정보처리방침 개정 안내 [개정일:2021.12.30]</div>
+                <div class="date">2021.06.01</div>
               </a>
               <div class="cont">
                 <p>
@@ -127,8 +113,8 @@
             <dd>
               <a href="#" role="button">
                 <div class="num">8</div>
-                <div class="category">주차/교통</div>
-                <div class="tit">주차 요금은 얼마인가요?</div>
+                <div class="tit">센터필드 영상정보처리기기 운영관리 방침 개정 안내 [개정일:2021.02.17]</div>
+                <div class="date">2021.06.01</div>
               </a>
               <div class="cont">
                 <p>
@@ -140,8 +126,8 @@
             <dd>
               <a href="#" role="button">
                 <div class="num">7</div>
-                <div class="category">주차/교통</div>
-                <div class="tit">주차요금 정산은 어떻게 하나요?</div>
+                <div class="tit">더샵스앳센터필드 추석연휴 연휴 영업시간 안내</div>
+                <div class="date">2021.06.01</div>
               </a>
               <div class="cont">
                 <p>
@@ -153,8 +139,8 @@
             <dd>
               <a href="#" role="button">
                 <div class="num">6</div>
-                <div class="category">시설안내</div>
-                <div class="tit">본인이 주차한 주차구역을 못 찾는 경우는 어떻게 해야 하나요?</div>
+                <div class="tit">센터필드 개인정보처리방침 개정 안내 [개정일:2021.12.30]</div>
+                <div class="date">2021.06.01</div>
               </a>
               <div class="cont">
                 <p>
@@ -166,8 +152,8 @@
             <dd>
               <a href="#" role="button">
                 <div class="num">5</div>
-                <div class="category">시설안내</div>
-                <div class="tit">지하철은 몇 호선, 어디에서 내리나요?</div>
+                <div class="tit">센터필드 영상정보처리기기 운영관리 방침 개정 안내 [개정일:2021.02.17]</div>
+                <div class="date">2021.06.01</div>
               </a>
               <div class="cont">
                 <p>
@@ -179,8 +165,8 @@
             <dd>
               <a href="#" role="button">
                 <div class="num">4</div>
-                <div class="category">시설안내</div>
-                <div class="tit">장애인을 위한 서비스가 있나요? (휠체어, 화장실 등)</div>
+                <div class="tit">더샵스앳센터필드 추석연휴 연휴 영업시간 안내</div>
+                <div class="date">2021.06.01</div>
               </a>
               <div class="cont">
                 <p>
@@ -212,13 +198,13 @@
 
 <script>
 export default {
-  name: 'Faq',
+  name: 'Notice',
   head: {
     title: {
-      inner: 'FAQ > NOTICE',
+      inner: 'NOTICE',
     },
     // Meta tags
-    meta: [{ name: 'keywords', content: 'Faq' }],
+    meta: [{ name: 'keywords', content: 'Notice' }],
   },
 };
 </script>
