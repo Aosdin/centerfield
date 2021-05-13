@@ -1,0 +1,20 @@
+.ico-coupon {
+  height: 32px;
+  margin-bottom: 30px;
+  background: url('../images/icon/ico_coupon.svg') no-repeat;
+  background-size: contain;
+}
+.sect-mycoupon {
+  .ment1 {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  .ment2 {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .btnwrap,
+  .btn-more {
+    margin-top: 50px;
+  }
+}

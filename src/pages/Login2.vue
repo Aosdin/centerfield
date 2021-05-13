@@ -61,19 +61,19 @@
               <ul class="login-menu">
                 <li>
                   <a href="#">
-                    <div class="ico"><img src="../assets/images/icon/icon_login1.svg" alt="" /></div>
+                    <div class="ico"><img src="../assets/images/icon/ico_login1.svg" alt="" /></div>
                     <p>아이디찾기</p>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <div class="ico"><img src="../assets/images/icon/icon_login2.svg" alt="" /></div>
+                    <div class="ico"><img src="../assets/images/icon/ico_login2.svg" alt="" /></div>
                     <p>비밀번호찾기</p>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <div class="ico"><img src="../assets/images/icon/icon_login3.svg" alt="" /></div>
+                    <div class="ico"><img src="../assets/images/icon/ico_login3.svg" alt="" /></div>
                     <p>회원가입</p>
                   </a>
                 </li>

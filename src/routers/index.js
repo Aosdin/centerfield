@@ -20,6 +20,8 @@ import Faq from '@/pages/Faq';
 import Login from '@/pages/Login';
 import Login2 from '@/pages/Login2';
 import Join from '@/pages/Join';
+import MyCoupon from '@/pages/MyCoupon';
+import MyCoupon2 from '@/pages/MyCoupon2';
 
 /**
  * Vue router
@@ -105,6 +107,16 @@ const router = new VueRouter({
           path: '/join',
           name: 'join',
           component: Join,
+        },
+        {
+          path: '/myCoupon',
+          name: 'myCoupon',
+          component: MyCoupon,
+        },
+        {
+          path: '/myCoupon2',
+          name: 'myCoupon2',
+          component: MyCoupon2,
         },
       ],
     },
