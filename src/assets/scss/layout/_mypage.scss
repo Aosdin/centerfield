@@ -18,3 +18,55 @@
     margin-top: 50px;
   }
 }
+.sect-withdrawal {
+  .title {
+    color: $white;
+    background-color: $red;
+    padding: 10px 30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .withdrawal-ment {
+    margin-bottom: 50px;
+    font-size: 14px;
+    font-weight: 300;
+    p {
+      margin-top: 20px;
+      &:first-of-type {
+        margin-top: 0;
+      }
+      strong {
+        font-size: 18px;
+      }
+    }
+  }
+  .btnwrap {
+    margin-top: 50px;
+  }
+}
+.terms-wrap {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  h3 {
+    font-size: 1rem;
+  }
+  h4 {
+    margin: 24px 0 4px;
+  }
+  ol {
+    padding-left: 16px;
+    & > li {
+      list-style: decimal;
+    }
+  }
+  .desc-txt {
+    margin-bottom: 12px;
+  }
+  .terms-part {
+    border-bottom: 1px solid $primary;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+}

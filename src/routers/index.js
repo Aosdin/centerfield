@@ -22,6 +22,9 @@ import Login2 from '@/pages/Login2';
 import Join from '@/pages/Join';
 import MyCoupon from '@/pages/MyCoupon';
 import MyCoupon2 from '@/pages/MyCoupon2';
+import Withdrawal from '@/pages/Withdrawal';
+import Terms1 from '@/pages/Terms1';
+import Privacy from '@/pages/Privacy';
 
 /**
  * Vue router
@@ -117,6 +120,21 @@ const router = new VueRouter({
           path: '/myCoupon2',
           name: 'myCoupon2',
           component: MyCoupon2,
+        },
+        {
+          path: '/withdrawal',
+          name: 'withdrawal',
+          component: Withdrawal,
+        },
+        {
+          path: '/terms1',
+          name: 'terms1',
+          component: Terms1,
+        },
+        {
+          path: '/privacy',
+          name: 'privacy',
+          component: Privacy,
         },
       ],
     },

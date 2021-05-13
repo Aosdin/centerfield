@@ -58,18 +58,22 @@
     & + label {
       @include disinBlock('m');
       position: relative;
+      padding-left: 20px;
       min-height: 20px;
       font-size: 14px;
       font-weight: 300;
-      line-height: 1;
+      line-height: 1.5;
       cursor: pointer;
       &:before {
         @include disinBlock('m');
+        @include inAfter();
         background-color: $gray;
         border: 1px solid $gray;
-        content: '';
+        position: absolute;
         width: 16px;
         height: 16px;
+        left: 0;
+        top: 4px;
         line-height: 20px;
         margin: -1px 5px 0 0;
         text-align: center;
@@ -83,14 +87,13 @@
         position: absolute;
         width: 10px;
         height: 10px;
-        left: 0;
-        top: 50%;
-        margin: -6px 0 0 3px;
+        left: 3px;
+        top: 6px;
         background: url('../images/icon/ico_check.svg') no-repeat center;
         background-size: contain;
         opacity: 0;
         transition: 0.3s ease-in;
-        z-index: 1;
+        z-index: 3;
       }
     }
     &:checked + label:before {
