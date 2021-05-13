@@ -3,11 +3,8 @@
     margin-bottom: 20px;
   }
 }
-.loginbox {
-  label {
-    @include blind;
-  }
-  & + .loginbox {
+.joinbox {
+  & + .joinbox {
     border-top: 1px solid $primary;
     margin-top: 20px;
     padding-top: 20px;
@@ -19,8 +16,17 @@
     }
   }
   .btn1,
-  .ulist2 {
+  .ulist2,
+  .fs10 + .agreebox,
+  .argbox + .argbox {
     margin-top: 20px;
+  }
+  .fs10 {
+    line-height: 2;
+  }
+  .agreebox {
+    height: 140px;
+    margin-bottom: 10px;
   }
 }
 .login-menu {
@@ -60,4 +66,37 @@
       }
     }
   }
+}
+.members-agreebox {
+  background-color: $black;
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 30px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  .chkwrap {
+    flex: 0 0 73px;
+  }
+}
+.agreebox {
+  border: 1px solid $gray;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.chkfelx {
+  display: flex;
+  justify-content: space-between;
+  .chkmodoo {
+    flex: 0 0 65px;
+  }
+}
+.join-footment {
+  margin: 50px 0 20px;
+  font-size: 14px;
+  font-weight: 300;
 }

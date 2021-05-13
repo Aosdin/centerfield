@@ -19,6 +19,7 @@ import Notice from '@/pages/Notice';
 import Faq from '@/pages/Faq';
 import Login from '@/pages/Login';
 import Login2 from '@/pages/Login2';
+import Join from '@/pages/Join';
 
 /**
  * Vue router
@@ -99,6 +100,11 @@ const router = new VueRouter({
           path: '/login2',
           name: 'login2',
           component: Login2,
+        },
+        {
+          path: '/join',
+          name: 'join',
+          component: Join,
         },
       ],
     },

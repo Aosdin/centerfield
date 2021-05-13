@@ -29,5 +29,11 @@
 $fontFamily: 'Noto Sans KR', sans-serif;
 
 .ftc-primary {
-  color: $primary;
+  color: $primary !important;
+}
+.ftc-default {
+  color: $color-default !important;
+}
+.fs10 {
+  font-size: 10px;
 }

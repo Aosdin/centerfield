@@ -7,19 +7,19 @@
           <fieldset>
             <legend>로그인입력</legend>
             <!-- 간편로그인(s) -->
-            <section class="loginbox">
+            <section class="joinbox">
               <h4 class="sectit3">간편로그인</h4>
               <div class="inputbox">
-                <label for="userName">이름</label>
+                <label class="blind" for="userName">이름</label>
                 <input type="text" id="userName" placeholder="이름" value="" />
               </div>
               <div class="inputbox">
-                <label for="userBirthday">생년월일</label>
+                <label class="blind" for="userBirthday">생년월일</label>
                 <input type="number" id="userBirthday" placeholder="생년월일(160101)" value="" />
               </div>
               <div class="phonebox">
                 <div class="selectbox">
-                  <label for="phoneNum1">휴대폰 앞번호</label>
+                  <label class="blind" for="phoneNum1">휴대폰 앞번호</label>
                   <select id="phoneNum1">
                     <option value="">010</option>
                     <option value="">011</option>
@@ -30,12 +30,12 @@
                 </div>
                 <div>-</div>
                 <div class="inputbox">
-                  <label for="phoneNum2">휴대폰 중간번호</label>
+                  <label class="blind" for="phoneNum2">휴대폰 중간번호</label>
                   <input type="number" id="phoneNum2" value="" />
                 </div>
                 <div>-</div>
                 <div class="inputbox">
-                  <label for="phoneNum3">휴대폰 뒷번호</label>
+                  <label class="blind" for="phoneNum3">휴대폰 뒷번호</label>
                   <input type="number" id="phoneNum3" value="" />
                 </div>
               </div>
@@ -47,14 +47,14 @@
             </section>
             <!--// 간편로그인(e) -->
             <!-- 통합로그인(s) -->
-            <section class="loginbox">
+            <section class="joinbox">
               <h4 class="sectit3">통합로그인</h4>
               <div class="inputbox">
-                <label for="userName2">이름</label>
+                <label class="blind" for="userName2">이름</label>
                 <input type="text" id="userName2" placeholder="이름" value="" />
               </div>
               <div class="inputbox">
-                <label for="userPassword">비밀번호</label>
+                <label class="blind" for="userPassword">비밀번호</label>
                 <input type="password" id="userPassword" placeholder="비밀번호" value="" />
               </div>
               <button type="button" class="btn1 btg-black">확인</button>

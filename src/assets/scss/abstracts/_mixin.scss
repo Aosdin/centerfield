@@ -51,6 +51,29 @@
   }
 }
 
+@mixin disinBlock($va) {
+  display: inline-block;
+
+  @if $va == 'm' {
+    vertical-align: middle;
+  } @else if $va == 't' {
+    vertical-align: top;
+  } @else if $va == 'b' {
+    vertical-align: bottom;
+  }
+}
+
+@mixin formindent {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 @mixin mq($screen-width) {
   @if $screen-width == 'min375' {
     @media screen and (min-width: 375px) {
