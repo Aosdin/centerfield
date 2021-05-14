@@ -39,6 +39,14 @@
       border-radius: 50%;
     }
   }
+  &.type2 {
+    & > li {
+      color: $primary;
+      &::before {
+        background-color: $primary;
+      }
+    }
+  }
 }
 .dlist {
   & > dt {

@@ -4,7 +4,7 @@
       <div class="inner2">
         <h3 class="sectit1">개인정보처리방침</h3>
         <div class="selectbox">
-          <label class="blind" for="termselect">이용약관 버전선택</label>
+          <label class="blind" for="termselect">개인정보처리방침 버전선택</label>
           <select id="termselect">
             <option value="">[Ver.2.0] 2021.05.05</option>
             <option value="">[Ver.1.9] 2020.05.05</option>

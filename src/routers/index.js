@@ -20,10 +20,14 @@ import Faq from '@/pages/Faq';
 import Login from '@/pages/Login';
 import Login2 from '@/pages/Login2';
 import Join from '@/pages/Join';
+import MyPage from '@/pages/MyPage';
+import MyPagePop1 from '@/pages/MyPagePop1';
+import MyPagePop2 from '@/pages/MyPagePop2';
 import MyCoupon from '@/pages/MyCoupon';
 import MyCoupon2 from '@/pages/MyCoupon2';
 import Withdrawal from '@/pages/Withdrawal';
 import Terms1 from '@/pages/Terms1';
+import Terms2 from '@/pages/Terms2';
 import Privacy from '@/pages/Privacy';
 
 /**
@@ -112,6 +116,21 @@ const router = new VueRouter({
           component: Join,
         },
         {
+          path: '/myPage',
+          name: 'myPage',
+          component: MyPage,
+        },
+        {
+          path: '/myPagePop1',
+          name: 'myPagePop1',
+          component: MyPagePop1,
+        },
+        {
+          path: '/myPagePop2',
+          name: 'myPagePop2',
+          component: MyPagePop2,
+        },
+        {
           path: '/myCoupon',
           name: 'myCoupon',
           component: MyCoupon,
@@ -130,6 +149,11 @@ const router = new VueRouter({
           path: '/terms1',
           name: 'terms1',
           component: Terms1,
+        },
+        {
+          path: '/terms2',
+          name: 'terms2',
+          component: Terms2,
         },
         {
           path: '/privacy',

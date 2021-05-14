@@ -1,0 +1,163 @@
+.popwrap {
+  position: absolute;
+  &.poptype1 {
+    background-color: $white;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+  }
+  .pop-close {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 28px;
+    right: 28px;
+    span {
+      @include ir();
+      @include mgCenter();
+      display: block;
+      width: 15px;
+      height: 15px;
+      background: url('../images/icon/ico_close.svg') no-repeat center;
+      background-size: contain;
+    }
+  }
+}
+.poptit {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-right: 40px;
+}
+.pop-content {
+  position: relative;
+}
+.poptext1 {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.branch-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  & > li {
+    flex: 0 0 (150/315) * 100%;
+    margin-top: 20px;
+    & > a {
+      background-color: $gray-light;
+      display: block;
+      border-radius: 12px 12px 20px 20px;
+      overflow: hidden;
+    }
+    &.active .branch-item .branch-photo {
+      &::before,
+      &::after {
+        opacity: 1;
+      }
+    }
+    &:first-of-type,
+    &:nth-of-type(2) {
+      margin-top: 0;
+    }
+  }
+  .branch-item {
+    .branch-photo {
+      position: relative;
+      border-radius: 0 0 12px 12px;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+      &::before {
+        @include inAfter();
+        background-color: rgba($primary, 0.9);
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: 0.3s ease-in;
+        z-index: 1;
+      }
+      &::after {
+        @include inAfter();
+        @include posiCenter('va');
+        display: block;
+        width: 28px;
+        height: 13px;
+        background: url('../images/icon/ico_check2.svg') no-repeat center;
+        background-size: contain;
+        opacity: 0;
+        transition: 0.3s ease-in;
+        z-index: 2;
+      }
+    }
+    .branch {
+      padding: 8px 0;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+}
+.members-list {
+  & > li {
+    border-top: 1px solid $primary;
+    padding-top: 20px;
+    margin-top: 20px;
+    &:first-of-type {
+      padding-top: 0;
+      margin-top: 0;
+      border-top: none;
+    }
+  }
+  .members-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
+    .icon {
+      flex: 0 0 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+    .memb-tit {
+      flex: 0 0 calc(100% - 68px);
+      padding-left: 8px;
+      font-size: 14px;
+    }
+    & + .memb-tit {
+      margin: 20px 0;
+    }
+  }
+  .memb-tit {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .listit {
+    font-size: 14px;
+    font-weight: 700;
+    & + .ulist2 {
+      margin-top: 5px;
+    }
+  }
+  .ulist2 + .listit {
+    margin-top: 10px;
+  }
+  .membtxt1 {
+    font-size: 14px;
+    font-weight: 300;
+    & + .ulist2 {
+      margin-top: 20px;
+    }
+  }
+}

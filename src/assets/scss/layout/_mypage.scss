@@ -1,3 +1,84 @@
+.mypage-list {
+  & > li {
+    margin-top: 20px;
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+  .item {
+    border: 1px solid $gray;
+    background-color: $white;
+    padding: 20px;
+    border-radius: 20px;
+    h4 {
+      color: $primary;
+      margin-bottom: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+    }
+    .item-area {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      min-height: 100px;
+      margin-bottom: 19px;
+      text-align: center;
+      .icon {
+        flex: 0 0 100%;
+        .ico-img {
+          @include mgCenter();
+          background-color: $gray;
+          width: 60px;
+          height: 60px;
+          margin-bottom: 5px;
+          border-radius: 50%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .item-tit {
+        flex: 0 0 100%;
+        font-size: 28px;
+        font-weight: 700;
+        &.type1 {
+          font-size: 24px;
+        }
+        & + p {
+          margin-top: 16px;
+        }
+      }
+      p {
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+  }
+  .btn-withdrawal {
+    margin-top: 20px;
+    text-align: center;
+    a {
+      color: $red;
+      position: relative;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.4;
+      &::after {
+        @include inAfter();
+        background-color: $red;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
 .ico-coupon {
   height: 32px;
   margin-bottom: 30px;
@@ -68,5 +149,40 @@
     border-bottom: 1px solid $primary;
     padding-bottom: 20px;
     margin-bottom: 20px;
+  }
+  table {
+    border: 1px solid $gray;
+    table-layout: fixed;
+    width: 100%;
+    min-width: 100%;
+    margin: 12px 0;
+    border-collapse: collapse;
+    border-bottom: none;
+    word-break: break-all;
+    thead {
+      th {
+        background-color: $gray-light;
+        border-bottom: 1px solid $gray;
+        padding: 8px 10px;
+        font-size: 14px;
+        font-weight: 700;
+        word-break: break-all;
+      }
+    }
+    th + th,
+    th + td,
+    td + td {
+      border-left: 1px solid $gray;
+    }
+    tbody {
+      td {
+        background-color: $white;
+        border-bottom: 1px solid $gray;
+        height: 37px;
+        padding: 8px 10px;
+        font-size: 14px;
+        word-break: break-all;
+      }
+    }
   }
 }
