@@ -9,11 +9,20 @@
           <p>센터필드 회원탈퇴를 하실 경우 신세계포인트 통합회원 정보는 유지되며, 센터필드에서 수집한 고객님의 개인정보는 회원 탈회 요청 시 지체없이 파기됩니다.</p>
         </div>
         <div class="chkbox">
-          <input type="checkbox" id="chk1" value="" />
+          <input
+            type="checkbox"
+            id="chk1"
+            value=""
+          >
           <label for="chk1">센터필드 회원탈퇴 안내사항을 모두 확인하였으며, 이에 동의합니다.</label>
         </div>
         <div class="btnwrap">
-          <button type="button" class="btn1 btg-red">더샵스앳센터필드 회원탈퇴</button>
+          <button
+            type="button"
+            class="btn1 btg-red"
+          >
+            더샵스앳센터필드 회원탈퇴
+          </button>
         </div>
       </div>
     </section>
@@ -25,10 +34,10 @@ export default {
   name: 'Withdrawal',
   head: {
     title: {
-      inner: '회원탈퇴',
+      inner: '회원탈퇴'
     },
     // Meta tags
-    meta: [{ name: 'keywords', content: 'Withdrawal' }],
-  },
-};
+    meta: [{ name: 'keywords', content: 'Withdrawal' }]
+  }
+}
 </script>

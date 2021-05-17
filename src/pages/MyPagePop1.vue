@@ -11,11 +11,14 @@
               <h4>회원등급</h4>
               <div class="item-area">
                 <div class="icon">
-                  <div class="ico-img"></div>
+                  <div class="ico-img" />
                 </div>
                 <div class="item-tit type1"><span class="ftc-primary">일반</span> 고객</div>
               </div>
-              <a href="#" class="btn1 btg-primary">더보기</a>
+              <a
+                href="#"
+                class="btn1 btg-primary"
+              >더보기</a>
             </div>
           </li>
           <li>
@@ -24,7 +27,10 @@
               <div class="item-area">
                 <div class="item-tit"><span class="ftc-primary">고양점</span></div>
               </div>
-              <a href="#" class="btn1 btg-primary">더보기</a>
+              <a
+                href="#"
+                class="btn1 btg-primary"
+              >더보기</a>
             </div>
           </li>
           <li>
@@ -33,7 +39,10 @@
               <div class="item-area">
                 <div class="item-tit"><span class="ftc-primary">00</span>개</div>
               </div>
-              <a href="#" class="btn1 btg-primary">더보기</a>
+              <a
+                href="#"
+                class="btn1 btg-primary"
+              >더보기</a>
             </div>
           </li>
           <li>
@@ -42,11 +51,14 @@
               <div class="item-area">
                 <div class="item-tit"><span class="ftc-primary">2,234</span> Point</div>
                 <p>
-                  현재 사용 가능한 포인트입니다.<br />
+                  현재 사용 가능한 포인트입니다.<br>
                   다른 가맹점에서 적립/사용한 전역 내역조회는 www.shinsegaepoint.com에서 확인 가능합니다.
                 </p>
               </div>
-              <a href="#" class="btn1 btg-primary">신세계포인트 조회</a>
+              <a
+                href="#"
+                class="btn1 btg-primary"
+              >신세계포인트 조회</a>
             </div>
           </li>
           <li>
@@ -55,11 +67,14 @@
               <div class="item-area">
                 <div class="item-tit"><span class="ftc-primary">김센터</span> 님</div>
                 <p>
-                  개인정보 수정은 신세계포인트 홈페이지<br />
+                  개인정보 수정은 신세계포인트 홈페이지<br>
                   My 신세계포인트 &gt; My 회원정보에서 가능합니다.
                 </p>
               </div>
-              <a href="#" class="btn1 btg-primary">개인정보수정</a>
+              <a
+                href="#"
+                class="btn1 btg-primary"
+              >개인정보수정</a>
               <div class="btn-withdrawal">
                 <a href="#"><span>탈퇴하기</span></a>
               </div>
@@ -76,7 +91,10 @@
           <li>
             <div class="members-head">
               <div class="icon">
-                <img src="../assets/images/temp/temp_icon.png" alt="" />
+                <img
+                  src="../assets/images/temp/temp_icon.png"
+                  alt=""
+                >
               </div>
             </div>
             <h4 class="memb-tit">김센터 님은 <span class="ftc-primary">센터필드 일반고객</span> 입니다.</h4>
@@ -89,7 +107,10 @@
           <li>
             <div class="members-head">
               <div class="icon">
-                <img src="../assets/images/temp/temp_icon.png" alt="" />
+                <img
+                  src="../assets/images/temp/temp_icon.png"
+                  alt=""
+                >
               </div>
               <h4 class="memb-tit">스타필드 해외 유명 브랜드 VIP</h4>
             </div>
@@ -113,7 +134,10 @@
           <li>
             <div class="members-head">
               <div class="icon">
-                <img src="../assets/images/temp/temp_icon.png" alt="" />
+                <img
+                  src="../assets/images/temp/temp_icon.png"
+                  alt=""
+                >
               </div>
               <h4 class="memb-tit">스타필드 우수고객</h4>
             </div>
@@ -136,7 +160,10 @@
           <li>
             <div class="members-head">
               <div class="icon">
-                <img src="../assets/images/temp/temp_icon.png" alt="" />
+                <img
+                  src="../assets/images/temp/temp_icon.png"
+                  alt=""
+                >
               </div>
               <h4 class="memb-tit">스타필드 일반고객</h4>
             </div>
@@ -162,7 +189,12 @@
           </li>
         </ul>
       </div>
-      <button type="button" class="pop-close"><span>팝업닫기</span></button>
+      <button
+        type="button"
+        class="pop-close"
+      >
+        <span>팝업닫기</span>
+      </button>
     </section>
     <!--// 팝업(e) -->
   </div>
@@ -173,10 +205,10 @@ export default {
   name: 'MyPagePop1',
   head: {
     title: {
-      inner: '회원 등급 기준 및 혜택 > 마이페이지',
+      inner: '회원 등급 기준 및 혜택 > 마이페이지'
     },
     // Meta tags
-    meta: [{ name: 'keywords', content: 'MyPagePop1' }],
-  },
-};
+    meta: [{ name: 'keywords', content: 'MyPagePop1' }]
+  }
+}
 </script>

@@ -8,7 +8,10 @@
             <div>이벤트 &amp; 쿠폰</div>
           </div>
           <div class="background-img">
-            <img src="../assets/images/parking/visual_parking.png" alt="" />
+            <img
+              src="../assets/images/parking/visual_parking.png"
+              alt=""
+            >
           </div>
         </div>
       </div>
@@ -20,7 +23,10 @@
           <ul class="brd-list">
             <li>
               <a href="/eventDetail">
-                <div class="imgthumb"><img src="../assets/images/temp/temp_event.png" alt="" /></div>
+                <div class="imgthumb"><img
+                  src="../assets/images/temp/temp_event.png"
+                  alt=""
+                ></div>
 
                 <div class="brd-wrap">
                   <h5 class="tit">카카오페이 1만원 할인</h5>
@@ -30,7 +36,10 @@
             </li>
             <li>
               <a href="/eventDetail">
-                <div class="imgthumb"><img src="../assets/images/temp/temp_event.png" alt="" /></div>
+                <div class="imgthumb"><img
+                  src="../assets/images/temp/temp_event.png"
+                  alt=""
+                ></div>
 
                 <div class="brd-wrap">
                   <h5 class="tit">카카오페이 1만원 할인</h5>
@@ -40,7 +49,10 @@
             </li>
             <li>
               <a href="/eventDetail">
-                <div class="imgthumb"><img src="../assets/images/temp/temp_event.png" alt="" /></div>
+                <div class="imgthumb"><img
+                  src="../assets/images/temp/temp_event.png"
+                  alt=""
+                ></div>
 
                 <div class="brd-wrap">
                   <h5 class="tit">카카오페이 1만원 할인</h5>
@@ -50,7 +62,10 @@
             </li>
             <li>
               <a href="/eventDetail">
-                <div class="imgthumb"><img src="../assets/images/temp/temp_event.png" alt="" /></div>
+                <div class="imgthumb"><img
+                  src="../assets/images/temp/temp_event.png"
+                  alt=""
+                ></div>
 
                 <div class="brd-wrap">
                   <h5 class="tit">카카오페이 1만원 할인</h5>
@@ -60,7 +75,10 @@
             </li>
             <li>
               <a href="/eventDetail">
-                <div class="imgthumb"><img src="../assets/images/temp/temp_event.png" alt="" /></div>
+                <div class="imgthumb"><img
+                  src="../assets/images/temp/temp_event.png"
+                  alt=""
+                ></div>
 
                 <div class="brd-wrap">
                   <h5 class="tit">카카오페이 1만원 할인</h5>
@@ -70,7 +88,10 @@
             </li>
             <li>
               <a href="/eventDetail">
-                <div class="imgthumb"><img src="../assets/images/temp/temp_event.png" alt="" /></div>
+                <div class="imgthumb"><img
+                  src="../assets/images/temp/temp_event.png"
+                  alt=""
+                ></div>
 
                 <div class="brd-wrap">
                   <h5 class="tit">카카오페이 1만원 할인</h5>
@@ -86,7 +107,10 @@
           <ul class="brd-list">
             <li>
               <a href="/couponDetail">
-                <div class="imgthumb"><img src="../assets/images/temp/temp_event.png" alt="" /></div>
+                <div class="imgthumb"><img
+                  src="../assets/images/temp/temp_event.png"
+                  alt=""
+                ></div>
 
                 <div class="brd-wrap">
                   <h5 class="tit">더샵스앳센터필드 오픈기념 쿠폰</h5>
@@ -96,7 +120,10 @@
             </li>
             <li>
               <a href="/couponDetail">
-                <div class="imgthumb"><img src="../assets/images/temp/temp_event.png" alt="" /></div>
+                <div class="imgthumb"><img
+                  src="../assets/images/temp/temp_event.png"
+                  alt=""
+                ></div>
 
                 <div class="brd-wrap">
                   <h5 class="tit">더샵스앳센터필드 오픈기념 쿠폰</h5>
@@ -106,7 +133,10 @@
             </li>
             <li>
               <a href="/couponDetail">
-                <div class="imgthumb"><img src="../assets/images/temp/temp_event.png" alt="" /></div>
+                <div class="imgthumb"><img
+                  src="../assets/images/temp/temp_event.png"
+                  alt=""
+                ></div>
 
                 <div class="brd-wrap">
                   <h5 class="tit">더샵스앳센터필드 오픈기념 쿠폰</h5>
@@ -116,7 +146,10 @@
             </li>
             <li>
               <a href="/couponDetail">
-                <div class="imgthumb"><img src="../assets/images/temp/temp_event.png" alt="" /></div>
+                <div class="imgthumb"><img
+                  src="../assets/images/temp/temp_event.png"
+                  alt=""
+                ></div>
 
                 <div class="brd-wrap">
                   <h5 class="tit">더샵스앳센터필드 오픈기념 쿠폰</h5>
@@ -126,7 +159,10 @@
             </li>
             <li>
               <a href="/couponDetail">
-                <div class="imgthumb"><img src="../assets/images/temp/temp_event.png" alt="" /></div>
+                <div class="imgthumb"><img
+                  src="../assets/images/temp/temp_event.png"
+                  alt=""
+                ></div>
 
                 <div class="brd-wrap">
                   <h5 class="tit">더샵스앳센터필드 오픈기념 쿠폰</h5>
@@ -136,7 +172,10 @@
             </li>
             <li>
               <a href="/couponDetail">
-                <div class="imgthumb"><img src="../assets/images/temp/temp_event.png" alt="" /></div>
+                <div class="imgthumb"><img
+                  src="../assets/images/temp/temp_event.png"
+                  alt=""
+                ></div>
 
                 <div class="brd-wrap">
                   <h5 class="tit">더샵스앳센터필드 오픈기념 쿠폰</h5>
@@ -157,10 +196,10 @@ export default {
   name: 'EventCoupon',
   head: {
     title: {
-      inner: '이벤트&쿠폰 목록',
+      inner: '이벤트&쿠폰 목록'
     },
     // Meta tags
-    meta: [{ name: 'keywords', content: 'EventCoupon' }],
-  },
-};
+    meta: [{ name: 'keywords', content: 'EventCoupon' }]
+  }
+}
 </script>

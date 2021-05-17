@@ -19,16 +19,13 @@ import store from '@/store' // Must be a name as `store`
  * Plugin
  */
 import plugins from '@/shared/plugins'
-import vueHead from 'vue-head'
 
 /**
  * Install plugins
  */
 Vue.use(plugins)
-Vue.use(vueHead)
 Vue.config.productionTip = false
 sync(store, router)
-
 new Vue({
   router,
   store,

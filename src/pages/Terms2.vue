@@ -4,7 +4,10 @@
       <div class="inner2">
         <h3 class="sectit1">영상정보처리기기 운영관리 방침</h3>
         <div class="selectbox">
-          <label class="blind" for="termselect">영상정보처리기기 운영관리 방침 버전선택</label>
+          <label
+            class="blind"
+            for="termselect"
+          >영상정보처리기기 운영관리 방침 버전선택</label>
           <select id="termselect">
             <option value="">[Ver.2.0] 2021.05.05</option>
             <option value="">[Ver.1.9] 2020.05.05</option>
@@ -140,10 +143,10 @@ export default {
   name: 'Terms2',
   head: {
     title: {
-      inner: '영상정보처리기기 운영관리 방침',
+      inner: '영상정보처리기기 운영관리 방침'
     },
     // Meta tags
-    meta: [{ name: 'keywords', content: 'Terms2' }],
-  },
-};
+    meta: [{ name: 'keywords', content: 'Terms2' }]
+  }
+}
 </script>

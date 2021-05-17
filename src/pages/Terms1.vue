@@ -4,7 +4,10 @@
       <div class="inner2">
         <h3 class="sectit1">이용약관</h3>
         <div class="selectbox">
-          <label class="blind" for="termselect">이용약관 버전선택</label>
+          <label
+            class="blind"
+            for="termselect"
+          >이용약관 버전선택</label>
           <select id="termselect">
             <option value="">[Ver.2.0] 2021.05.05</option>
             <option value="">[Ver.1.9] 2020.05.05</option>
@@ -68,10 +71,10 @@ export default {
   name: 'Terms1',
   head: {
     title: {
-      inner: '이용약관',
+      inner: '이용약관'
     },
     // Meta tags
-    meta: [{ name: 'keywords', content: 'Terms1' }],
-  },
-};
+    meta: [{ name: 'keywords', content: 'Terms1' }]
+  }
+}
 </script>
