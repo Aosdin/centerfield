@@ -1,8 +1,15 @@
 .mypage-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   & > li {
-    margin-top: 20px;
-    &:first-of-type {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    &:last-of-type {
       margin-top: 0;
+    }
+    &.grid-2 {
+      flex: 0 0 (173/355) * 100%;
     }
   }
   .item {
@@ -22,7 +29,6 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      min-height: 100px;
       margin-bottom: 19px;
       text-align: center;
       .icon {
@@ -55,6 +61,17 @@
         font-weight: 300;
       }
     }
+    .btn2 {
+      width: 98px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .barcode {
+      margin-bottom: 20px;
+      img {
+        width: 100%;
+      }
+    }
   }
   .btn-withdrawal {
     margin-top: 20px;
@@ -84,6 +101,35 @@
   margin-bottom: 30px;
   background: url('../images/icon/ico_coupon.svg') no-repeat;
   background-size: contain;
+}
+.sect-mypage {
+  .inner2 {
+    position: relative;
+    .btn2 {
+      position: absolute;
+      display: inline-block;
+      width: auto;
+      top: 0;
+      right: 30px;
+    }
+  }
+  .userwrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    .icon {
+      background-color: $gray;
+      flex: 0 0 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+    .username {
+      flex: 0 0 calc(100% - 60px);
+      padding-left: 10px;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
 }
 .sect-mycoupon {
   .ment1 {
