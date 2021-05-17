@@ -129,18 +129,59 @@
         </div>
       </div>
     </section>
+    <!-- 팝업(s) -->
+    <section class="popwrap poptype1">
+      <h3 class="poptit">경로찾기</h3>
+      <div class="pop-content">
+        <div class="formwrap">
+          <form>
+            <fieldset>
+              <legend>경로 찾기</legend>
+              <div class="selectbox">
+                <label for="frm1" class="blind">현재 위치 선택</label>
+                <select id="frm1">
+                  <option>현재 위치를 선택하세요.</option>
+                  <option>선택1</option>
+                  <option>선택2</option>
+                  <option>선택3</option>
+                </select>
+              </div>
+              <div class="selectbox">
+                <label for="frm2" class="blind">목적지 선택</label>
+                <select id="frm2">
+                  <option>목적지를 선택하세요</option>
+                  <option>선택1</option>
+                  <option>선택2</option>
+                  <option>선택3</option>
+                </select>
+              </div>
+              <button type="button" class="btn1 btg-primary">
+                <span>찾기</span>
+              </button>
+              <div class="floor_rootmap">
+                <img src="../assets/images/floor/floor_root.svg" alt="" />
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <button type="button" class="pop-close">
+        <span>팝업닫기</span>
+      </button>
+    </section>
+    <!--// 팝업(e) -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'FloorInfo',
+  name: 'FloorInfoPop',
   head: {
     title: {
-      inner: '층별안내 상세',
+      inner: '경로찾기 > 층별안내 상세',
     },
     // Meta tags
-    meta: [{ name: 'keywords', content: 'FloorInfo' }],
+    meta: [{ name: 'keywords', content: 'FloorInfoPop' }],
   },
 };
 </script>

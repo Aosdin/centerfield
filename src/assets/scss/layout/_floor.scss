@@ -137,29 +137,48 @@
 }
 .sect-floorstore {
   .area-store {
-    margin-bottom: 50px;
-    &:last-of-type {
-      margin-bottom: 0;
+    margin-top: 50px;
+    &:first-of-type {
+      margin-top: 0;
     }
-    .sectit,
+    .map {
+      margin-bottom: 20px;
+      img {
+        width: 100%;
+      }
+    }
+    .sectit {
+      padding: 0 20px;
+    }
     .patition-text {
-      text-align: center;
+      display: inline-block;
       margin-bottom: 5px;
     }
     .area {
-      @include clearfix();
+      padding: 0 20px;
     }
     .dlist {
-      width: 48%;
-      &.west {
+      @include clearfix();
+      margin-top: 8px;
+      &:first-of-type {
+        margin-top: 0;
+      }
+      dt {
         float: left;
+        width: 115px;
+        margin-bottom: 0;
+      }
+      dd {
+        float: right;
+        width: calc(100% - 115px);
+      }
+      &.west {
         color: $primary;
         a {
           color: $primary;
         }
       }
       &.east {
-        float: right;
         color: $gold;
         a {
           color: $gold;
@@ -171,5 +190,11 @@
         }
       }
     }
+  }
+}
+.floor_rootmap {
+  margin-top: 45px;
+  img {
+    width: 100%;
   }
 }
