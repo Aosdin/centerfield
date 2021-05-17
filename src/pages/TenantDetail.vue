@@ -3,55 +3,98 @@
     <div class="sect-prepare">오픈 준비중</div>
     <section class="sector sect-tenant">
       <div class="tenant-mainimg">
-        <img
-          src="../assets/images/tenant/joenTheJuice.png"
-          alt=""
-        >
+        <img src="../assets/images/tenant/firebell.png" alt="" />
       </div>
       <div class="tenant-info">
-        <div class="tenant-tit">FIRE BELL</div>
+        <div class="tenant-tit">파이어벨 디어 고메</div>
         <div class="tenant-detail">
           <div class="subinfo">
-            <div class="category">브런치 / 버거 / 샌드위치</div>
             <div class="time">매일 오전 10:00 ~ 오후 9:00</div>
             <div class="area">EAST TOWER 1F</div>
           </div>
-          <button
-            type="button"
-            class="btntel"
-          >
+          <button type="button" class="btntel">
             <span>전화걸기</span>
           </button>
         </div>
-        <p class="description">것이 원질이 이상 끓는 설레는 뿐이다. 더운지라 내려온 꽃이 장식하는 사라지지 청춘은 약동하다. 같으며, 미묘한 장식하는 생의 우리의 소담스러운 웅대한 얼음에 것이다. 것이 아니한 인도하겠다는 보라. 심장의 끓는 이상은 목숨이 새가 광야에서 만물은 것이다. 이는 찬미를 것은 있는가? 황금시대의 있는 이상, 맺어, 바이며, 그것은 말이다.</p>
+        <div class="use-info">
+          <div class="item">
+            <div class="ico y">
+              <span class="i1"></span>
+            </div>
+            <p>신세계상품권</p>
+          </div>
+          <div class="item">
+            <div class="ico y">
+              <span class="i2"></span>
+            </div>
+            <p>포인트적립</p>
+          </div>
+          <div class="item">
+            <div class="ico y">
+              <span class="i3"></span>
+            </div>
+            <p>카드가능</p>
+          </div>
+          <div class="item">
+            <div class="ico y">
+              <span class="i4"></span>
+            </div>
+            <p>포장가능</p>
+          </div>
+          <div class="item">
+            <div class="ico n">
+              <span class="i5"></span>
+            </div>
+            <p>예약불가</p>
+          </div>
+        </div>
+        <ul class="menu-list ulist2">
+          <li>
+            <div class="menu">루키버거</div>
+            <div class="price">7,900</div>
+          </li>
+          <li>
+            <div class="menu">맥버거</div>
+            <div class="price">8,900</div>
+          </li>
+          <li>
+            <div class="menu">하나바버거</div>
+            <div class="price">8,900</div>
+          </li>
+          <li>
+            <div class="menu">칠리킹버거</div>
+            <div class="price">10,900</div>
+          </li>
+          <li>
+            <div class="menu">레오버거</div>
+            <div class="price">9,900</div>
+          </li>
+          <li>
+            <div class="menu">콜911버거</div>
+            <div class="price">9,900</div>
+          </li>
+          <li>
+            <div class="menu">에그이고버거</div>
+            <div class="price">10,900</div>
+          </li>
+        </ul>
+        <p class="description">수제버거 전문점. 소고기 패티에 아메리칸 치즈를 사용한 아메리칸 스타일의 수제버거.</p>
       </div>
       <div class="tenant-location">
-        <img
-          src="../assets/images/tenant/tenant_location_firebell.svg"
-          alt=""
-        >
+        <img src="../assets/images/tenant/tenant_location_firebell.svg" alt="" />
       </div>
     </section>
     <!-- 매장 썸네일(s) -->
     <section class="sector">
       <div class="inner">
         <div class="img-thumb">
-          <img
-            src="../assets/images/tenant/Rectangle_116.png"
-            alt=""
-          >
+          <img src="../assets/images/tenant/Rectangle_116.png" alt="" />
         </div>
         <div class="img-thumb">
-          <img
-            src="../assets/images/tenant/Rectangle_117.png"
-            alt=""
-          >
+          <img src="../assets/images/tenant/Rectangle_117.png" alt="" />
         </div>
         <div class="img-thumb">
-          <img
-            src="../assets/images/tenant/Rectangle_116.png"
-            alt=""
-          >
+          <img src="../assets/images/tenant/Rectangle_118.png" alt="" />
         </div>
       </div>
     </section>
@@ -64,10 +107,10 @@ export default {
   name: 'TenantDetail',
   head: {
     title: {
-      inner: '매장 상세'
+      inner: '매장 상세',
     },
     // Meta tags
-    meta: [{ name: 'keywords', content: 'TenantDetail' }]
-  }
-}
+    meta: [{ name: 'keywords', content: 'TenantDetail' }],
+  },
+};
 </script>

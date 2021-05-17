@@ -2,6 +2,7 @@
   .tenant-mainimg {
     @include mgCenter();
     width: 200px;
+    margin-bottom: 45px;
     img {
       width: 100%;
       text-align: center;
@@ -11,6 +12,7 @@
     padding-left: 30px;
     padding-right: 30px;
     .tenant-tit {
+      margin-bottom: 10px;
       font-size: 20px;
       font-weight: 700;
     }
@@ -23,7 +25,8 @@
       margin-bottom: 10px;
       font-size: 14px;
       .subinfo {
-        flex-basis: calc(100% - 45px);
+        flex-basis: calc(100% - 50px);
+        padding-right: 10px;
         & > div {
           margin-top: 5px;
         }
@@ -34,15 +37,14 @@
       }
       .btntel {
         display: block;
-        flex: 0 30px;
+        flex: 0 0 50px;
         height: 50px;
         span {
           @include ir();
-          @include mgCenter();
           display: block;
-          width: 13px;
           height: 50px;
           background: url('../images/icon/ico_phone.svg') no-repeat center;
+          background-size: contain;
         }
       }
     }
@@ -50,6 +52,105 @@
       margin-bottom: 30px;
       font-size: 14px;
       font-weight: 300;
+    }
+    .use-info {
+      border-bottom: 1px solid $primary;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      .item {
+        flex: 0 0 19%;
+        .ico {
+          width: 28px;
+          height: 28px;
+          margin: 0 auto 2px;
+          overflow: hidden;
+          span {
+            @include mgCenter();
+            position: relative;
+            display: block;
+            margin-top: 3px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            &::after {
+              @include ir();
+              position: absolute;
+              width: 4px;
+              height: 4px;
+              top: 0;
+              right: 0;
+              background-size: contain;
+              background-repeat: no-repeat;
+            }
+            &.i1 {
+              width: 22px;
+              height: 18px;
+              margin-top: 5px;
+              background-image: url('../images/icon/ico_tenant1.png');
+            }
+            &.i2 {
+              width: 20px;
+              height: 20px;
+              margin-top: 4px;
+              background-image: url('../images/icon/ico_tenant2.png');
+            }
+            &.i3 {
+              width: 22px;
+              height: 21px;
+              background-image: url('../images/icon/ico_tenant3.png');
+            }
+            &.i4 {
+              width: 22px;
+              height: 21px;
+              background-image: url('../images/icon/ico_tenant4.png');
+            }
+            &.i5 {
+              width: 22px;
+              height: 21px;
+              background-image: url('../images/icon/ico_tenant5.png');
+            }
+          }
+          &.y {
+            span {
+              &::after {
+                content: '사용가능';
+                background-image: url('../images/icon/ico_tenant_yes.png');
+              }
+            }
+          }
+          &.n {
+            span {
+              &::after {
+                content: '사용불가';
+                background-image: url('../images/icon/ico_tenant_no.png');
+              }
+            }
+          }
+        }
+        p {
+          font-size: 10px;
+          font-weight: 300;
+          text-align: center;
+        }
+      }
+    }
+    .menu-list {
+      border-bottom: 1px solid $primary;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      & > li {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 3px;
+        font-size: 14px;
+        font-weight: 300;
+        &:first-of-type {
+          margin-top: 0;
+        }
+      }
     }
   }
   .tenant-location {
