@@ -409,11 +409,18 @@
   }
 }
 .listnone {
+  margin-top: 50px;
   font-size: 14px;
   font-weight: 300;
+
   .text1 {
     color: $primary;
-    font-size: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
     font-weight: 700;
+  }
+  @at-root .inner & {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
