@@ -47,6 +47,12 @@
       }
     }
   }
+  &.type3 {
+    border-top: 1px dashed $primary;
+    & > li {
+      margin-top: 20px;
+    }
+  }
 }
 .dlist {
   & > dt {
