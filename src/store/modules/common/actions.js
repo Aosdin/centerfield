@@ -22,5 +22,8 @@ export default {
   },
   setNavigation ({ commit }, payload) {
     commit(t.SET_NAVIGATION, payload)
+  },
+  setMapDialogs ({ commit }, payload) {
+    commit(t.SET_MAPDIALOGS, payload)
   }
 }

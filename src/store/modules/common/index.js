@@ -3,7 +3,8 @@ import getters from './getters'
 import mutations from './mutations'
 
 const state = {
-  isNavigation: false
+  isNavigation: false,
+  isMapDialog: false
 }
 
 export default {

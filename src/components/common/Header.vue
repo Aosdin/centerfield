@@ -11,6 +11,7 @@
     <a
       href="javascript:;"
       class="btn-spot"
+      @click="setMapDialogsAction(true)"
     ><span /></a>
   </header>
 </template>
@@ -27,7 +28,8 @@ export default {
   },
   methods: {
     ...mapActions('common', {
-      setNavigation: 'setNavigation'
+      setNavigation: 'setNavigation',
+      setMapDialogsAction: 'setMapDialogs'
     }),
     showNavi () {
       this.setNavigation(!this.isNavigation)

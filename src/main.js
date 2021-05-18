@@ -5,6 +5,7 @@
 import 'normalize.css'
 import '@/assets/css/style.css'
 import '@/assets/scss/style.scss'
+import 'vuetify/dist/vuetify.css'
 
 /**
  * Entry vue
@@ -19,6 +20,7 @@ import store from '@/store' // Must be a name as `store`
  * Plugin
  */
 import plugins from '@/shared/plugins'
+import vuetify from './plugins/vuetify'
 
 /**
  * Install plugins
@@ -29,5 +31,6 @@ sync(store, router)
 new Vue({
   router,
   store,
+  vuetify,
   render: h => h(App)
 }).$mount('#app')
