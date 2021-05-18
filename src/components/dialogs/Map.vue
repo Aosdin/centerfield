@@ -66,7 +66,7 @@
           </div>
         </div>
 
-        <button type="button" class="pop-close">
+        <button type="button" class="pop-close" @click="setMapDialogsAction(false)">
           <span>팝업닫기</span>
         </button>
       </div>
