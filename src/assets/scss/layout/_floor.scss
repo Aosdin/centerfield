@@ -192,9 +192,39 @@
     }
   }
 }
-.floor_rootmap {
+.floor-level {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  li {
+    flex: 0 0 16%;
+    &:first-of-type {
+      flex: 0 0 26%;
+    }
+    a {
+      border: 1px solid $gray;
+      display: inline-block;
+      width: 100%;
+      padding: 7px 0;
+      font-weight: 700;
+      text-align: center;
+    }
+    &.active {
+      a {
+        color: $white;
+        border-color: $black;
+        background-color: $black;
+      }
+    }
+  }
+}
+.floor-rootmap {
   margin-top: 45px;
   img {
     width: 100%;
+  }
+  p {
+    margin-top: 20px;
+    font-size: 14px;
   }
 }

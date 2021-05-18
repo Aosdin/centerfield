@@ -137,6 +137,13 @@
           <form>
             <fieldset>
               <legend>경로 찾기</legend>
+              <ul class="floor-level">
+                <li><a href="#">주차장</a></li>
+                <li><a href="#">B2</a></li>
+                <li class="active"><a href="#">B1</a></li>
+                <li><a href="#">1F</a></li>
+                <li><a href="#">2F</a></li>
+              </ul>
               <div class="selectbox">
                 <label for="frm1" class="blind">현재 위치 선택</label>
                 <select id="frm1">
@@ -146,6 +153,13 @@
                   <option>선택3</option>
                 </select>
               </div>
+              <ul class="floor-level">
+                <li class="active"><a href="#">주차장</a></li>
+                <li><a href="#">B2</a></li>
+                <li><a href="#">B1</a></li>
+                <li><a href="#">1F</a></li>
+                <li><a href="#">2F</a></li>
+              </ul>
               <div class="selectbox">
                 <label for="frm2" class="blind">목적지 선택</label>
                 <select id="frm2">
@@ -158,8 +172,9 @@
               <button type="button" class="btn1 btg-primary">
                 <span>찾기</span>
               </button>
-              <div class="floor_rootmap">
+              <div class="floor-rootmap">
                 <img src="../assets/images/floor/floor_root.svg" alt="" />
+                <p>EAST 엘리베이터를 이용하여 2F에서 하차, 외부 정원을 통과해 주세요.</p>
               </div>
             </fieldset>
           </form>
