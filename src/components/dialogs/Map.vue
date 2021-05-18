@@ -10,30 +10,30 @@
               <fieldset>
                 <legend>경로 찾기</legend>
                 <ul class="floor-level">
-                  <li><button type="button" @click="fromFloor = 'parking'">주차장</button></li>
-                  <li><button type="button" @click="fromFloor = 'B2'">B2</button></li>
-                  <li class="active"><button type="button" @click="fromFloor = 'B1'">B1</button></li>
-                  <li><button type="button" @click="fromFloor = 'F1'">1F</button></li>
-                  <li><button type="button" @click="fromFloor = 'F2'">2F</button></li>
+                  <li :class="{'active' : fromFloor === 'parking'}"><button type="button" @click="fromFloor = 'parking'">주차장</button></li>
+                  <li :class="{'active' : fromFloor === 'B2'}"><button type="button" @click="fromFloor = 'B2'">B2</button></li>
+                  <li :class="{'active' : fromFloor === 'B1'}"><button type="button" @click="fromFloor = 'B1'">B1</button></li>
+                  <li :class="{'active' : fromFloor === 'F1'}"><button type="button" @click="fromFloor = 'F1'">1F</button></li>
+                  <li :class="{'active' : fromFloor === 'F2'}"><button type="button" @click="fromFloor = 'F2'">2F</button></li>
                 </ul>
                 <div class="selectbox">
                   <label for="frm1" class="blind">현재 위치 선택</label>
                   <select id="frm1" v-model="fromSel">
-                    <option value="">선택하세요.</option>
+                    <option :value="null">선택하세요.</option>
                     <option :value="o.value" v-for="o in selData[fromFloor]">{{ o.text }}</option>
                   </select>
                 </div>
                 <ul class="floor-level">
-                  <li class="active"><button type="button" @click="toFloor = 'parking'">주차장</button></li>
-                  <li><button type="button" @click="toFloor = 'B2'">B2</button></li>
-                  <li><button type="button" @click="toFloor = 'B1'">B1</button></li>
-                  <li><button type="button" @click="toFloor = 'F1'">1F</button></li>
-                  <li><button type="button" @click="toFloor = 'F2'">2F</button></li>
+                  <li :class="{'active' : toFloor === 'parking'}"><button type="button" @click="toFloor = 'parking'">주차장</button></li>
+                  <li :class="{'active' : toFloor === 'B2'}"><button type="button" @click="toFloor = 'B2'">B2</button></li>
+                  <li :class="{'active' : toFloor === 'B1'}"><button type="button" @click="toFloor = 'B1'">B1</button></li>
+                  <li :class="{'active' : toFloor === 'F1'}"><button type="button" @click="toFloor = 'F1'">1F</button></li>
+                  <li :class="{'active' : toFloor === 'F2'}"><button type="button" @click="toFloor = 'F2'">2F</button></li>
                 </ul>
                 <div class="selectbox">
                   <label for="frm2" class="blind">목적지 선택</label>
                   <select id="frm2" v-model="toSel">
-                    <option value="">선택하세요.</option>
+                    <option :value="null">선택하세요.</option>
                     <option :value="o.value" v-for="o in selData[toFloor]">{{ o.text }}</option>
                   </select>
                 </div>
@@ -53,8 +53,6 @@
                   <div v-if="showMapDataGroup === 'PE_1FW'">PE_1FW 지도이미지 넣어주세요</div>
                   <div v-if="showMapDataGroup === 'PE_2FE'">PE_2FE 지도이미지 넣어주세요</div>
                   <div v-if="showMapDataGroup === 'PE_2FW'">PE_2FW 지도이미지 넣어주세요</div>
-
-                  /*나머지코드들도 위와같이 추가부탁드립니다*/
                 </div>
 
                 <div class="floor-rootmap">
@@ -128,6 +126,14 @@ export default {
       if (this.fromSel !== null && this.toSel !== null) return this.mapDataGroup[this.fromSel][this.toSel];
       return null;
     },
+  },
+  watch: {
+    fromFloor () {
+      this.fromSel = null
+    },
+    toFloor () {
+      this.toSel = null
+    }
   },
   methods: {
     ...mapActions('common', {
