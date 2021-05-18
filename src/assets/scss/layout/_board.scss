@@ -106,11 +106,14 @@
     .brd-wrap {
       padding: 12px 20px 9px;
       .tit {
+        @include ellipsis(2);
         font-weight: 700;
+        word-break: break-all;
       }
       p {
         font-size: 14px;
         font-weight: 300;
+        word-break: break-all;
       }
     }
   }
@@ -403,5 +406,14 @@
         margin-right: 0;
       }
     }
+  }
+}
+.listnone {
+  font-size: 14px;
+  font-weight: 300;
+  .text1 {
+    color: $primary;
+    font-size: 20px;
+    font-weight: 700;
   }
 }

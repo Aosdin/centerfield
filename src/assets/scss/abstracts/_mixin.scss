@@ -74,6 +74,14 @@
   border: 0;
 }
 
+@mixin ellipsis($n) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $n;
+  -webkit-box-orient: vertical;
+}
+
 @mixin mq($screen-width) {
   @if $screen-width == 'min375' {
     @media screen and (min-width: 375px) {

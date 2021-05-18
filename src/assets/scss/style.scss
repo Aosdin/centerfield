@@ -37,3 +37,18 @@
     left: 250px;
   }
 }
+
+/* v-application 초기화 */
+body {
+  .v-application {
+    font-family: $fontFamily;
+    color: $color-default;
+    ul,
+    li {
+      padding-left: 0;
+    }
+    a {
+      color: $color-default;
+    }
+  }
+}

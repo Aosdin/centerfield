@@ -26,6 +26,33 @@
     }
   }
 }
+.fullPop {
+  position: relative;
+  .pop-inner {
+    padding: 30px;
+    .floor-rootmap {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+  }
+  .pop-close {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 28px;
+    right: 28px;
+    span {
+      @include ir();
+      @include mgCenter();
+      display: block;
+      width: 15px;
+      height: 15px;
+      background: url('../images/icon/ico_close.svg') no-repeat center;
+      background-size: contain;
+    }
+  }
+}
 .poptit {
   font-size: 20px;
   font-weight: 700;
@@ -159,11 +186,5 @@
     & + .ulist2 {
       margin-top: 20px;
     }
-  }
-}
-.poptype1 {
-  .floor-rootmap {
-    margin-left: -20px;
-    margin-right: -20px;
   }
 }

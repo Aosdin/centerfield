@@ -138,11 +138,11 @@
             <fieldset>
               <legend>경로 찾기</legend>
               <ul class="floor-level">
-                <li><a href="#">주차장</a></li>
-                <li><a href="#">B2</a></li>
-                <li class="active"><a href="#">B1</a></li>
-                <li><a href="#">1F</a></li>
-                <li><a href="#">2F</a></li>
+                <li><button type="button">주차장</button></li>
+                <li><button type="button">B2</button></li>
+                <li class="active"><button type="button">B1</button></li>
+                <li><button type="button">1F</button></li>
+                <li><button type="button">2F</button></li>
               </ul>
               <div class="selectbox">
                 <label for="frm1" class="blind">현재 위치 선택</label>
@@ -154,11 +154,11 @@
                 </select>
               </div>
               <ul class="floor-level">
-                <li class="active"><a href="#">주차장</a></li>
-                <li><a href="#">B2</a></li>
-                <li><a href="#">B1</a></li>
-                <li><a href="#">1F</a></li>
-                <li><a href="#">2F</a></li>
+                <li class="active"><button type="button">주차장</button></li>
+                <li><button type="button">B2</button></li>
+                <li><button type="button">B1</button></li>
+                <li><button type="button">1F</button></li>
+                <li><button type="button">2F</button></li>
               </ul>
               <div class="selectbox">
                 <label for="frm2" class="blind">목적지 선택</label>
