@@ -202,11 +202,22 @@
                   <div v-if="showMapDataGroup === '1FE_1FW'">
                     <img src="../../assets/images/floor/1FE_1FW.svg" alt="" />
                   </div>
+                  <div v-if="showMapDataGroup === '1FW_2FE'">
+                    <img src="../../assets/images/floor/1FW_2FE.svg" alt="" />
+                    <p>EAST 에스컬레이터를 이용하여 이동하세요.</p>
+                  </div>
                   <div v-if="showMapDataGroup === '1FE_2FE'">
                     <img src="../../assets/images/floor/1FE_2FE.svg" alt="" />
                     <p>EAST 에스컬레이터를 이용하여 이동하세요.</p>
                   </div>
-                  <!-- 목요일 물어볼것! figma에 1FW_2FW, 1FE_2FE 2개가 있음 -->
+                  <div v-if="showMapDataGroup === '1FE_2FW'">
+                    <img src="../../assets/images/floor/1FE_2FW.svg" alt="" />
+                    <p>EAST 에스컬레이터와 외부정원을 통해 이동하세요.</p>
+                  </div>
+                  <div v-if="showMapDataGroup === '1FW_2FW'">
+                    <img src="../../assets/images/floor/1FW_2FW.svg" alt="" />
+                    <p>WEST 엘리베이터를 이용하여 이동하세요.</p>
+                  </div>
                   <div v-if="showMapDataGroup === '2FE_2FW'">
                     <img src="../../assets/images/floor/2FE_2FW.svg" alt="" />
                     <p>외부정원을 통과하여 이동하세요.</p>
