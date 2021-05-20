@@ -4,7 +4,7 @@ import mutations from './mutations'
 
 const state = {
   isNavigation: false,
-  isMapDialog: true
+  isMapDialog: false
 }
 
 export default {
