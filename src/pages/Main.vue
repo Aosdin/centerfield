@@ -2,12 +2,19 @@
   <div class="main">
     <div class="inner">
       <!-- 슬라이드 영역(s) -->
-      <div class="main-sldr">
-        <div class="item">
-          <div>
+      <div class="main-sldr swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="../assets/images/main/slide_img01.png" alt="MIRROR &amp; LIGHT" />
+          </div>
+          <div class="swiper-slide">
+            <img src="../assets/images/main/slide_img02.png" alt="FOOD STREET" />
+          </div>
+          <div class="swiper-slide">
             <img src="../assets/images/main/slide_img01.png" alt="MIRROR &amp; LIGHT" />
           </div>
         </div>
+        <div class="swiper-pagination" />
       </div>
       <!--// 슬라이드 영역(e) -->
       <section class="info-sector" ref="info">
@@ -137,6 +144,7 @@ export default {
     ScrollTrigger01: null,
     ScrollTrigger02: null,
     ScrollTrigger03: null,
+    visualSwiper: null,
   }),
   computed: {
     vtop() {
@@ -195,6 +203,12 @@ export default {
         onEnter: () => this.goToSection('i4', 'onEnter'),
         onEnterBack: () => this.goToSection('i4', 'onEnterBack'),
         onLeave: () => this.goToSection('i4', 'onLeave'),
+      });
+
+      this.visualSwiper = new window.Swiper('.main-sldr.swiper-container', {
+        pagination: {
+          el: '.swiper-pagination',
+        },
       });
     });
   },
