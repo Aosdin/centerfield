@@ -13,30 +13,34 @@
   font-weight: 700;
   text-align: center;
 }
-.btg-primary {
-  color: $white;
-  background-color: $primary;
-  border: 1px solid $primary;
-}
-.btg-black {
-  color: $white;
-  background-color: $black;
-  border: 1px solid $black;
-}
-.btg-gray {
-  color: $white;
-  background-color: $gray;
-  border: 1px solid $gray;
-}
-.btg-red {
-  color: $white;
-  background-color: $red;
-  border: 1px solid $red;
-}
-.btn-more {
-  a {
-    display: inline-block;
-    font-size: 18px;
-    font-weight: 700;
+body {
+  .v-application {
+    .btg-primary {
+      color: $white;
+      background-color: $primary;
+      border: 1px solid $primary;
+    }
+    .btg-black {
+      color: $white;
+      background-color: $black;
+      border: 1px solid $black;
+    }
+    .btg-gray {
+      color: $white;
+      background-color: $gray;
+      border: 1px solid $gray;
+    }
+    .btg-red {
+      color: $white;
+      background-color: $red;
+      border: 1px solid $red;
+    }
+    .btn-more {
+      a {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
   }
 }
