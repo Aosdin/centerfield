@@ -34,7 +34,7 @@
     <section class="sector sect-store">
       <div class="inner">
         <div class="store">
-          <a href="#">
+          <router-link :to="{ name: 'tenantDetail' }">
             <!-- (!)오픈 준비중일때는 photo에 'prepare'를 추가해주세요. -->
             <div class="photo prepare">
               <img
@@ -45,7 +45,7 @@
             <h4 class="store-name">FIRE BELL</h4>
             <div class="category">브런치 / 버거 / 샌드위치</div>
             <div class="area">EAST TOWER 1F</div>
-          </a>
+          </router-link>
         </div>
         <div class="store">
           <a href="#">
