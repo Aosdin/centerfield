@@ -3,12 +3,12 @@
     <div class="inner">
       <!-- 슬라이드 영역(s) -->
       <div class="main-sldr swiper-container">
-        <div class="item swiper-wrapper">
+        <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img src="../assets/images/main/slide_img01.png" alt="MIRROR &amp; LIGHT" />
           </div>
           <div class="swiper-slide">
-            <img src="../assets/images/main/slide_img01.png" alt="MIRROR &amp; LIGHT" />
+            <img src="../assets/images/main/slide_img02.png" alt="FOOD STREET" />
           </div>
           <div class="swiper-slide">
             <img src="../assets/images/main/slide_img01.png" alt="MIRROR &amp; LIGHT" />
@@ -207,8 +207,7 @@ export default {
 
       this.visualSwiper = new window.Swiper('.main-sldr.swiper-container', {
         pagination: {
-          el: '.event .swiper-pagination',
-          type: 'fraction',
+          el: '.swiper-pagination',
         },
       });
     });

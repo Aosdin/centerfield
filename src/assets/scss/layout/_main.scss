@@ -3,10 +3,20 @@
   .main-sldr {
     height: 106.6667vw;
     margin-bottom: 20px;
-    .item {
-      height: 100%;
+    .swiper-slide {
       img {
         width: 100%;
+      }
+    }
+    .swiper-pagination {
+      .swiper-pagination-bullet {
+        background-color: $white;
+        margin: 0 5px;
+        opacity: 0.5;
+        &.swiper-pagination-bullet-active {
+          background-color: $white;
+          opacity: 1;
+        }
       }
     }
   }
