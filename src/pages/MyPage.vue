@@ -41,6 +41,12 @@
               <a href="#" class="btn2 btg-primary">포인트 조회</a>
             </div>
           </li>
+          <li>
+            <div class="itemlink">
+              <a href="#" class="ftc-primary">회원 등급 기준 및 혜택 자세히보기</a>
+              <a href="#" class="ftc-red">탈퇴하기</a>
+            </div>
+          </li>
         </ul>
       </div>
     </section>
