@@ -25,18 +25,16 @@
           <div class="inner-item">
             <div class="front-tit">
               <div class="floorinfo">
-                <span>FINE DINNIG</span>
-                <span>SPA</span>
-                <span>CLINIC</span>
+                <span>FOOD STREET</span>
+                <span>GOLF ACADEMY</span>
               </div>
-              <h4>2F</h4>
+              <h4>B2</h4>
             </div>
             <div class="back-tit">
-              <h4>2F</h4>
+              <h4>B2</h4>
               <div class="floorinfo">
-                <span>FINE DINNIG</span>
-                <span>SPA</span>
-                <span>CLINIC</span>
+                <span>FOOD STREET</span>
+                <span>GOLF ACADEMY</span>
               </div>
             </div>
             <div class="background-img" />
@@ -46,18 +44,16 @@
           <div class="inner-item">
             <div class="front-tit">
               <div class="floorinfo">
-                <span>DINNIG</span>
-                <span>CAFE</span>
-                <span>LIFESTYLE</span>
+                <span>CASUAL F&amp;B</span>
+                <span>AMENITY</span>
               </div>
-              <h4>1F</h4>
+              <h4>B1</h4>
             </div>
             <div class="back-tit">
-              <h4>1F</h4>
+              <h4>B1</h4>
               <div class="floorinfo">
-                <span>DINNIG</span>
-                <span>CAFE</span>
-                <span>LIFESTYLE</span>
+                <span>CASUAL F&amp;B</span>
+                <span>AMENITY</span>
               </div>
             </div>
             <div class="background-img" />
@@ -67,16 +63,18 @@
           <div class="inner-item">
             <div class="front-tit">
               <div class="floorinfo">
-                <span>CASUAL F&amp;B</span>
-                <span>AMENITY</span>
+                <span>DINNIG</span>
+                <span>CAFE</span>
+                <span>LIFESTYLE</span>
               </div>
-              <h4>B1</h4>
+              <h4>1F</h4>
             </div>
             <div class="back-tit">
-              <h4>B1</h4>
+              <h4>1F</h4>
               <div class="floorinfo">
-                <span>CASUAL F&amp;B</span>
-                <span>AMENITY</span>
+                <span>DINNIG</span>
+                <span>CAFE</span>
+                <span>LIFESTYLE</span>
               </div>
             </div>
             <div class="background-img" />
@@ -86,16 +84,18 @@
           <div class="inner-item">
             <div class="front-tit">
               <div class="floorinfo">
-                <span>FOOD STREET</span>
-                <span>GOLF ACADEMY</span>
+                <span>FINE DINNIG</span>
+                <span>SPA</span>
+                <span>CLINIC</span>
               </div>
-              <h4>B2</h4>
+              <h4>2F</h4>
             </div>
             <div class="back-tit">
-              <h4>B2</h4>
+              <h4>2F</h4>
               <div class="floorinfo">
-                <span>FOOD STREET</span>
-                <span>GOLF ACADEMY</span>
+                <span>FINE DINNIG</span>
+                <span>SPA</span>
+                <span>CLINIC</span>
               </div>
             </div>
             <div class="background-img" />
