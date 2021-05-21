@@ -16,36 +16,48 @@
             <span>전화걸기</span>
           </button>
         </div>
+        <p class="description">수제버거 전문점. 소고기 패티에 아메리칸 치즈를 사용한 아메리칸 스타일의 수제버거.</p>
         <div class="use-info">
+          <!-- 가능이면 y, 불가면 n -->
           <div class="item">
-            <div class="ico y">
-              <span class="i1"></span>
+            <div class="itembox">
+              <div class="ico y">
+                <span class="i1"></span>
+              </div>
+              <p>신세계상품권</p>
             </div>
-            <p>신세계상품권</p>
           </div>
           <div class="item">
-            <div class="ico y">
-              <span class="i2"></span>
+            <div class="itembox">
+              <div class="ico y">
+                <span class="i2"></span>
+              </div>
+              <p>포인트적립</p>
             </div>
-            <p>포인트적립</p>
           </div>
           <div class="item">
-            <div class="ico y">
-              <span class="i3"></span>
+            <div class="itembox">
+              <div class="ico y">
+                <span class="i3"></span>
+              </div>
+              <p>카드가능</p>
             </div>
-            <p>카드가능</p>
           </div>
           <div class="item">
-            <div class="ico y">
-              <span class="i4"></span>
+            <div class="itembox">
+              <div class="ico y">
+                <span class="i4"></span>
+              </div>
+              <p>포장가능</p>
             </div>
-            <p>포장가능</p>
           </div>
           <div class="item">
-            <div class="ico n">
-              <span class="i5"></span>
+            <div class="itembox">
+              <div class="ico n">
+                <span class="i5"></span>
+              </div>
+              <p>예약불가</p>
             </div>
-            <p>예약불가</p>
           </div>
         </div>
         <ul class="menu-list ulist2">
@@ -78,7 +90,6 @@
             <div class="price">10,900</div>
           </li>
         </ul>
-        <p class="description">수제버거 전문점. 소고기 패티에 아메리칸 치즈를 사용한 아메리칸 스타일의 수제버거.</p>
       </div>
       <div class="tenant-location">
         <img src="../assets/images/tenant/tenant_location_firebell.svg" alt="" />

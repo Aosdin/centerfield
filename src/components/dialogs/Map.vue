@@ -10,7 +10,8 @@
               <fieldset>
                 <legend>경로 찾기</legend>
                 <ul class="floor-level">
-                  <li :class="{ active: fromFloor === 'parking' }"><button type="button" @click="fromFloor = 'parking'">주차장</button></li>
+                  <li>현재경로</li>
+                  <li :class="{ active: fromFloor === 'parking' }"><button type="button" @click="fromFloor = 'parking'">P</button></li>
                   <li :class="{ active: fromFloor === 'B2' }"><button type="button" @click="fromFloor = 'B2'">B2</button></li>
                   <li :class="{ active: fromFloor === 'B1' }"><button type="button" @click="fromFloor = 'B1'">B1</button></li>
                   <li :class="{ active: fromFloor === 'F1' }"><button type="button" @click="fromFloor = 'F1'">1F</button></li>
@@ -24,7 +25,8 @@
                   </select>
                 </div>
                 <ul class="floor-level">
-                  <li :class="{ active: toFloor === 'parking' }"><button type="button" @click="toFloor = 'parking'">주차장</button></li>
+                  <li>목적지</li>
+                  <li :class="{ active: toFloor === 'parking' }"><button type="button" @click="toFloor = 'parking'">P</button></li>
                   <li :class="{ active: toFloor === 'B2' }"><button type="button" @click="toFloor = 'B2'">B2</button></li>
                   <li :class="{ active: toFloor === 'B1' }"><button type="button" @click="toFloor = 'B1'">B1</button></li>
                   <li :class="{ active: toFloor === 'F1' }"><button type="button" @click="toFloor = 'F1'">1F</button></li>
@@ -83,7 +85,6 @@
                   </div>
                   <div v-if="showMapDataGroupSelect === 'PW_B2E2'">
                     <img src="../../assets/images/floor/PW_B2E2.svg" alt="" />
-                    <p>WEST 엘리베이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'PW_B1E'">
                     <img src="../../assets/images/floor/PW_B1E.svg" alt="" />
@@ -134,7 +135,6 @@
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B2E1_2FW'">
                     <img src="../../assets/images/floor/B2E1_2FW.svg" alt="" />
-                    <p>WEST 엘리베이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B2E2_B1E'">
                     <img src="../../assets/images/floor/B2E2_B1E.svg" alt="" />
@@ -190,7 +190,6 @@
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B1W_2FE'">
                     <img src="../../assets/images/floor/B1W_2FE.svg" alt="" />
-                    <p>건물 외부와 EAST 에스컬레이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B1W_2FW'">
                     <img src="../../assets/images/floor/B1W_2FW.svg" alt="" />
@@ -205,7 +204,6 @@
                   </div>
                   <div v-if="showMapDataGroupSelect === '1FE_2FE'">
                     <img src="../../assets/images/floor/1FE_2FE.svg" alt="" />
-                    <p>EAST 에스컬레이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === '1FE_2FW'">
                     <img src="../../assets/images/floor/1FE_2FW.svg" alt="" />
@@ -332,10 +330,10 @@ export default {
     ...mapActions('common', {
       setMapDialogsAction: 'setMapDialogs',
     }),
-    search () {
-      this.showMapDataGroupSelect = this.showMapDataGroup
-      console.log(this.showMapDataGroupSelect, this.showMapDataGroup)
-    }
+    search() {
+      this.showMapDataGroupSelect = this.showMapDataGroup;
+      console.log(this.showMapDataGroupSelect, this.showMapDataGroup);
+    },
   },
 };
 </script>

@@ -5,13 +5,17 @@
       <div class="main-sldr swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="../assets/images/main/slide_img01.png" alt="MIRROR &amp; LIGHT" />
+            <a href="/floor1">
+              <img src="../assets/images/main/slide_img01.png" alt="FOOD STREET 6월 30일 오픈" />
+            </a>
           </div>
           <div class="swiper-slide">
-            <img src="../assets/images/main/slide_img02.png" alt="FOOD STREET" />
+            <a href="/parkingInfo">
+              <img src="../assets/images/main/slide_img02.png" alt="THE SHOPS AT CENTERFIELD 오시는 길" />
+            </a>
           </div>
           <div class="swiper-slide">
-            <img src="../assets/images/main/slide_img01.png" alt="MIRROR &amp; LIGHT" />
+            <img src="../assets/images/main/slide_img03.png" alt="MIRROR &amp; LIGHT" />
           </div>
         </div>
         <div class="swiper-pagination" />
@@ -160,7 +164,7 @@ export default {
     goFloor() {
       this.$router.push({ name: 'floor1' });
     },
-    resize () {
+    resize() {
       ScrollTrigger.getAll().map(s => {
         s.kill(true);
       });
@@ -206,8 +210,8 @@ export default {
           onEnterBack: () => this.goToSection('i4', 'onEnterBack'),
           onLeave: () => this.goToSection('i4', 'onLeave'),
         });
-      })
-    }
+      });
+    },
   },
   mounted() {
     this.$nextTick(_ => {
@@ -218,7 +222,7 @@ export default {
       });
     });
     window.addEventListener('resize', this.resize);
-    this.resize()
+    this.resize();
   },
   destroyed() {
     console.log(ScrollTrigger.getAll());

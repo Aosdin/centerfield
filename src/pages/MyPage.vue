@@ -5,8 +5,8 @@
         <h3 class="sectit1">MY PAGE</h3>
         <a href="#" class="btn2 btg-black">개인정보수정</a>
         <div class="userwrap">
-          <div class="icon" />
           <div class="username"><span class="ftc-primary">김센터</span> 님</div>
+          <div class="usermember">일반회원</div>
         </div>
       </div>
       <div class="inner">
@@ -44,7 +44,7 @@
           <li>
             <div class="itemlink">
               <a href="#" class="ftc-primary">회원 등급 기준 및 혜택 자세히보기</a>
-              <a href="#" class="ftc-red">탈퇴하기</a>
+              <a href="/Withdrawal" class="ftc-red">탈퇴하기</a>
             </div>
           </li>
         </ul>

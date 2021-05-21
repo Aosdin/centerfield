@@ -106,6 +106,7 @@
   .userwrap {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 20px;
     .icon {
       background-color: $gray;
@@ -114,9 +115,11 @@
       border-radius: 50%;
     }
     .username {
-      flex: 0 0 calc(100% - 60px);
-      padding-left: 10px;
       font-size: 24px;
+      font-weight: 700;
+    }
+    .usermember {
+      color: $primary;
       font-weight: 700;
     }
   }
