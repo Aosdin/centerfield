@@ -160,9 +160,11 @@ export default {
     goFloor() {
       this.$router.push({ name: 'floor1' });
     },
-  },
-  mounted() {
-    this.$nextTick(_ => {
+    resize () {
+      ScrollTrigger.getAll().map(s => {
+        s.kill(true);
+      });
+
       const urban = document.getElementById('urban') || this.$refs.urban;
       const urbanTop = urban.getBoundingClientRect().y || 0;
       console.log(this.vtop);
@@ -204,13 +206,18 @@ export default {
         onEnterBack: () => this.goToSection('i4', 'onEnterBack'),
         onLeave: () => this.goToSection('i4', 'onLeave'),
       });
-
+    }
+  },
+  mounted() {
+    this.$nextTick(_ => {
       this.visualSwiper = new window.Swiper('.main-sldr.swiper-container', {
         pagination: {
           el: '.swiper-pagination',
         },
       });
     });
+    window.addEventListener('resize', this.resize);
+    this.resize()
   },
   destroyed() {
     console.log(ScrollTrigger.getAll());
