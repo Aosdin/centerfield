@@ -26,7 +26,7 @@
       <img src="../assets/images/floor/floor_map1.svg" alt="" />
     </section>
     <section class="sector sect-store">
-      <div class="inner">
+      <div class="item i1 active">
         <div class="store">
           <a href="/tenantDetail">
             <!-- (!)오픈 준비중일때는 photo에 'prepare'를 추가해주세요. -->
@@ -38,6 +38,8 @@
             <div class="area">EAST TOWER 1F</div>
           </a>
         </div>
+      </div>
+      <div class="item i2">
         <div class="store">
           <a href="#">
             <div class="photo">
@@ -48,9 +50,11 @@
             <div class="area">EAST TOWER 1F</div>
           </a>
         </div>
+      </div>
+      <div class="item i3">
         <div class="store">
           <a href="#">
-            <div class="photo">
+            <div class="photo prepare">
               <img src="../assets/images/floor/store/image 36.png" alt="" />
             </div>
             <h4 class="store-name">PHO LEHOI</h4>
@@ -58,6 +62,8 @@
             <div class="area">EAST TOWER 1F</div>
           </a>
         </div>
+      </div>
+      <div class="item i4">
         <div class="store">
           <a href="#">
             <div class="photo">
@@ -68,6 +74,8 @@
             <div class="area">EAST TOWER 1F</div>
           </a>
         </div>
+      </div>
+      <div class="item i5">
         <div class="store">
           <a href="#">
             <div class="photo">
