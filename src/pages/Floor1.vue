@@ -33,9 +33,7 @@
         <div class="store">
           <a href="/tenantDetail">
             <!-- (!)오픈 준비중일때는 photo에 'prepare'를 추가해주세요. -->
-            <div class="photo">
-              <img src="../assets/images/floor/store/image 34.png" alt="" />
-            </div>
+            <div class="photo" :style="{ backgroundImage: 'url(/src/assets/images/floor/store/image_34.png)' }"></div>
             <h4 class="store-name">파이어벨 디어고메</h4>
             <div class="category">브런치 / 버거 / 샌드위치</div>
             <div class="area">EAST TOWER 1F</div>
@@ -46,7 +44,7 @@
         <div class="store">
           <a href="#">
             <div class="photo">
-              <img src="../assets/images/floor/store/image 35.png" alt="" />
+              <img src="../assets/images/floor/store/image_35.png" alt="" />
             </div>
             <h4 class="store-name">제네랄드링크</h4>
             <div class="category">브런치 / 버거 / 샌드위치</div>
@@ -58,7 +56,7 @@
         <div class="store">
           <a href="#">
             <div class="photo prepare">
-              <img src="../assets/images/floor/store/image 36.png" alt="" />
+              <img src="../assets/images/floor/store/image_36.png" alt="" />
             </div>
             <h4 class="store-name">레호이</h4>
             <div class="category">브런치 / 버거 / 샌드위치</div>
@@ -70,7 +68,7 @@
         <div class="store">
           <a href="#">
             <div class="photo">
-              <img src="../assets/images/floor/store/image 37.png" alt="" />
+              <img src="../assets/images/floor/store/image_37.png" alt="" />
             </div>
             <h4 class="store-name">미아논나</h4>
             <div class="category">브런치 / 버거 / 샌드위치</div>
@@ -82,7 +80,7 @@
         <div class="store">
           <a href="#">
             <div class="photo">
-              <img src="../assets/images/floor/store/image 38.png" alt="" />
+              <img src="../assets/images/floor/store/image_38.png" alt="" />
             </div>
             <h4 class="store-name">쿠앤즈버킷</h4>
             <div class="category">브런치 / 버거 / 샌드위치</div>

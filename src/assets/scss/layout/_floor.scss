@@ -115,8 +115,12 @@
     }
     .photo {
       position: relative;
+      height: 260px;
       margin-bottom: 20px;
       border-radius: 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
       overflow: hidden;
       img {
         width: 100%;
@@ -143,6 +147,7 @@
     .store-name,
     .category,
     .area {
+      @include textOver;
       transition: 0.3s linear;
     }
     .store-name {
