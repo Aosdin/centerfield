@@ -24,11 +24,11 @@
       <section class="info-sector" ref="info">
         <h3>
           미식과 취향,<br />
-          도심 라이프스타일의 정수
+          세상에 없던 도심 라이프스타일
         </h3>
         <p>
-          더샵스앳센터필드(THE SHOPS AT CENTERFIELD)는 식(食)을 중심으로 현대인들에게 필요한 라이프스타일을 제안한다.<br />
-          파인 다이닝과 캐주얼 다이닝은 물론, 동시대 가장 힙한 카페 등 다채로운 콘셉트로 세상에 없던 세상이 펼쳐진다. 또한 스파와 편집숍 등 섬세한 취향을 즐길 수 있는 리테일이 함께 해 도심 라이프스타일의 정수를 경험할 수 있다.
+          더 샵스 앳 센터필드(THE SHOPS AT CENTERFIELD)는 식(食)을 중심으로 현대인들에게 필요한 라이프스타일을 제안합니다.<br />
+          총 4개 층에 다채로운 콘셉트로 파인 다이닝과 캐주얼 다이닝은 물론, 트렌디한 카페, 편집숍, 스파 등 미식과 감성, 삶을 풍요롭게 하는 취향을 경험할 수 있습니다.
         </p>
       </section>
       <section class="urban-sector" ref="urban" id="urban">
@@ -210,13 +210,8 @@ export default {
           onEnterBack: () => this.goToSection('i4', 'onEnterBack'),
           onLeave: () => this.goToSection('i4', 'onLeave'),
         });
-<<<<<<< HEAD
-      });
+      }, 100);
     },
-=======
-      }, 100)
-    }
->>>>>>> 3c8a859348021c53482e13d09f6c985c6fb7a611
   },
   mounted() {
     this.$nextTick(_ => {
