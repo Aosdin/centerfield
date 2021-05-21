@@ -164,48 +164,49 @@ export default {
       ScrollTrigger.getAll().map(s => {
         s.kill(true);
       });
-
-      const urban = document.getElementById('urban') || this.$refs.urban;
-      const urbanTop = urban.getBoundingClientRect().y || 0;
-      console.log(this.vtop);
-      console.log(urban);
-      console.log(urbanTop, window.screenTop, innerHeight, innerWidth, window.screenTop);
-      this.ScrollTrigger01 = ScrollTrigger.create({
-        trigger: '#i2',
-        start: 'top ' + (innerHeight - 510) + 'px',
-        // markers: true,
-        end: 'top top+=' + (innerHeight - this.vtop - 360),
-        scrub: true,
-        pin: true,
-        overwrite: true,
-        onEnter: () => this.goToSection('i2', 'onEnter'),
-        onEnterBack: () => this.goToSection('i2', 'onEnterBack'),
-        onLeave: () => this.goToSection('i2', 'onLeave'),
-      });
-      this.ScrollTrigger02 = ScrollTrigger.create({
-        trigger: '#i3',
-        start: 'top ' + (innerHeight - 510) + 'px',
-        // markers: true,
-        end: 'top top+=' + (innerHeight - this.vtop - 610),
-        scrub: true,
-        pin: true,
-        overwrite: true,
-        onEnter: () => this.goToSection('i3', 'onEnter'),
-        onEnterBack: () => this.goToSection('i3', 'onEnterBack'),
-        onLeave: () => this.goToSection('i3', 'onLeave'),
-      });
-      this.ScrollTrigger03 = ScrollTrigger.create({
-        trigger: '#i4',
-        start: 'top ' + (innerHeight - 510) + 'px',
-        // markers: true
-        end: 'top top+=' + (innerHeight - this.vtop - 860),
-        scrub: true,
-        pin: true,
-        overwrite: true,
-        onEnter: () => this.goToSection('i4', 'onEnter'),
-        onEnterBack: () => this.goToSection('i4', 'onEnterBack'),
-        onLeave: () => this.goToSection('i4', 'onLeave'),
-      });
+      this.$nextTick(_ => {
+        const urban = document.getElementById('urban') || this.$refs.urban;
+        const urbanTop = urban.getBoundingClientRect().y || 0;
+        console.log(this.vtop);
+        console.log(urban);
+        console.log(urbanTop, window.screenTop, innerHeight, innerWidth, window.screenTop);
+        this.ScrollTrigger01 = ScrollTrigger.create({
+          trigger: '#i2',
+          start: 'top ' + (innerHeight - 510) + 'px',
+          // markers: true,
+          end: 'top top+=' + (innerHeight - this.vtop - 360),
+          scrub: true,
+          pin: true,
+          overwrite: true,
+          onEnter: () => this.goToSection('i2', 'onEnter'),
+          onEnterBack: () => this.goToSection('i2', 'onEnterBack'),
+          onLeave: () => this.goToSection('i2', 'onLeave'),
+        });
+        this.ScrollTrigger02 = ScrollTrigger.create({
+          trigger: '#i3',
+          start: 'top ' + (innerHeight - 510) + 'px',
+          // markers: true,
+          end: 'top top+=' + (innerHeight - this.vtop - 610),
+          scrub: true,
+          pin: true,
+          overwrite: true,
+          onEnter: () => this.goToSection('i3', 'onEnter'),
+          onEnterBack: () => this.goToSection('i3', 'onEnterBack'),
+          onLeave: () => this.goToSection('i3', 'onLeave'),
+        });
+        this.ScrollTrigger03 = ScrollTrigger.create({
+          trigger: '#i4',
+          start: 'top ' + (innerHeight - 510) + 'px',
+          // markers: true
+          end: 'top top+=' + (innerHeight - this.vtop - 860),
+          scrub: true,
+          pin: true,
+          overwrite: true,
+          onEnter: () => this.goToSection('i4', 'onEnter'),
+          onEnterBack: () => this.goToSection('i4', 'onEnterBack'),
+          onLeave: () => this.goToSection('i4', 'onLeave'),
+        });
+      })
     }
   },
   mounted() {
