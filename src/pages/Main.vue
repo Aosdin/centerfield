@@ -164,7 +164,7 @@ export default {
       ScrollTrigger.getAll().map(s => {
         s.kill(true);
       });
-      this.$nextTick(_ => {
+      this.setTimeout(_ => {
         const urban = document.getElementById('urban') || this.$refs.urban;
         const urbanTop = urban.getBoundingClientRect().y || 0;
         console.log(this.vtop);
@@ -172,9 +172,9 @@ export default {
         console.log(urbanTop, window.screenTop, innerHeight, innerWidth, window.screenTop);
         this.ScrollTrigger01 = ScrollTrigger.create({
           trigger: '#i2',
-          start: 'top top+=' + (urbanTop -610) + 'px',
-          markers: true,
-          end: 'top top+=' + (urbanTop - this.vtop - 360),
+          start: 'top ' + (innerHeight - 510) + 'px',
+          // markers: true,
+          end: 'top top+=' + (innerHeight - this.vtop - 360),
           scrub: true,
           pin: true,
           overwrite: true,
@@ -184,9 +184,9 @@ export default {
         });
         this.ScrollTrigger02 = ScrollTrigger.create({
           trigger: '#i3',
-          start: 'top top+=' + (urbanTop -610) + 'px',
+          start: 'top ' + (innerHeight - 510) + 'px',
           // markers: true,
-          end: 'top top+=' + (urbanTop - this.vtop - 610),
+          end: 'top top+=' + (innerHeight - this.vtop - 610),
           scrub: true,
           pin: true,
           overwrite: true,
@@ -196,9 +196,9 @@ export default {
         });
         this.ScrollTrigger03 = ScrollTrigger.create({
           trigger: '#i4',
-          start: 'top top+=' + (urbanTop -610) + 'px',
+          start: 'top ' + (innerHeight - 510) + 'px',
           // markers: true
-          end: 'top top+=' + (urbanTop - this.vtop - 860),
+          end: 'top top+=' + (innerHeight - this.vtop - 860),
           scrub: true,
           pin: true,
           overwrite: true,
@@ -206,7 +206,7 @@ export default {
           onEnterBack: () => this.goToSection('i4', 'onEnterBack'),
           onLeave: () => this.goToSection('i4', 'onLeave'),
         });
-      })
+      }, 100)
     }
   },
   mounted() {
