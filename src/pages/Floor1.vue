@@ -10,20 +10,23 @@
               <span>CAFE</span>
               <span>LIFESTYLE</span>
             </div>
-            <h3>1F</h3>
+            <h3>B2</h3>
           </div>
           <div class="background-img">
             <img src="../assets/images/main/uban_img2.png" alt="" />
           </div>
         </div>
         <div class="floor-infotext">
-          <h3>DINING - LIFESTYLE - AMENITY</h3>
-          <p>품격 있고 트렌디한 미각 세계와프리미엄 라이프스타일 컨텐츠를 The Shops At CENTERFIELD에서 만나보세요. 품격 있고 트렌디한 미각 세계와 프리미엄 라이프스타일 컨텐츠를 The Shops At CENTERFIELD에서 만나보세요.</p>
+          <h3>
+            <span>FOOD STREET</span>
+            <span>GOLF ACADEMY</span>
+          </h3>
+          <p>동서양을 넘나드는 12곳의 트렌디한 맛집과 차별화된 골프 문화를 경험할 수 있는 GDR 아카데미를 만나보세요.</p>
         </div>
       </div>
     </section>
     <section class="sector sect-floormap">
-      <img src="../assets/images/floor/floor_map1.svg" alt="" />
+      <img src="../assets/images/floor/floor_mapB2.svg" alt="" />
     </section>
     <section class="sector sect-store">
       <div class="item i1 active">
@@ -33,7 +36,7 @@
             <div class="photo">
               <img src="../assets/images/floor/store/image 34.png" alt="" />
             </div>
-            <h4 class="store-name">FIRE BELL</h4>
+            <h4 class="store-name">파이어벨 디어고메</h4>
             <div class="category">브런치 / 버거 / 샌드위치</div>
             <div class="area">EAST TOWER 1F</div>
           </a>
@@ -45,7 +48,7 @@
             <div class="photo">
               <img src="../assets/images/floor/store/image 35.png" alt="" />
             </div>
-            <h4 class="store-name">GENERAL DRINK SHOP</h4>
+            <h4 class="store-name">제네랄드링크</h4>
             <div class="category">브런치 / 버거 / 샌드위치</div>
             <div class="area">EAST TOWER 1F</div>
           </a>
@@ -57,7 +60,7 @@
             <div class="photo prepare">
               <img src="../assets/images/floor/store/image 36.png" alt="" />
             </div>
-            <h4 class="store-name">PHO LEHOI</h4>
+            <h4 class="store-name">레호이</h4>
             <div class="category">브런치 / 버거 / 샌드위치</div>
             <div class="area">EAST TOWER 1F</div>
           </a>
@@ -69,7 +72,7 @@
             <div class="photo">
               <img src="../assets/images/floor/store/image 37.png" alt="" />
             </div>
-            <h4 class="store-name">MIA NONNAA</h4>
+            <h4 class="store-name">미아논나</h4>
             <div class="category">브런치 / 버거 / 샌드위치</div>
             <div class="area">EAST TOWER 1F</div>
           </a>
@@ -81,7 +84,7 @@
             <div class="photo">
               <img src="../assets/images/floor/store/image 38.png" alt="" />
             </div>
-            <h4 class="store-name">QUEENS BUKET</h4>
+            <h4 class="store-name">쿠앤즈버킷</h4>
             <div class="category">브런치 / 버거 / 샌드위치</div>
             <div class="area">EAST TOWER 1F</div>
           </a>

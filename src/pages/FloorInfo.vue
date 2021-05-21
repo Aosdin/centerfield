@@ -14,7 +14,7 @@
       </div>
     </section>
     <section class="sector sect-floormap">
-      <img src="../assets/images/floor/floor_map1.svg" alt="" />
+      <img src="../assets/images/floor/floor_map.svg" alt="" />
     </section>
     <section class="sector sect-floorstore">
       <div class="inner">
@@ -57,19 +57,19 @@
           <div class="area">
             <dl class="dlist west">
               <dt>WEST TOWER</dt>
-              <dd><a href="#">BGZT Lab.</a></dd>
+              <dd><a href="#">번개장터</a></dd>
               <dd><a href="#">에디토리</a></dd>
               <dd><a href="#">산타마리아노벨라</a></dd>
               <dd><a href="#">헤아</a></dd>
               <dd><a href="#">오르오르</a></dd>
-              <dd><a href="#">카페진정성</a></dd>
-              <dd><a href="#">노아베이커리</a></dd>
+              <dd><a href="#">스틸북스</a></dd>
+              <dd><a href="#">아방베이커리</a></dd>
             </dl>
             <dl class="dlist east">
               <dt>EAST TOWER</dt>
               <dd><a href="#">해우리</a></dd>
               <dd><a href="#">JS가든</a></dd>
-              <dd><a href="#">락희옥</a></dd>
+              <dd><a href="#">부루독</a></dd>
             </dl>
           </div>
         </div>
@@ -88,12 +88,13 @@
               <dd><a href="#">치과</a></dd>
               <dd><a href="#">에이와</a></dd>
               <dd><a href="#">약국</a></dd>
+              <dd><a href="#">꽃집</a></dd>
               <dd><a href="#">이마트24</a></dd>
             </dl>
             <dl class="dlist east">
               <dt>EAST TOWER</dt>
               <dd><a href="#">하입빈스</a></dd>
-              <dd><a href="#">미확정</a></dd>
+              <dd><a href="#">김씨마구로</a></dd>
               <dd><a href="#">스타벅스 리저브</a></dd>
               <dd><a href="#">와인앤모어</a></dd>
             </dl>
@@ -111,10 +112,10 @@
           <div class="area">
             <dl class="dlist east">
               <dt>EAST TOWER</dt>
-              <dd><a href="#">호시카츠</a></dd>
+              <dd><a href="#">삼백돈</a></dd>
               <dd><a href="#">한국집</a></dd>
-              <dd><a href="#">천일제면소</a></dd>
-              <dd><a href="#">홍대개미</a></dd>
+              <dd><a href="#">도화정공가네 서오룽 가마솥한</a></dd>
+              <dd><a href="#">우에노421 바이고메서촌김씨</a></dd>
               <dd><a href="#">GDR아카데미</a></dd>
               <dd><a href="#">쿠앤즈버킷</a></dd>
               <dd><a href="#">정읍 옛날김밥</a></dd>
