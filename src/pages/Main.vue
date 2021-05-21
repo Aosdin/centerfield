@@ -168,7 +168,7 @@ export default {
       ScrollTrigger.getAll().map(s => {
         s.kill(true);
       });
-      this.$nextTick(_ => {
+      setTimeout(_ => {
         const urban = document.getElementById('urban') || this.$refs.urban;
         const urbanTop = urban.getBoundingClientRect().y || 0;
         console.log(this.vtop);
@@ -210,8 +210,13 @@ export default {
           onEnterBack: () => this.goToSection('i4', 'onEnterBack'),
           onLeave: () => this.goToSection('i4', 'onLeave'),
         });
+<<<<<<< HEAD
       });
     },
+=======
+      }, 100)
+    }
+>>>>>>> 3c8a859348021c53482e13d09f6c985c6fb7a611
   },
   mounted() {
     this.$nextTick(_ => {
