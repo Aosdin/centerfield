@@ -164,7 +164,7 @@ export default {
       ScrollTrigger.getAll().map(s => {
         s.kill(true);
       });
-      this.setTimeout(_ => {
+      setTimeout(_ => {
         const urban = document.getElementById('urban') || this.$refs.urban;
         const urbanTop = urban.getBoundingClientRect().y || 0;
         console.log(this.vtop);
