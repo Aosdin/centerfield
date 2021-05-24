@@ -28,8 +28,8 @@
     <section class="sector sect-floormap">
       <img src="../assets/images/floor/floor_mapB2.svg" alt="" />
     </section>
-    <section class="sector sect-store">
-      <div class="item i1 active">
+    <section class="sector sect-store" ref="store" id="store">
+      <div class="item i1 active" ref="item1" id="i1">
         <div class="store">
           <a href="/tenantDetail">
             <!-- (!)오픈 준비중일때는 photo에 'prepare'를 추가해주세요. -->
@@ -42,7 +42,7 @@
           </a>
         </div>
       </div>
-      <div class="item i2">
+      <div class="item i2" ref="item2" id="i2">
         <div class="store">
           <a href="#">
             <div class="photo">
@@ -54,7 +54,7 @@
           </a>
         </div>
       </div>
-      <div class="item i3">
+      <div class="item i3" ref="item3" id="i3">
         <div class="store">
           <a href="#">
             <div class="photo prepare">
@@ -66,7 +66,7 @@
           </a>
         </div>
       </div>
-      <div class="item i4">
+      <div class="item i4" ref="item4" id="i4">
         <div class="store">
           <a href="#">
             <div class="photo">
@@ -78,7 +78,7 @@
           </a>
         </div>
       </div>
-      <div class="item i5">
+      <div class="item i5" ref="item5" id="i5">
         <div class="store">
           <a href="#">
             <div class="photo">
@@ -95,6 +95,8 @@
 </template>
 
 <script>
+import {ScrollTrigger} from "gsap/all";
+
 export default {
   name: 'Floor1',
   head: {
@@ -104,11 +106,96 @@ export default {
     // Meta tags
     meta: [{ name: 'keywords', content: 'Floor1' }],
   },
+  computed: {
+    vtop() {
+      return (106.6667 * innerWidth) / 100;
+    }
+  },
+  methods: {
+    goToSection(t, b) {
+      const o = document.getElementById(t);
+      if (b === 'onEnter' || b === 'onEnterBack') o.classList.remove('active');
+      else o.classList.add('active');
+    },
+    goFloor() {
+      this.$router.push({ name: 'floor1' });
+    },
+    resize() {
+      ScrollTrigger.update()
+    },
+    handleScroll () {
+
+    }
+  },
+  mounted() {
+    const store = document.getElementById('store') || this.$refs.store;
+    const storeTop = store.getBoundingClientRect().y || 0;
+    window.addEventListener('resize', this.resize);
+    window.addEventListener('scroll', this.handleScroll);
+    console.log(`${window.outerHeight}` , storeTop)
+    console.log(storeTop - `${window.outerHeight}`)
+    this.resize();
+    this.ScrollTrigger01 = ScrollTrigger.create({
+      trigger: '#i2',
+      start: 'top ' + (storeTop - innerHeight) + 'px',
+      markers: true,
+      end: 'top top+=' + (`${window.outerHeight}` - this.vtop - 670),
+      scrub: true,
+      pin: true,
+      overwrite: true,
+      onEnter: () => this.goToSection('i2', 'onEnter'),
+      onEnterBack: () => this.goToSection('i2', 'onEnterBack'),
+      onLeave: () => this.goToSection('i2', 'onLeave'),
+    });
+    this.ScrollTrigger02 = ScrollTrigger.create({
+      trigger: '#i3',
+      start: 'top ' + (storeTop - innerHeight) + 'px',
+      // markers: true,
+      end: 'top top+=' + (`${window.outerHeight}` - this.vtop - 1040),
+      scrub: true,
+      pin: true,
+      overwrite: true,
+      onEnter: () => this.goToSection('i3', 'onEnter'),
+      onEnterBack: () => this.goToSection('i3', 'onEnterBack'),
+      onLeave: () => this.goToSection('i3', 'onLeave'),
+    });
+    this.ScrollTrigger03 = ScrollTrigger.create({
+      trigger: '#i4',
+      start: 'top ' + (storeTop - innerHeight) + 'px',
+      // markers: true
+      end: 'top top+=' + (`${window.outerHeight}` - this.vtop - 1410),
+      scrub: true,
+      pin: true,
+      overwrite: true,
+      onEnter: () => this.goToSection('i4', 'onEnter'),
+      onEnterBack: () => this.goToSection('i4', 'onEnterBack'),
+      onLeave: () => this.goToSection('i4', 'onLeave'),
+    });
+    this.ScrollTrigger03 = ScrollTrigger.create({
+      trigger: '#i5',
+      start: 'top ' + (storeTop - innerHeight) + 'px',
+      // markers: true
+      end: 'top top+=' + (`${window.outerHeight}` - this.vtop - 1780),
+      scrub: true,
+      pin: true,
+      overwrite: true,
+      onEnter: () => this.goToSection('i5', 'onEnter'),
+      onEnterBack: () => this.goToSection('i5', 'onEnterBack'),
+      onLeave: () => this.goToSection('i5', 'onLeave'),
+    });
+  },
+  destroyed() {
+    console.log(ScrollTrigger.getAll());
+    ScrollTrigger.getAll().map(s => {
+      s.kill(true);
+    });
+  }
 };
 </script>
 
 <style scoped>
 .sect-store {
-  height: 700px;
+  height: 2175px;
+  position: relative;
 }
 </style>

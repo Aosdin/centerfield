@@ -149,11 +149,18 @@ export default {
     ScrollTrigger02: null,
     ScrollTrigger03: null,
     visualSwiper: null,
+    inter: null
   }),
   computed: {
     vtop() {
       return (106.6667 * innerWidth) / 100;
     },
+    getHeight () {
+      return Math.max(
+        `${window.outerHeight}`,
+        innerHeight
+      )
+    }
   },
   methods: {
     goToSection(t, b) {
@@ -165,50 +172,7 @@ export default {
       this.$router.push({ name: 'floor1' });
     },
     resize() {
-      ScrollTrigger.getAll().map(s => {
-        s.kill(true);
-      });
-        const urban = document.getElementById('urban') || this.$refs.urban;
-        const urbanTop = urban.getBoundingClientRect().y || 0;
-        console.log(this.vtop);
-        console.log(urban);
-        console.log(urbanTop, window.screenTop, innerHeight, innerWidth, window.screenTop);
-        this.ScrollTrigger01 = ScrollTrigger.create({
-          trigger: '#i2',
-          start: 'top ' + (innerHeight - 510) + 'px',
-          // markers: true,
-          end: 'top top+=' + (innerHeight - this.vtop - 360),
-          scrub: true,
-          pin: true,
-          overwrite: true,
-          onEnter: () => this.goToSection('i2', 'onEnter'),
-          onEnterBack: () => this.goToSection('i2', 'onEnterBack'),
-          onLeave: () => this.goToSection('i2', 'onLeave'),
-        });
-        this.ScrollTrigger02 = ScrollTrigger.create({
-          trigger: '#i3',
-          start: 'top ' + (innerHeight - 510) + 'px',
-          // markers: true,
-          end: 'top top+=' + (innerHeight - this.vtop - 610),
-          scrub: true,
-          pin: true,
-          overwrite: true,
-          onEnter: () => this.goToSection('i3', 'onEnter'),
-          onEnterBack: () => this.goToSection('i3', 'onEnterBack'),
-          onLeave: () => this.goToSection('i3', 'onLeave'),
-        });
-        this.ScrollTrigger03 = ScrollTrigger.create({
-          trigger: '#i4',
-          start: 'top ' + (innerHeight - 510) + 'px',
-          // markers: true
-          end: 'top top+=' + (innerHeight - this.vtop - 860),
-          scrub: true,
-          pin: true,
-          overwrite: true,
-          onEnter: () => this.goToSection('i4', 'onEnter'),
-          onEnterBack: () => this.goToSection('i4', 'onEnterBack'),
-          onLeave: () => this.goToSection('i4', 'onLeave'),
-        });
+      ScrollTrigger.update()
     },
   },
   mounted() {
@@ -221,13 +185,49 @@ export default {
     });
     window.addEventListener('resize', this.resize);
     this.resize();
+    this.ScrollTrigger01 = ScrollTrigger.create({
+      trigger: '#i2',
+      start: 'top ' + (`${window.outerHeight}` - 580) + 'px',
+      // markers: true,
+      end: 'top top+=' + (`${window.outerHeight}` - this.vtop - 380),
+      scrub: true,
+      pin: true,
+      overwrite: true,
+      onEnter: () => this.goToSection('i2', 'onEnter'),
+      onEnterBack: () => this.goToSection('i2', 'onEnterBack'),
+      onLeave: () => this.goToSection('i2', 'onLeave'),
+    });
+    this.ScrollTrigger02 = ScrollTrigger.create({
+      trigger: '#i3',
+      start: 'top ' + (`${window.outerHeight}` - 580) + 'px',
+      // markers: true,
+      end: 'top top+=' + (`${window.outerHeight}` - this.vtop - 640),
+      scrub: true,
+      pin: true,
+      overwrite: true,
+      onEnter: () => this.goToSection('i3', 'onEnter'),
+      onEnterBack: () => this.goToSection('i3', 'onEnterBack'),
+      onLeave: () => this.goToSection('i3', 'onLeave'),
+    });
+    this.ScrollTrigger03 = ScrollTrigger.create({
+      trigger: '#i4',
+      start: 'top ' + (`${window.outerHeight}` - 580) + 'px',
+      // markers: true
+      end: 'top top+=' + (`${window.outerHeight}` - this.vtop - 900),
+      scrub: true,
+      pin: true,
+      overwrite: true,
+      onEnter: () => this.goToSection('i4', 'onEnter'),
+      onEnterBack: () => this.goToSection('i4', 'onEnterBack'),
+      onLeave: () => this.goToSection('i4', 'onLeave'),
+    });
   },
   destroyed() {
     console.log(ScrollTrigger.getAll());
     ScrollTrigger.getAll().map(s => {
       s.kill(true);
     });
-  },
+  }
 };
 </script>
 <style scoped>
