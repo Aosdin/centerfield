@@ -12,6 +12,9 @@
             <div class="time">매일 오전 10:00 ~ 오후 9:00</div>
             <div class="area">EAST TOWER 1F</div>
           </div>
+          <button type="button" class="btnlocation">
+            <span>위치보기</span>
+          </button>
           <button type="button" class="btntel">
             <span>전화걸기</span>
           </button>
@@ -20,40 +23,40 @@
         <div class="use-info">
           <!-- 가능이면 y, 불가면 n -->
           <div class="item">
-            <div class="itembox">
-              <div class="ico y">
+            <div class="itembox y">
+              <div class="ico">
                 <span class="i1"></span>
               </div>
               <p>신세계상품권</p>
             </div>
           </div>
           <div class="item">
-            <div class="itembox">
-              <div class="ico y">
+            <div class="itembox y">
+              <div class="ico">
                 <span class="i2"></span>
               </div>
               <p>포인트적립</p>
             </div>
           </div>
           <div class="item">
-            <div class="itembox">
-              <div class="ico y">
+            <div class="itembox y">
+              <div class="ico">
                 <span class="i3"></span>
               </div>
               <p>카드가능</p>
             </div>
           </div>
           <div class="item">
-            <div class="itembox">
-              <div class="ico y">
+            <div class="itembox n">
+              <div class="ico">
                 <span class="i4"></span>
               </div>
-              <p>포장가능</p>
+              <p>포장불가</p>
             </div>
           </div>
           <div class="item">
-            <div class="itembox">
-              <div class="ico n">
+            <div class="itembox n">
+              <div class="ico">
                 <span class="i5"></span>
               </div>
               <p>예약불가</p>
@@ -91,9 +94,9 @@
           </li>
         </ul>
       </div>
-      <div class="tenant-location">
+      <!-- <div class="tenant-location">
         <img src="../assets/images/tenant/tenant_location_firebell.svg" alt="" />
-      </div>
+      </div> -->
     </section>
     <!-- 매장 썸네일(s) -->
     <section class="sector">
