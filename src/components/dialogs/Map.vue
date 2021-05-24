@@ -45,177 +45,274 @@
                 <div class="map floor-rootmap" v-if="showMapDataGroupSelect">
                   <div v-if="showMapDataGroupSelect === 'PE_PW'">
                     <img src="../../assets/images/floor/PE_PW.svg" alt="" />
-                    <p>주차장을 통과하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'PE_B2E1'">
                     <img src="../../assets/images/floor/PE_B2E1.svg" alt="" />
-                    <p>EAST 엘리베이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'PE_B2E2'">
                     <img src="../../assets/images/floor/PE_B2E2.svg" alt="" />
-                    <p>EAST 엘리베이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'PE_B1E'">
                     <img src="../../assets/images/floor/PE_B1E.svg" alt="" />
-                    <p>EAST 엘리베이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'PE_B1W'">
                     <img src="../../assets/images/floor/PE_B1W.svg" alt="" />
-                    <p>EAST 엘리베이터와 건물 외부를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'PE_1FE'">
                     <img src="../../assets/images/floor/PE_1FE.svg" alt="" />
-                    <p>EAST 엘리베이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'PE_1FW'">
                     <img src="../../assets/images/floor/PE_1FW.svg" alt="" />
-                    <p>EAST 엘리베이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'PE_2FE'">
                     <img src="../../assets/images/floor/PE_2FE.svg" alt="" />
-                    <p>EAST 엘리베이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'PE_2FW'">
                     <img src="../../assets/images/floor/PE_2FW.svg" alt="" />
-                    <p>EAST 엘리베이터와 외부정원을 이용하여 이동하세요.</p>
+                  </div>
+                  <div v-if="showMapDataGroupSelect === 'PW_PE'">
+                    <img src="../../assets/images/floor/PW_PE.svg" alt="" />
                   </div>
                   <div v-if="showMapDataGroupSelect === 'PW_B2E1'">
                     <img src="../../assets/images/floor/PW_B2E1.svg" alt="" />
-                    <p>WEST 엘리베이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'PW_B2E2'">
                     <img src="../../assets/images/floor/PW_B2E2.svg" alt="" />
                   </div>
                   <div v-if="showMapDataGroupSelect === 'PW_B1E'">
                     <img src="../../assets/images/floor/PW_B1E.svg" alt="" />
-                    <p>WEST 엘리베이터와 건물 외부를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'PW_B1W'">
                     <img src="../../assets/images/floor/PW_B1W.svg" alt="" />
-                    <p>WEST 엘리베이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'PW_1FE'">
                     <img src="../../assets/images/floor/PW_1FE.svg" alt="" />
-                    <p>WEST 엘리베이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'PW_1FW'">
                     <img src="../../assets/images/floor/PW_1FW.svg" alt="" />
-                    <p>WEST 엘리베이터를 이용하여 1F로 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'PW_2FE'">
                     <img src="../../assets/images/floor/PW_2FE.svg" alt="" />
-                    <p>WEST 엘리베이터와 외부정원을 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'PW_2FW'">
                     <img src="../../assets/images/floor/PW_2FW.svg" alt="" />
-                    <p>WEST 엘리베이터를 이용하여 이동하세요.</p>
+                  </div>
+                  <div v-if="showMapDataGroupSelect === 'B2E1_PE'">
+                    <img src="../../assets/images/floor/B2E1_PE.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === 'B2E1_PW'">
+                    <img src="../../assets/images/floor/B2E1_PW.svg" alt="" />
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B2E1_B2E2'">
                     <img src="../../assets/images/floor/B2E1_B2E2.svg" alt="" />
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B2E1_B1E'">
                     <img src="../../assets/images/floor/B2E1_B1E.svg" alt="" />
-                    <p>EAST 에스컬레이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B2E1_B1W'">
                     <img src="../../assets/images/floor/B2E1_B1W.svg" alt="" />
-                    <p>WEST 에스컬레이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B2E1_1FE'">
                     <img src="../../assets/images/floor/B2E1_1FE.svg" alt="" />
-                    <p>EAST 에스컬레이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B2E1_1FW'">
                     <img src="../../assets/images/floor/B2E1_1FW.svg" alt="" />
-                    <p>WEST 에스컬레이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B2E1_2FE'">
                     <img src="../../assets/images/floor/B2E1_2FE.svg" alt="" />
-                    <p>EAST 엘리베이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B2E1_2FW'">
                     <img src="../../assets/images/floor/B2E1_2FW.svg" alt="" />
                   </div>
+                  <div v-if="showMapDataGroupSelect === 'B2E2_PE'">
+                    <img src="../../assets/images/floor/B2E2_PE.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === 'B2E2_PW'">
+                    <img src="../../assets/images/floor/B2E2_PW.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === 'B2E2_B2E1'">
+                    <img src="../../assets/images/floor/B2E2_B2E1.svg" alt="" />
+                  </div>
                   <div v-if="showMapDataGroupSelect === 'B2E2_B1E'">
                     <img src="../../assets/images/floor/B2E2_B1E.svg" alt="" />
-                    <p>EAST 에스컬레이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B2E2_B1W'">
                     <img src="../../assets/images/floor/B2E2_B1W.svg" alt="" />
-                    <p>WEST 에스컬레이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B2E2_1FE'">
                     <img src="../../assets/images/floor/B2E2_1FE.svg" alt="" />
-                    <p>EAST 에스컬레이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B2E2_1FW'">
                     <img src="../../assets/images/floor/B2E2_1FW.svg" alt="" />
-                    <p>EAST 에스컬레이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B2E2_2FE'">
                     <img src="../../assets/images/floor/B2E2_2FE.svg" alt="" />
-                    <p>EAST 엘리베이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B2E2_2FW'">
                     <img src="../../assets/images/floor/B2E2_2FW.svg" alt="" />
-                    <p>EAST 엘리베이터를 이용하여 2F로 이동한 후, 외부정원을 통해 WEST로 이동하세요.</p>
+                  </div>
+                  <div v-if="showMapDataGroupSelect === 'B1E_PE'">
+                    <img src="../../assets/images/floor/B1E_PE.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === 'B1E_PW'">
+                    <img src="../../assets/images/floor/B1E_PW.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === 'B1E_B2E1'">
+                    <img src="../../assets/images/floor/B1E_B2E1.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === 'B1E_B2E2'">
+                    <img src="../../assets/images/floor/B1E_B2E2.svg" alt="" />
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B1E_B1W'">
                     <img src="../../assets/images/floor/B1E_B1W.svg" alt="" />
-                    <p>건물 외부를 통해 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B1E_1FE'">
                     <img src="../../assets/images/floor/B1E_1FE.svg" alt="" />
-                    <p>EAST 에스컬레이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B1E_1FW'">
                     <img src="../../assets/images/floor/B1E_1FW.svg" alt="" />
-                    <p>EAST 에스컬레이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B1E_2FE'">
                     <img src="../../assets/images/floor/B1E_2FE.svg" alt="" />
-                    <p>EAST 에스컬레이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B1E_2FW'">
                     <img src="../../assets/images/floor/B1E_2FW.svg" alt="" />
-                    <p>EAST 에스컬레이터를 이용하여 2F로 이동한 후, 외부정원을 통해 WEST로 이동하세요.</p>
+                  </div>
+                  <div v-if="showMapDataGroupSelect === 'B1W_PE'">
+                    <img src="../../assets/images/floor/B1W_PE.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === 'B1W_PW'">
+                    <img src="../../assets/images/floor/B1W_PW.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === 'B1W_B2E1'">
+                    <img src="../../assets/images/floor/B1W_B2E1.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === 'B1W_B2E2'">
+                    <img src="../../assets/images/floor/B1W_B2E2.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === 'B1W_B1E'">
+                    <img src="../../assets/images/floor/B1W_B1E.svg" alt="" />
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B1W_1FE'">
                     <img src="../../assets/images/floor/B1W_1FE.svg" alt="" />
-                    <p>WEST 에스컬레이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B1W_1FW'">
                     <img src="../../assets/images/floor/B1W_1FW.svg" alt="" />
-                    <p>WEST 에스컬레이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B1W_2FE'">
                     <img src="../../assets/images/floor/B1W_2FE.svg" alt="" />
                   </div>
                   <div v-if="showMapDataGroupSelect === 'B1W_2FW'">
                     <img src="../../assets/images/floor/B1W_2FW.svg" alt="" />
-                    <p>WEST 엘리베이터를 이용하여 이동하세요.</p>
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '1FE_PE'">
+                    <img src="../../assets/images/floor/1FE_PE.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '1FE_PW'">
+                    <img src="../../assets/images/floor/1FE_PW.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '1FE_B2E1'">
+                    <img src="../../assets/images/floor/1FE_B2E1.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '1FE_B2E2'">
+                    <img src="../../assets/images/floor/1FE_B2E2.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '1FE_B1E'">
+                    <img src="../../assets/images/floor/1FE_B1E.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '1FE_B1W'">
+                    <img src="../../assets/images/floor/1FE_B1W.svg" alt="" />
                   </div>
                   <div v-if="showMapDataGroupSelect === '1FE_1FW'">
                     <img src="../../assets/images/floor/1FE_1FW.svg" alt="" />
-                  </div>
-                  <div v-if="showMapDataGroupSelect === '1FW_2FE'">
-                    <img src="../../assets/images/floor/1FW_2FE.svg" alt="" />
-                    <p>EAST 에스컬레이터를 이용하여 이동하세요.</p>
                   </div>
                   <div v-if="showMapDataGroupSelect === '1FE_2FE'">
                     <img src="../../assets/images/floor/1FE_2FE.svg" alt="" />
                   </div>
                   <div v-if="showMapDataGroupSelect === '1FE_2FW'">
                     <img src="../../assets/images/floor/1FE_2FW.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '1FW_PE'">
+                    <img src="../../assets/images/floor/1FW_PE.svg" alt="" />
                     <p>EAST 에스컬레이터와 외부정원을 통해 이동하세요.</p>
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '1FW_PW'">
+                    <img src="../../assets/images/floor/1FW_PW.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '1FW_B2E1'">
+                    <img src="../../assets/images/floor/1FW_B2E1.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '1FW_B2E2'">
+                    <img src="../../assets/images/floor/1FW_B2E2.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '1FW_B1E'">
+                    <img src="../../assets/images/floor/1FW_B1E.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '1FW_B1W'">
+                    <img src="../../assets/images/floor/1FW_B1W.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '1FW_1FE'">
+                    <img src="../../assets/images/floor/1FW_1FE.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '1FW_2FE'">
+                    <img src="../../assets/images/floor/1FW_2FE.svg" alt="" />
                   </div>
                   <div v-if="showMapDataGroupSelect === '1FW_2FW'">
                     <img src="../../assets/images/floor/1FW_2FW.svg" alt="" />
-                    <p>WEST 엘리베이터를 이용하여 이동하세요.</p>
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '2FE_PE'">
+                    <img src="../../assets/images/floor/2FE_PE.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '2FE_PW'">
+                    <img src="../../assets/images/floor/2FE_PW.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '2FE_B2E1'">
+                    <img src="../../assets/images/floor/2FE_B2E1.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '2FE_B2E2'">
+                    <img src="../../assets/images/floor/2FE_B2E2.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '2FE_B1E'">
+                    <img src="../../assets/images/floor/2FE_B1E.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '2FE_B1W'">
+                    <img src="../../assets/images/floor/2FE_B1W.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '2FE_1FE'">
+                    <img src="../../assets/images/floor/2FE_1FE.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '2FE_1FW'">
+                    <img src="../../assets/images/floor/2FE_1FW.svg" alt="" />
                   </div>
                   <div v-if="showMapDataGroupSelect === '2FE_2FW'">
                     <img src="../../assets/images/floor/2FE_2FW.svg" alt="" />
-                    <p>외부정원을 통과하여 이동하세요.</p>
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '2FW_PE'">
+                    <img src="../../assets/images/floor/2FW_PE.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '2FW_PW'">
+                    <img src="../../assets/images/floor/2FW_PW.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '2FW_B2E1'">
+                    <img src="../../assets/images/floor/2FW_B2E1.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '2FW_B2E2'">
+                    <img src="../../assets/images/floor/2FW_B2E2.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '2FW_B1E'">
+                    <img src="../../assets/images/floor/2FW_B1E.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '2FW_B1W'">
+                    <img src="../../assets/images/floor/2FW_B1W.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '2FW_1FE'">
+                    <img src="../../assets/images/floor/2FW_1FE.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '2FW_1FW'">
+                    <img src="../../assets/images/floor/2FW_1FW.svg" alt="" />
+                  </div>
+                  <div v-if="showMapDataGroupSelect === '2FW_2FE'">
+                    <img src="../../assets/images/floor/2FW_2FE.svg" alt="" />
                   </div>
                 </div>
               </fieldset>
