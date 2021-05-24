@@ -1,6 +1,7 @@
 .sect-floorinfo {
   .floor-imgwrap {
     position: relative;
+    height: 80vw;
     margin-bottom: 20px;
     border-radius: 20px;
     overflow: hidden;
@@ -91,6 +92,7 @@
   }
 }
 .sect-floormap {
+  height: 58.6667vw;
   img {
     width: 100%;
   }
