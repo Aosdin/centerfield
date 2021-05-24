@@ -39,7 +39,7 @@
         <router-link :to="{ name: 'floorInfo' }"><span>FLOOR MAP</span></router-link>
       </li>
       <li>
-        <a href="#"><span>LOCATION</span></a>
+        <router-link :to="{ name: 'location' }"><span>LOCATION</span></router-link>
       </li>
       <li>
         <router-link :to="{ name: 'parkingInfo' }"><span>PARKING</span></router-link>

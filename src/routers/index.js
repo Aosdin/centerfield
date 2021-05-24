@@ -12,6 +12,7 @@ import Floor1 from '@/pages/Floor1';
 import TenantDetail from '@/pages/TenantDetail';
 import FloorInfo from '@/pages/FloorInfo';
 import FloorInfoPop from '@/pages/FloorInfoPop';
+import Location from '@/pages/Location';
 import ParkingInfo from '@/pages/ParkingInfo';
 import EventCouponList from '@/pages/EventCouponList';
 import EventDetail from '@/pages/EventDetail';
@@ -75,6 +76,11 @@ const router = new VueRouter({
           path: '/floorInfoPop',
           name: 'floorInfoPop',
           component: FloorInfoPop,
+        },
+        {
+          path: '/location',
+          name: 'location',
+          component: Location,
         },
         {
           path: '/parkingInfo',
