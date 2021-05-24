@@ -187,9 +187,9 @@ export default {
     this.resize();
     this.ScrollTrigger01 = ScrollTrigger.create({
       trigger: '#i2',
-      start: 'top ' + (`${window.outerHeight}` - 580) + 'px',
+      start: 'top ' + (innerHeight - 580) + 'px',
       // markers: true,
-      end: 'top top+=' + (`${window.outerHeight}` - this.vtop - 380),
+      end: 'top top+=' + (innerHeight - this.vtop - 380),
       scrub: true,
       pin: true,
       overwrite: true,
@@ -199,9 +199,9 @@ export default {
     });
     this.ScrollTrigger02 = ScrollTrigger.create({
       trigger: '#i3',
-      start: 'top ' + (`${window.outerHeight}` - 580) + 'px',
+      start: 'top ' + (innerHeight - 580) + 'px',
       // markers: true,
-      end: 'top top+=' + (`${window.outerHeight}` - this.vtop - 640),
+      end: 'top top+=' + (innerHeight - this.vtop - 640),
       scrub: true,
       pin: true,
       overwrite: true,
@@ -211,9 +211,9 @@ export default {
     });
     this.ScrollTrigger03 = ScrollTrigger.create({
       trigger: '#i4',
-      start: 'top ' + (`${window.outerHeight}` - 580) + 'px',
+      start: 'top ' + (innerHeight - 580) + 'px',
       // markers: true
-      end: 'top top+=' + (`${window.outerHeight}` - this.vtop - 900),
+      end: 'top top+=' + (innerHeight - this.vtop - 900),
       scrub: true,
       pin: true,
       overwrite: true,

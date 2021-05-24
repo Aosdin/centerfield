@@ -138,7 +138,7 @@ export default {
     this.ScrollTrigger01 = ScrollTrigger.create({
       trigger: '#i2',
       start: 'top ' + (storeTop - innerHeight) + 'px',
-      markers: true,
+      // markers: true,
       end: 'top top+=' + (`${window.outerHeight}` - this.vtop - 670),
       scrub: true,
       pin: true,
