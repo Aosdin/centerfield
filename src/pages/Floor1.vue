@@ -106,6 +106,11 @@ export default {
     // Meta tags
     meta: [{ name: 'keywords', content: 'Floor1' }],
   },
+  data: () => ({
+    ScrollTrigger01: null,
+    ScrollTrigger02: null,
+    ScrollTrigger03: null
+  }),
   computed: {
     vtop() {
       return (106.6667 * innerWidth) / 100;
@@ -137,7 +142,7 @@ export default {
     this.resize();
     this.ScrollTrigger01 = ScrollTrigger.create({
       trigger: '#i2',
-      start: 'top ' + (storeTop - innerHeight) + 'px',
+      start: 'top ' + (storeTop - `${window.outerHeight}`) + 'px',
       // markers: true,
       end: 'top top+=' + (`${window.outerHeight}` - this.vtop - 670),
       scrub: true,
@@ -149,7 +154,7 @@ export default {
     });
     this.ScrollTrigger02 = ScrollTrigger.create({
       trigger: '#i3',
-      start: 'top ' + (storeTop - innerHeight) + 'px',
+      start: 'top ' + (storeTop - `${window.outerHeight}`) + 'px',
       // markers: true,
       end: 'top top+=' + (`${window.outerHeight}` - this.vtop - 1040),
       scrub: true,
@@ -161,7 +166,7 @@ export default {
     });
     this.ScrollTrigger03 = ScrollTrigger.create({
       trigger: '#i4',
-      start: 'top ' + (storeTop - innerHeight) + 'px',
+      start: 'top ' + (storeTop - `${window.outerHeight}`) + 'px',
       // markers: true
       end: 'top top+=' + (`${window.outerHeight}` - this.vtop - 1410),
       scrub: true,
@@ -171,9 +176,9 @@ export default {
       onEnterBack: () => this.goToSection('i4', 'onEnterBack'),
       onLeave: () => this.goToSection('i4', 'onLeave'),
     });
-    this.ScrollTrigger03 = ScrollTrigger.create({
+    this.ScrollTrigger04 = ScrollTrigger.create({
       trigger: '#i5',
-      start: 'top ' + (storeTop - innerHeight) + 'px',
+      start: 'top ' + (storeTop - `${window.outerHeight}`) + 'px',
       // markers: true
       end: 'top top+=' + (`${window.outerHeight}` - this.vtop - 1780),
       scrub: true,
