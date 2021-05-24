@@ -33,7 +33,9 @@
         <div class="store">
           <a href="/tenantDetail">
             <!-- (!)오픈 준비중일때는 photo에 'prepare'를 추가해주세요. -->
-            <div class="photo" :style="{ backgroundImage: 'url(/src/assets/images/floor/store/image_34.png)' }"></div>
+            <div class="photo">
+              <img src="../assets/images/floor/store/image_34.png" alt="" />
+            </div>
             <h4 class="store-name">파이어벨 디어고메</h4>
             <div class="category">브런치 / 버거 / 샌드위치</div>
             <div class="area">EAST TOWER 1F</div>
@@ -104,3 +106,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.sect-store {
+  height: 700px;
+}
+</style>
