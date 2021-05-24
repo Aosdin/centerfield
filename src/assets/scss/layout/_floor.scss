@@ -105,7 +105,7 @@
     background-color: $gray-light;
     position: absolute;
     width: 100%;
-    height: 350px;
+    height: 412px;
     bottom: 0;
     // margin-top: 20px;
     padding: 20px;
@@ -151,28 +151,37 @@
         }
       }
     }
+    .tan-textwrap {
+      position: relative;
+      height: 92px;
+    }
     .store-name,
     .category,
     .area {
       @include textOver;
-      transition: 0.3s linear;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      margin-top: 0;
+      transition: 0.45s ease-in;
     }
     .store-name {
+      top: 62px;
       font-size: 20px;
       font-weight: 700;
     }
     .category {
+      top: 66px;
       font-weight: 300;
-      height: 0;
       opacity: 0;
-      visibility: hidden;
+      transition-delay: 0.18s;
     }
     .area {
+      top: 66px;
       font-size: 12px;
       font-weight: 700;
-      height: 0;
       opacity: 0;
-      visibility: hidden;
+      transition-delay: 0.3s;
     }
   }
   .item {
@@ -199,18 +208,17 @@
       z-index: 2;
     }
     &.active {
-      .store {
-        height: 412px;
-      }
       .category,
       .area {
-        height: auto;
         opacity: 1;
-        visibility: visible;
       }
-      .category,
-      .area {
-        margin-top: 10px;
+      .store-name {
+        top: 0;
+        bottom: auto;
+      }
+      .category {
+        top: 34px;
+        font-size: 16px;
       }
     }
   }
