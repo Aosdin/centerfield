@@ -163,7 +163,7 @@
       width: 100%;
       left: 0;
       margin-top: 0;
-      transition: 0.45s ease-in;
+      transition: 0.45s linear;
     }
     .store-name {
       top: 62px;
@@ -174,14 +174,14 @@
       top: 66px;
       font-weight: 300;
       opacity: 0;
-      transition-delay: 0.18s;
+      transition-delay: 0.15s;
     }
     .area {
       top: 66px;
       font-size: 12px;
       font-weight: 700;
       opacity: 0;
-      transition-delay: 0.3s;
+      transition-delay: 0.27s;
     }
   }
   .item {
