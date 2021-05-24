@@ -105,7 +105,7 @@
 </template>
 
 <script>
-import { ScrollTrigger } from 'gsap/all';
+import {ScrollTrigger} from "gsap/all";
 
 export default {
   name: 'Floor1',
@@ -119,12 +119,12 @@ export default {
   data: () => ({
     ScrollTrigger01: null,
     ScrollTrigger02: null,
-    ScrollTrigger03: null,
+    ScrollTrigger03: null
   }),
   computed: {
     vtop() {
       return (106.6667 * innerWidth) / 100;
-    },
+    }
   },
   methods: {
     goToSection(t, b) {
@@ -136,23 +136,25 @@ export default {
       this.$router.push({ name: 'floor1' });
     },
     resize() {
-      ScrollTrigger.update();
+      ScrollTrigger.update()
     },
-    handleScroll() {},
+    handleScroll () {
+
+    }
   },
   mounted() {
     const store = document.getElementById('store') || this.$refs.store;
     const storeTop = store.getBoundingClientRect().y || 0;
     window.addEventListener('resize', this.resize);
     window.addEventListener('scroll', this.handleScroll);
-    console.log(`${window.outerHeight}`, storeTop);
-    console.log(storeTop - `${window.outerHeight}`);
+    console.log(`${window.outerHeight}` , storeTop, this.vtop)
+    console.log(storeTop - `${window.outerHeight}`)
     this.resize();
     this.ScrollTrigger01 = ScrollTrigger.create({
       trigger: '#i2',
-      start: 'top ' + (storeTop - `${window.outerHeight}`) + 'px',
+      start: 'top ' + (`${window.outerHeight}` - 690) + 'px',
       // markers: true,
-      end: 'top top+=' + (`${window.outerHeight}` - this.vtop - 670),
+      end: 'top top+=' + (`${window.outerHeight}` - 1060),
       scrub: true,
       pin: true,
       overwrite: true,
@@ -162,9 +164,9 @@ export default {
     });
     this.ScrollTrigger02 = ScrollTrigger.create({
       trigger: '#i3',
-      start: 'top ' + (storeTop - `${window.outerHeight}`) + 'px',
+      start: 'top ' + (`${window.outerHeight}` - 690) + 'px',
       // markers: true,
-      end: 'top top+=' + (`${window.outerHeight}` - this.vtop - 1040),
+      end: 'top top+=' + (`${window.outerHeight}` - 1430),
       scrub: true,
       pin: true,
       overwrite: true,
@@ -174,9 +176,9 @@ export default {
     });
     this.ScrollTrigger03 = ScrollTrigger.create({
       trigger: '#i4',
-      start: 'top ' + (storeTop - `${window.outerHeight}`) + 'px',
+      start: 'top ' + (`${window.outerHeight}` - 690) + 'px',
       // markers: true
-      end: 'top top+=' + (`${window.outerHeight}` - this.vtop - 1410),
+      end: 'top top+=' + (`${window.outerHeight}` - 1800),
       scrub: true,
       pin: true,
       overwrite: true,
@@ -186,9 +188,9 @@ export default {
     });
     this.ScrollTrigger04 = ScrollTrigger.create({
       trigger: '#i5',
-      start: 'top ' + (storeTop - `${window.outerHeight}`) + 'px',
+      start: 'top ' + (`${window.outerHeight}` - 690) + 'px',
       // markers: true
-      end: 'top top+=' + (`${window.outerHeight}` - this.vtop - 1780),
+      end: 'top top+=' + (`${window.outerHeight}` - 2170),
       scrub: true,
       pin: true,
       overwrite: true,
@@ -202,7 +204,7 @@ export default {
     ScrollTrigger.getAll().map(s => {
       s.kill(true);
     });
-  },
+  }
 };
 </script>
 
