@@ -110,18 +110,31 @@
       </div>
     </section>
     <!--// 매장 썸네일(e) -->
+    <!-- 팝업(s) -->
+    <section class="popwrap poptype1">
+      <h3 class="poptit">파이어벨 디어고메</h3>
+      <div class="pop-content">
+        <p class="imgwrap">
+          <img src="../assets/images/tenant/tenant_location_firebell.svg" alt="" />
+        </p>
+      </div>
+      <button type="button" class="pop-close">
+        <span>팝업닫기</span>
+      </button>
+    </section>
+    <!--// 팝업(e) -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'TenantDetail',
+  name: 'TenantDetailPop',
   head: {
     title: {
-      inner: '매장 상세',
+      inner: '위치정보 > 매장 상세',
     },
     // Meta tags
-    meta: [{ name: 'keywords', content: 'TenantDetail' }],
+    meta: [{ name: 'keywords', content: 'TenantDetailPop' }],
   },
 };
 </script>
