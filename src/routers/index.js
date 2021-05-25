@@ -10,6 +10,8 @@ import Main from '@/pages/Main';
 import Main2 from '@/pages/Main2';
 import Floor1 from '@/pages/Floor1';
 import TenantDetail from '@/pages/TenantDetail';
+import TenantDetailPop from '@/pages/TenantDetailPop';
+import About from '@/pages/About';
 import FloorInfo from '@/pages/FloorInfo';
 import FloorInfoPop from '@/pages/FloorInfoPop';
 import Location from '@/pages/Location';
@@ -66,6 +68,16 @@ const router = new VueRouter({
           path: '/tenantDetail',
           name: 'tenantDetail',
           component: TenantDetail,
+        },
+        {
+          path: '/tenantDetailPop',
+          name: 'tenantDetailPop',
+          component: TenantDetailPop,
+        },
+        {
+          path: '/about',
+          name: 'about',
+          component: About,
         },
         {
           path: '/floorInfo',

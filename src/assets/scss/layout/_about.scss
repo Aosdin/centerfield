@@ -1,0 +1,29 @@
+.about-text {
+  p {
+    margin-top: 25px;
+    font-weight: 300;
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+}
+.about-sldr {
+  .swiper-slide {
+    border-radius: 20px;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      background-color: $white;
+      margin: 0 5px;
+      opacity: 0.5;
+      &.swiper-pagination-bullet-active {
+        background-color: $white;
+        opacity: 1;
+      }
+    }
+  }
+}
