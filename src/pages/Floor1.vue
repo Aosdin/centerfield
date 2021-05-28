@@ -5,11 +5,6 @@
       <div class="inner">
         <div class="floor-imgwrap">
           <div class="floor-tit">
-            <div class="floorinfo">
-              <span>DINNIG</span>
-              <span>CAFE</span>
-              <span>LIFESTYLE</span>
-            </div>
             <h3>B2</h3>
           </div>
           <div class="background-img">
@@ -105,7 +100,7 @@
 </template>
 
 <script>
-import {ScrollTrigger} from "gsap/all";
+import { ScrollTrigger } from 'gsap/all';
 
 export default {
   name: 'Floor1',
@@ -119,12 +114,12 @@ export default {
   data: () => ({
     ScrollTrigger01: null,
     ScrollTrigger02: null,
-    ScrollTrigger03: null
+    ScrollTrigger03: null,
   }),
   computed: {
     vtop() {
       return (106.6667 * innerWidth) / 100;
-    }
+    },
   },
   methods: {
     goToSection(t, b) {
@@ -136,19 +131,17 @@ export default {
       this.$router.push({ name: 'floor1' });
     },
     resize() {
-      ScrollTrigger.update()
+      ScrollTrigger.update();
     },
-    handleScroll () {
-
-    }
+    handleScroll() {},
   },
   mounted() {
     const store = document.getElementById('store') || this.$refs.store;
     const storeTop = store.getBoundingClientRect().y || 0;
     window.addEventListener('resize', this.resize);
     window.addEventListener('scroll', this.handleScroll);
-    console.log(`${window.outerHeight}` , storeTop, this.vtop)
-    console.log(storeTop - `${window.outerHeight}`)
+    console.log(`${window.outerHeight}`, storeTop, this.vtop);
+    console.log(storeTop - `${window.outerHeight}`);
     this.resize();
     this.ScrollTrigger01 = ScrollTrigger.create({
       trigger: '#i2',
@@ -204,7 +197,7 @@ export default {
     ScrollTrigger.getAll().map(s => {
       s.kill(true);
     });
-  }
+  },
 };
 </script>
 
