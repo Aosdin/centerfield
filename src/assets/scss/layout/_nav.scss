@@ -63,7 +63,24 @@
     & > li {
       margin-top: 20px;
       a {
+        display: block;
         font-weight: 300;
+        span {
+          position: relative;
+          display: inline-block;
+        }
+      }
+      .gnb-search {
+        &::after {
+          @include inAfter();
+          @include disinBlock('m');
+          vertical-align: middle;
+          width: 32px;
+          height: 27px;
+          margin-left: 4px;
+          background: url('../images/icon/ico_search.svg') no-repeat center;
+          background-size: contain;
+        }
       }
     }
   }

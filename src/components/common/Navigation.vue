@@ -50,6 +50,9 @@
       <li>
         <a href="#"><span>NOTICE</span></a>
       </li>
+      <li>
+        <a href="#" class="gnb-search"><span>SEARCH</span></a>
+      </li>
     </ul>
     <div class="lang-select">
       <a href="#"><span>ENGLISH</span></a>
